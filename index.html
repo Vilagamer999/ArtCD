@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Cover Grid</title>
+  <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 100%;
+      max-height: 500px;
+      height: auto;
+    }
+
+    header p {
+      font-size: 40px;
+      margin-top: 0px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 20px;
+      padding: 0px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(3, minmax(150px, 400px));
+      }
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    .grid-item h3 {
+      margin: 8px 0;
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./covers/banner.png" alt="Placeholder Image">
+    <p>Vila's Art CD Archive</p>
+  </header>
+  <div class="grid-container">
+    <a href="./art/kb03/index.html" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/kb03.png" alt="Album Cover 1">
+      <h3>Karabiner art CD (1995-2003)</h3>
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/kb04.png" alt="Album Cover 2">
+      <h3>Karabiner art CD (2004)</h3>
+    </a>
+    <a href="./art/kb05/index.html" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/kb05.png" alt="Album Cover 3">
+      <h3>Karabiner art CD (2005)</h3>
+    </a>
+    <a href="./art/kb06/index.html" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/kb06.png" alt="Album Cover 4">
+      <h3>Karabiner art CD (2006)</h3>
+    </a>
+    <a href="./art/ksm/index.html" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/KSM.png" alt="Album Cover 5">
+      <h3>Kenneth Sample Macro Art CD (2004)</h3>
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/grim.png" alt="Album Cover 6">
+      <h3>Grimal art CD (1996-2003)</h3>
+    </a>
+    <a href="#" class="grid-item">
+      <img src="./covers/fap1.png" alt="Album Cover 7">
+      <h3>Furry Artists Partnership CD 1 (2004)</h3>
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/unknown.png" alt="Album Cover 8">
+      <h3>Furry Artists Partnership CD 2 (2005)</h3>
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/unknown.png" alt="Album Cover 9">
+      <h3>Furry Artists Partnership CD 3 (2006)</h3>
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/unknown.png" alt="Album Cover 10">
+      <h3>Furry Artists Partnership CD 4 (2007)</h3>
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/unknown.png" alt="Album Cover 11">
+      <h3>Furry Artists Partnership CD 5 (2008)</h3>
+    </a>
+    <a href="./art/bbs" target="_blank" rel="noopener noreferrer" class="grid-item">
+      <img src="./covers/bbs.png" alt="Album Cover 12">
+      <h3>Furry BBS Archive (1995-1997)</h3>
+    </a>
+  </div>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
