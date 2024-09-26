@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        #sidebar {
+            width: 250px;
+            height: 100%;
+            background-color: #1e1e1e;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        #sidebar-content {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        #content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #gallery {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-gap: 10px;
+            align-content: start;
+            overflow-y: auto;
+        }
+        #video-container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #video-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        .folder, .home-button {
+            cursor: pointer;
+            padding: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .folder:hover, .home-button:hover {
+            background-color: #2a2a2a;
+        }
+        .folder.expandable {
+            cursor: default;
+            font-weight: bold;
+        }
+        .folder.expandable:hover {
+            background-color: inherit;
+        }
+        .folder.expandable::before {
+            content: '▶';
+            margin-right: 5px;
+            font-size: 0.8em;
+        }
+        .folder.expandable.expanded::before {
+            content: '▼';
+        }
+        .sub-folder {
+            margin-left: 20px;
+            display: none;
+        }
+        .sub-folder.expanded {
+            display: block;
+        }
+        .thumbnail {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        #modalContent {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        #modalImg {
+            max-width: 100%;
+            max-height: 80vh;
+            cursor: pointer;
+        }
+        #imageInfo {
+            color: white;
+            margin-top: 10px;
+            text-align: center;
+        }
+        #closeModal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #credit {
+            font-size: 12px;
+            text-align: center;
+            padding: 5px;
+            margin-top: 20px;
+        }
+        #credit a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+        }
+        #credit a:hover {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="sidebar-content">
+            <div class="home-button">Home</div>
+            <!-- Folder structure will be inserted here by JavaScript -->
+        </div>
+        <div id="credit">
+            <a href="https://archive.org/details/@vilagamer999" target="_blank" rel="noopener noreferrer external">Gallery Website coded by Vila<br>for your viewing pleasure ;3</a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="video-container">
+            <div id="video-title">Message from Furrfragged</div>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="gallery"></div>
+    </div>
+    <div id="modal">
+        <span id="closeModal">&times;</span>
+        <div id="modalContent">
+            <img id="modalImg" src="" alt="Expanded Image">
+            <div id="imageInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        const folderStructure = {
+            "dragons and scalies": [],
+            "fox vs scales": [],
+            "public paw off": {
+                "Frag Fox": [],
+                "Other characters": []
+            },
+            "random sketches": {
+                "car sketches": [],
+                "random non furry sketches": [],
+                "random sketches furry": {
+                    "adult": [],
+                    "non adult": []
+                }
+            },
+            "sly": [],
+            "sly vs fox": [],
+            "star fox": [],
+            "wolf link": [],
+            "zoo life drawings": []
+        };
+
+        const folderImages = {
+    "sly vs fox": ['sly-vs-fox-fox-wins.jpg', 'sly-vs-fox-sly-lose.jpg', 'sly-vs-fox-sly-in-trouble.jpg', 'Sly vs fox fox pwnd.jpg', 'sly-vs-fox-fox-cums-all-over.jpg', 'sly-vs-fox-foxy-seduced.jpg', 'sly-vs-fox-sneaky-sly-muzzle-action.jpg', 'sly-vs-fox-suck-and-jerk.jpg', 'fox sly double orgasm FULL.jpg', 'sly-vs-fox-tail-swipe-damage.jpg', 'sly-vs-fox-fox-gives-up.jpg', 'sly-vs-fox-bukake-super-finishing-move.jpg', 'sly-vs-fox-kiss-taunt.jpg', 'sly-vs-fox-double-danger.jpg', 'sly-vs-fox-fox-in-danger.jpg', 'sly vs fox sucking on knees FULL.jpg', 'fox-cant-handle-sly.jpg'],
+    "zoo life drawings": ['CCF01182008_00129.jpg', 'CCF01182008_00139.jpg', 'CCF01182008_00138.jpg', 'CCF01182008_00148.jpg', 'CCF01182008_00149.jpg', 'CCF01182008_00141.jpg', 'CCF01182008_00155.jpg', 'CCF01182008_00154.jpg', 'CCF01182008_00140.jpg', 'CCF01182008_00156.jpg', 'CCF01182008_00142.jpg', 'CCF01182008_00143.jpg', 'CCF01182008_00157.jpg', 'CCF01182008_00153.jpg', 'CCF01182008_00147.jpg', 'CCF01182008_00146.jpg', 'CCF01182008_00152.jpg', 'CCF01182008_00144.jpg', 'CCF01182008_00145.jpg', 'CCF01182008_00136.jpg', 'CCF01182008_00137.jpg', 'CCF01182008_00135.jpg', 'CCF01182008_00134.jpg', 'CCF01182008_00130.jpg', 'CCF01182008_00131.jpg', 'CCF01182008_00133.jpg', 'CCF01182008_00132.jpg'],
+    "sly": ['CCF01202008_000232.jpg', 'CCF01202008_00019.jpg', 'CCF01202008_00018.jpg', 'CCF01202008_00020.jpg', 'CCF01202008_00009.jpg', 'CCF01202008_00022.jpg', 'CCF01202008_00013.jpg', 'CCF01202008_00012.jpg', 'CCF01202008_00010.jpg', 'CCF01202008_00011.jpg', 'CCF01202008_00015.jpg', 'CCF01202008_00014.jpg', 'CCF01202008_00017.jpg', 'caught a thief.jpg'],
+    "dragons and scalies": ['CCF01182008_00100.jpg', 'CCF01182008_00099.jpg', 'CCF01182008_00098.jpg', 'CCF01182008_00015.jpg', 'CCF01182008_00017.jpg', 'CCF01182008_00016.jpg', 'CCF01182008_00012.jpg', 'CCF01182008_00013.jpg', 'CCF01182008_00021.jpg', 'CCF01182008_00020.jpg', 'CCF01182008_00022.jpg', 'CCF01182008_00023.jpg', 'CCF01182008_00018.jpg', 'CCF01182008_00019.jpg', 'CCF01182008_00095.jpg', 'CCF01182008_00096.jpg', 'CCF01182008_00097.jpg'],
+    "fox vs scales": ['CCF01192008_00008.jpg', 'CCF01192008_00009.jpg', 'scales-wins.jpg', 'CCF01192008_00013.jpg', 'CCF01192008_00007.jpg', 'CCF01192008_00006.jpg', 'CCF01192008_00012.jpg', 'CCF01192008_00004.jpg', 'CCF01192008_00010.jpg', 'CCF01192008_00011.jpg', 'CCF01192008_00005.jpg', 'CCF01192008_00015.jpg', 'CCF01192008_00014.jpg', 'CCF01192008_00016.jpg', 'CCF01192008_00017.jpg'],
+    "public paw off/Other characters": ['dino pawoff win FULL.jpg', 'dINO PUBLIC FAPPING FULL.jpg', 'CCF01202008_00026.jpg', 'CCF01202008_00025.jpg', 'CCF01202008_00024.jpg', 'CCF01202008_00008.jpg', 'CCF01202008_00007.jpg', 'horny horse public hardon FULL.jpg', 'CCF01202008_00004.jpg', 'dino pawoff crashed FULL.jpg', 'dino pawoff failed FULL.jpg', 'public jerking foxy .jpg', 'CCF01202008_00016.jpg', 'Copy of horny horse public hardon FULL.jpg', 'foxy flaunting 2.jpg', 'horny public raptor FULL.jpg'],
+    "public paw off/Frag Fox": ['frag-caught-in-elevator.jpg', 'frag-folsom-level-fail.jpg', 'frags game over FULL.jpg', 'frag-foxy-cuffed.jpg', 'frag bk 3.jpg', 'frag select 2.jpg', 'RUN FRAG FULL.jpg', 'frag b2.jpg', 'frag-foxy-cumming2.jpg', 'frag san fran cumming FULL.jpg', 'frag public game FULL.jpg', 'FRAG BUSTED FULL.jpg', 'Frag pawoff win FULL.jpg', 'exposed in public.jpg', 'CCF01202008_00032.jpg', 'frag-public-orgy.jpg', 'frag game over pal FULL.jpg', 'frag-fapping-in-elevator.jpg', 'CCF01202008_00027.jpg', 'CCF01202008_00030.jpg', 'CCF01202008_00034.jpg', 'frag select GG2 copy.png', 'Character select.jpg', 'rooboy and frag public fapping.JPG', 'Frag caught at the mall FULL.jpg', 'frag sanfran pawing busted FULL.jpg', 'CCF01202008_00036.jpg', 'frag-crys-coon-cums3.jpg', 'frag-arrested.jpg', 'frag bad pawing spot FULL.jpg', 'frag overly horny FULL.jpg', 'frag-folsom-level-complete.jpg', 'frag-fox-pawing.jpg', 'CCF01202008_00029.jpg', 'oops careless pawing foxy.jpg', 'CCF01192008_00001.jpg', 'CCF01192008_00000.jpg', 'PRINT 7.jpg', 'frag exposed FULL.jpg', 'CCF01202008_00028.jpg', 'oops-silly-fox.jpg', 'CCF01192008_00002.jpg', 'CCF01192008_00003.jpg', 'frag jail fucking FULL.jpg', 'frag-caught-public-vibrating.jpg', 'frag-fox-jail-game-over.jpg', 'frag-foxy-cumming-park.jpg', 'frag-foxy-busted-against-glass.jpg', 'frag-caught-cumming-3.jpg', 'frag select.jpg', 'frag prison showers FULL2.jpg', 'the-game-over-screen-oHH-NOO2.jpg', 'Frag-pawing-failure-2.jpg', 'cumming but failed FULL 2.jpg', 'frag alley game over FULL.jpg', 'frag bk.jpg', 'CCF01182008_00126.jpg'],
+    "random sketches/random sketches furry/non adult": ['CCF01182008_00117.jpg', 'CCF01182008_00088.jpg', 'CCF01172008_00023.jpg', 'CCF01182008_00077.jpg', 'CCF01182008_00063.jpg', 'CCF01182008_00062.jpg', 'CCF01182008_00076.jpg', 'CCF01172008_00036.jpg', 'CCF01172008_00022.jpg', 'CCF01182008_00089.jpg', 'CCF01182008_00102.jpg', 'CCF01182008_00128.jpg', 'CCF01172008_00008.jpg', 'CCF01172008_00020.jpg', 'CCF01182008_00048.jpg', 'CCF01182008_00060.jpg', 'CCF01182008_00074.jpg', 'CCF01182008_00075.jpg', 'CCF01182008_00061.jpg', 'CCF01182008_00049.jpg', 'CCF01172008_00021.jpg', 'CCF01172008_00009.jpg', 'CCF01182008_00101.jpg', 'CCF01182008_00111.jpg', 'CCF01182008_00105.jpg', 'CCF01172008_00025.jpg', 'CCF01172008_00019.jpg', 'CCF01182008_00065.jpg', 'CCF01182008_00059.jpg', 'CCF01182008_00058.jpg', 'CCF01182008_00064.jpg', 'CCF01172008_00018.jpg', 'CCF01172008_00024.jpg', 'FC-2007.jpg', 'CCF01182008_00110.jpg', 'CCF01182008_00072.jpg', 'CCF01182008_00066.jpg', 'CCF01182008_00067.jpg', 'CCF01182008_00073.jpg', 'CCF01182008_00113.jpg', 'CCF01182008_00028.jpg', 'CCF01182008_00000.jpg', 'CCF01182008_00001.jpg', 'CCF01182008_00029.jpg', 'CCF01182008_00003.jpg', 'CCF01182008_00002.jpg', 'CCF01182008_00006.jpg', 'CCF01182008_00007.jpg', 'CCF01182008_00011.jpg', 'CCF01182008_00005.jpg', 'CCF01182008_00039.jpg', 'CCF01182008_00038.jpg', 'CCF01182008_00004.jpg', 'CCF01182008_00010.jpg', 'CCF01182008_00009.jpg', 'CCF01182008_00035.jpg', 'CCF01182008_00034.jpg', 'CCF01182008_00008.jpg', 'CCF01182008_00036.jpg', 'CCF01182008_00037.jpg', 'CCF01182008_00027.jpg', 'CCF01182008_00033.jpg', 'CCF01182008_00032.jpg', 'CCF01182008_00026.jpg', 'CCF01182008_00030.jpg', 'CCF01182008_00025.jpg', 'CCF01182008_00031.jpg', 'CCF01182008_00122.jpg', 'CCF01172008_00002.jpg', 'CCF01182008_00081.jpg', 'CCF01172008_00016.jpg', 'CCF01182008_00056.jpg', 'CCF01182008_00042.jpg', 'CCF01182008_00043.jpg', 'CCF01182008_00057.jpg', 'CCF01182008_00080.jpg', 'CCF01172008_00017.jpg', 'CCF01172008_00003.jpg', 'CCF01182008_00109.jpg', 'CCF01172008_00015.jpg', 'CCF01182008_00082.jpg', 'CCF01172008_00001.jpg', 'CCF01182008_00069.jpg', 'CCF01182008_00041.jpg', 'CCF01182008_00055.jpg', 'CCF01182008_00054.jpg', 'CCF01182008_00040.jpg', 'CCF01182008_00068.jpg', 'CCF01182008_00083.jpg', 'CCF01182008_00120.jpg', 'CCF01182008_00108.jpg', 'CCF01182008_00124.jpg', 'CCF01182008_00118.jpg', 'CCF01182008_00087.jpg', 'CCF01172008_00010.jpg', 'CCF01172008_00004.jpg', 'CCF01182008_00044.jpg', 'CCF01182008_00050.jpg', 'CCF01182008_00078.jpg', 'CCF01182008_00079.jpg', 'CCF01182008_00051.jpg', 'CCF01182008_00045.jpg', 'CCF01172008_00005.jpg', 'CCF01182008_00092.jpg', 'CCF01182008_00119.jpg', 'CCF01182008_00125.jpg', 'CCF01182008_00090.jpg', 'CCF01172008_00007.jpg', 'CCF01182008_00084.jpg', 'CCF01182008_00053.jpg', 'CCF01182008_00047.jpg', 'CCF01182008_00046.jpg', 'CCF01182008_00052.jpg', 'CCF01182008_00085.jpg', 'CCF01182008_00091.jpg', 'CCF01172008_00006.jpg'],
+    "random sketches/random sketches furry/adult": ['frag showers FULL.jpg', 'CCF01172008_00034.jpg', 'CCF01172008_00031.jpg', 'CCF01172008_00030.jpg', 'CCF01172008_00026.jpg', 'CCF01172008_00032.jpg', 'CCF01172008_00033.jpg', 'CCF01172008_00027.jpg', 'CCF01202008_00033.jpg', 'fox sucking a fox FULL.jpg', 'dino darted fun times FULL.jpg', 'CCF01202008_00001.jpg', 'CCF01202008_00002.jpg', 'CCF01202008_00003.jpg', 'stressed horny foxy FULL.jpg', 'CCF01182008_00123.jpg', 'BAM2.jpg', 'CCF01172008_00029.jpg', 'CCF01172008_00028.jpg'],
+    "random sketches/car sketches": ['CCF01182008_00071.jpg', 'CCF01182008_00070.jpg', 'CCF01182008_00086.jpg', 'CCF01182008_00127.jpg'],
+    "random sketches/random non furry sketches": ['CCF01182008_00103.jpg', 'CCF01182008_00116.jpg', 'CCF01182008_00114.jpg', 'CCF01172008_00035.jpg', 'CCF01182008_00115.jpg', 'CCF01182008_00104.jpg', 'CCF01182008_00106.jpg', 'CCF01182008_00112.jpg', 'CCF01182008_00107.jpg', 'CCF01182008_00024.jpg', 'CCF01182008_00121.jpg', 'CCF01172008_00014.jpg', 'CCF01172008_00011.jpg', 'CCF01172008_00013.jpg', 'CCF01172008_00012.jpg'],
+    "star fox": ['fox falco shower FULL.jpg', 'foxy caught fapping FULL.jpg', 'falco  fox cock suck FULL.jpg', 'foxy caught fucked FULL.jpg', 'fox-jerked-off-by-wolf.jpg', 'foxy caught tied sucked FULL.jpg', 'sneaky-fox-fapping.jpg', 'fox-caught-by-wolf.jpg', 'fox-caught-jerking-by-dino.jpg', 'fox held and climaxed FULL.jpg', 'fox dino undress FULL.jpg', 'fox falco in bed FULL.jpg', 'Foxy pinned by horny sharpclaw FULL.jpg', 'falco climaxing fox FULL.jpg', 'foxy caught and sucked FULL.jpg', 'cummy scales fox FULL.jpg', 'foxy fuxked in teh ass FULL.jpg', 'foxy seduced FULL.jpg', 'fox falco snuggle FULL.jpg', 'fox-imposing-horny-dino.jpg', 'foxy game over FULL.jpg', 'CCF01202008_00006.jpg', 'scales fox snuggle FULL.jpg', 'JAIL FOX FULL.jpg', 'CCF01202008_00005.jpg', 'fox-tied-and-fucked-by-sharoclaw.jpg', 'fox-missadventures-orgasm.jpg', 'fox-horny-for-dinos.jpg', 'fox misadventures FULL.jpg', 'fox and falco sucking FULL.jpg', 'foxy tied and teased FULL.jpg', 'foxy caught and licked FULL.jpg', 'fox dino 69 FULL.jpg', 'foxy cums game over FULL.jpg', 'foxy sucked off FULL.jpg', 'fox-fucked-by-dino.jpg', 'fox-fappy-suprise.jpg', 'fox-caught-by-sharpclaw.jpg', 'fox-tied-and-aroused.jpg'],
+    "wolf link": ['wolf link fuxed sharpclaw FULL.jpg', 'wolf-link-fucked-cumming.jpg', 'wolf link tied FULL.jpg', 'Fast pawin FULL.jpg', 'horny-wolf-link.jpg', 'wolf link deku sucked FULL.jpg', 'Wolf link pawing off FULL.jpg', 'wolf link forest hands orgasm FULL.jpg', 'LINK FULL.jpg', 'wolf link self suck FULL.jpg', 'link lizard FULL.jpg', 'wolf-link-fuxed-against-wall.jpg', 'Horny wolf link FULL.jpg', 'suckle wolf link FULL.jpg', 'wolf-link-tied-and-sucked.jpg'],
+};
+
+        const sidebarContent = document.getElementById('sidebar-content');
+        const content = document.getElementById('content');
+        const videoContainer = document.getElementById('video-container');
+        const video = document.querySelector('video');
+        const gallery = document.getElementById('gallery');
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modalImg');
+        const imageInfo = document.getElementById('imageInfo');
+        const closeModal = document.getElementById('closeModal');
+        const homeButton = document.querySelector('.home-button');
+
+        function createFolderStructure(container, structure, path = '') {
+            for (const [name, subFolders] of Object.entries(structure)) {
+                const folder = document.createElement('div');
+                folder.className = 'folder';
+                folder.textContent = name;
+                
+                if (Object.keys(subFolders).length > 0) {
+                    folder.className += ' expandable';
+                    const subContainer = document.createElement('div');
+                    subContainer.className = 'sub-folder';
+                    createFolderStructure(subContainer, subFolders, path + name + '/');
+                    
+                    folder.onclick = (e) => {
+                        e.stopPropagation();
+                        folder.classList.toggle('expanded');
+                        subContainer.classList.toggle('expanded');
+                    };
+                    
+                    container.appendChild(folder);
+                    container.appendChild(subContainer);
+                } else {
+                    folder.onclick = () => loadImages(path + name);
+                    container.appendChild(folder);
+                }
+            }
+        }
+
+        function loadImages(folderPath) {
+            videoContainer.style.display = 'none';
+            gallery.style.display = 'grid';
+            gallery.innerHTML = '';
+            const images = folderImages[folderPath] || [];
+            
+            images.forEach(img => {
+                const imgElement = document.createElement('img');
+                imgElement.src = `${folderPath}/${img}`;
+                imgElement.alt = img;
+                imgElement.className = 'thumbnail';
+                imgElement.onclick = () => openModal(`${folderPath}/${img}`, folderPath);
+                gallery.appendChild(imgElement);
+            });
+        }
+
+        function openModal(src, folderPath) {
+            modal.style.display = 'flex';
+            modalImg.src = src;
+            modalImg.onclick = () => window.open(src, '_blank');
+            
+            const img = new Image();
+            img.onload = function() {
+                const fileName = src.split('/').pop();
+                imageInfo.textContent = `${fileName} (${this.width}x${this.height})`;
+            };
+            img.src = src;
+        }
+
+        function showHome() {
+            videoContainer.style.display = 'flex';
+            gallery.style.display = 'none';
+            resizeVideo();
+        }
+
+        function resizeVideo() {
+            const containerWidth = videoContainer.clientWidth;
+            const containerHeight = videoContainer.clientHeight;
+            const videoRatio = video.videoWidth / video.videoHeight;
+            const containerRatio = containerWidth / containerHeight;
+
+            if (videoRatio > containerRatio) {
+                video.style.width = '100%';
+                video.style.height = 'auto';
+            } else {
+                video.style.width = 'auto';
+                video.style.height = '100%';
+            }
+        }
+
+        closeModal.onclick = () => {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        homeButton.onclick = showHome;
+
+        window.addEventListener('resize', resizeVideo);
+        video.addEventListener('loadedmetadata', resizeVideo);
+
+        createFolderStructure(sidebarContent, folderStructure);
+        showHome(); // Start with the home view
+    </script>
+</body>
+</html>
