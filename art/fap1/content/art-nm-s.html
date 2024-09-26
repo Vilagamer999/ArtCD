@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/NaniMoose/sketches/");
+AddArt("Jasmine Topless", "Previously Unreleased", "JasmineTopless", "png");
+AddArt("Jasmine Sketch", "Previously Unreleased", "JasmineSketch", "png");
+AddArt("FoxBros 1", "Previously Unreleased", "FoxBros1", "gif");
+AddArt("FoxBros 2", "Previously Unreleased", "FoxBros2", "gif");
+AddArt("Randy & Powder", "Previously Unreleased", "RandyPowder-Sketch", "gif");
+AddArt("Randy Development Sketches", "", "Randy_Dev", "gif");
+AddArt("Powder Development Sketches", "", "Powder_Dev", "gif");
+AddArt("Spiedo Development Sketches", "", "Spiedo_Dev", "gif");
+AddArt("Love Development Sketches", "", "Love_Dev", "gif");
+AddArt("Locke Development Sketches", "", "Locke_Dev", "gif");
+AddArt("Fox Comic", "", "FoxComic", "gif");
+AddArt("Siblings", "", "Siblings", "gif");
+AddArt("BondageBat", "", "BondageBat", "gif");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

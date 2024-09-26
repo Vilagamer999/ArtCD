@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Fennec/Hboi 02/");
+AddArt("Pg0 COVER RINGTAIL", "", "Hboi 01 - PG0_COVER_RINGTAIL", "JPG");
+AddArt("Pg1 dragonbunny", "", "Hboi 01 - pg1_dragonbunny", "JPG");
+AddArt("Pg2 undies", "", "Hboi 01 - pg2_undies", "JPG");
+AddArt("Pg3 teeshortz", "", "Hboi 01 - pg3_teeshortz", "JPG");
+AddArt("Pg4 pissing", "", "Hboi 01 - pg4_pissing", "JPG");
+AddArt("Pg5 SCRATCHSNIFF", "", "HBOI 01 - PG5_SCRATCHSNIFF", "JPG");
+AddArt("Pg6 kidz", "", "Hboi 01 - pg6_kidz", "JPG");
+AddArt("Pg8 FELKAWAII", "", "Hboi 01 - PG8_FELKAWAII", "JPG");
+AddArt("Pg9 fennYIP", "", "Hboi 01 - pg_9_fennYIP", "JPG");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

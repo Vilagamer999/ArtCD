@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/GreenMonkey/blackandwhite/");
+
+AddArt("69bw", "", "69bw", "jpg");
+AddArt("joust sm", "", "joust_sm", "jpg");
+AddArt("nightcat-02b", "", "nightcat-02b", "jpg");
+AddArt("unfin comm1", "", "unfin_comm1", "jpg");
+AddArt("unfin comm2", "", "unfin_comm2", "jpg");
+AddArt("natefinal2b", "", "natefinal2b", "jpg");
+AddArt("rifle", "", "rifle", "jpg");
+AddArt("batsketch", "", "batsketch", "jpg");
+AddArt("abakan-03", "", "abakan-03", "jpg");
+AddArt("nightcat-02", "", "nightcat-02", "jpg");
+AddArt("phonixcomm3", "", "phonixcomm3", "jpg");
+AddArt("phonixcomm", "", "phonixcomm", "jpg");
+AddArt("nightcat-01", "", "nightcat-01", "jpg");
+AddArt("dancin", "", "dancin", "jpg");
+AddArt("dkmixa", "", "dkmixa", "jpg");
+AddArt("digi", "", "digi", "jpg");
+AddArt("roof2", "", "roof2", "jpg");
+AddArt("roof", "", "roof", "jpg");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

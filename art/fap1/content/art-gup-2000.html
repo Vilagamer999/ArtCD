@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Guppy/2000/");
+AddArt("cc-eggplant01", "", "cc-eggplant01", "jpg");
+AddArt("cc-eggplant02", "", "cc-eggplant02", "jpg");
+AddArt("cc-eggplant03", "", "cc-eggplant03", "jpg");
+AddArt("cc-eggplant04", "", "cc-eggplant04", "jpg");
+AddArt("cc-eggplant05", "", "cc-eggplant05", "jpg");
+AddArt("cc-eggplant06", "", "cc-eggplant06", "jpg");
+AddArt("cc-eggplant07", "", "cc-eggplant07", "jpg");
+AddArt("cc-eggplant08", "", "cc-eggplant08", "jpg");
+AddArt("cc-eggplant09", "", "cc-eggplant09", "jpg");
+AddArt("cc-eggplant10", "", "cc-eggplant10", "jpg");
+AddArt("cc-eggplant11", "", "cc-eggplant11", "jpg");
+AddArt("cc-eggplant12", "", "cc-eggplant12", "jpg");
+AddArt("cc-eggplant13", "", "cc-eggplant13", "jpg");
+AddArt("cc-eggplant14", "", "cc-eggplant14", "jpg");
+AddArt("cc-eggplant15", "", "cc-eggplant15", "jpg");
+AddArt("cc-eggplant16", "", "cc-eggplant16", "jpg");
+AddArt("cc-eggplant17", "", "cc-eggplant17", "jpg");
+AddArt("cc-eggplant18", "", "cc-eggplant18", "jpg");
+AddArt("cc-eggplant19", "", "cc-eggplant19", "jpg");
+AddArt("cc-eggplant20", "", "cc-eggplant20", "jpg");
+AddArt("cc-bunnybutt", "", "cc-bunnybutt", "jpg");
+AddArt("cc-recycle", "", "cc-recycle", "jpg");
+AddArt("cc-gund", "", "cc-gund", "jpg");
+AddArt("cc-pillowfox", "", "cc-pillowfox", "jpg");
+AddArt("cc-leatherwuff", "", "cc-leatherwuff", "jpg");
+AddArt("cc-kirk", "", "cc-kirk", "jpg");
+AddArt("cc-rusty2", "", "cc-rusty2", "jpg");
+AddArt("cc-bigfox", "", "cc-bigfox", "jpg");
+AddArt("cc-foxtaur", "", "cc-foxtaur", "jpg");
+AddArt("cc-dessert", "", "cc-dessert", "jpg");
+AddArt("cc-corset", "", "cc-corset", "jpg");
+AddArt("cc-sir", "", "cc-sir", "jpg");
+AddArt("cc-gupshoot", "", "cc-gupshoot", "jpg");
+AddArt("cc-invisodom", "", "cc-invisodom", "jpg");
+AddArt("cc-cape", "", "cc-cape", "jpg");
+AddArt("cc-squirrel", "", "cc-squirrel", "jpg");
+AddArt("cc-dot", "", "cc-dot", "jpg");
+AddArt("cc-spotty", "", "cc-spotty", "jpg");
+AddArt("cc-puddin", "", "cc-puddin", "jpg");
+AddArt("cc-lastsupper", "", "cc-lastsupper", "jpg");
+AddArt("cc-creation", "", "cc-creation", "jpg");
+AddArt("cc-mucha", "", "cc-mucha", "jpg");
+AddArt("cc-delaware", "", "cc-delaware", "jpg");
+AddArt("cc-foxsnack", "", "cc-foxsnack", "jpg");
+AddArt("cc-dimensio", "", "cc-dimensio", "jpg");
+AddArt("catsailor", "", "catsailor", "jpg");
+AddArt("cc-success", "", "cc-success", "jpg");
+AddArt("cc-roomates", "", "cc-roomates", "jpg");
+AddArt("cc-cowboy", "", "cc-cowboy", "jpg");
+AddArt("cc-cooler-twins", "", "cc-cooler-twins", "jpg");
+AddArt("CC-SLUG", "", "CC-SLUG", "JPG");
+AddArt("CC-MOUSE", "", "CC-MOUSE", "JPG");
+AddArt("CC-WALDO", "", "CC-WALDO", "JPG");
+AddArt("for-al-20000211", "", "for-al-20000211", "jpg");
+AddArt("cc-afterwork", "", "cc-afterwork", "jpg");
+AddArt("cc-leathermouse", "", "cc-leathermouse", "jpg");
+AddArt("cc-selfportrait", "", "cc-selfportrait", "jpg");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+body, td, input, select, textarea, font {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #785844;
+}
+
+body {
+  background-color: #FFD7B3;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+td {
+  vertical-align: top;
+  text-align: center;
+}
+
+td.cen {
+  vertical-align: middle;
+}
+
+td.l {
+  text-align: left;
+}
+
+td.r {
+  text-align: right;
+}
+
+p, form {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #AF4326;
+}
+
+big {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+small {
+  font-size: 12px;
+}
+
+img.rect {
+  border: 2px solid #AF4326;
+}
+
+.box {
+  background-color: #FFBB9C;
+  border: 2px solid #785844;
+  padding: 5px;
+}
+
+.bar {
+  background-color: #FFBB9C;
+  border: 2px solid #785844;
+  padding: 2px;
+  margin: 0;
+}
+
+p.para, p.tpara, p.left {
+  text-align: left;
+  padding: 0 50px 9px;
+}
+
+p.para {
+  text-indent: 50px;
+}
+
+p.tpara {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-indent: 50px;
+}
+
+ul, ol {
+  text-align: left;
+  padding: 0 50px 9px 70px;
+}
+
+li {
+  padding-bottom: 9px;
+}
+
+.Thumb {
+  border: 2px solid #FF9B6F;
+}
+
+.ThumbSel {
+  border: 2px solid #AF4326;
+}
+
+#iconrow {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+#disp {
+  margin: 10px 0;
+}
+
+#nav {
+  margin-top: 10px;
+}
+
+#nav img {
+  cursor: pointer;
+  margin: 0 5px;
+}

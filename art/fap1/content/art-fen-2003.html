@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Fennec/Fenn\'s Pics 2003/");
+AddArt("for Frommer mff2001", "", "Fenn - for Frommer mff2001", "JPG");
+AddArt("toyDRAGON", "", "fenn -toyDRAGON s", "JPG");
+AddArt("runtt's tail ff03", "", "Fenn - runtt's tail ff03", "JPG");
+AddArt("chiarcutie", "", "Fenn - chiarcutie", "jpg");
+AddArt("WUFFI WANPWAY", "", "FENN - WUFFI WANPWAY", "JPG");
+AddArt("happyCooney", "", "Fenn - happyCooney", "JPG");
+AddArt("dragon MFF03", "", "Fenn - dragon MFF03", "JPG");
+AddArt("4Cirrus mff03", "", "Fenn - 4Cirrus mff03 Cl", "JPG");
+AddArt("TailsNKip", "", "Fenn - TailsNKip CL", "JPG");
+AddArt("happyfox", "", "Fenn - happyfox", "JPG");
+AddArt("BELTIC@FF01", "", "FENN - BELTIC@FF01", "JPG");
+AddArt("MARBLES", "", "FENN-MARBLES", "JPG");
+AddArt("vimmy messy col", "", "Fenn - vimmy messy col", "JPG");
+AddArt("kipfoxbutt s", "", "Fenn - kipfoxbutt s", "JPG");
+AddArt("joshua (c)sm", "", "Fenn - joshua (c)sm", "JPG");
+AddArt("TURRENT 03 S", "", "FENN - TURRENT 03 S", "JPG");
+AddArt("whatudon'tknow s", "", "Fenn - whatudon'tknow s", "JPG");
+AddArt("AC03 MY KITY s", "", "FENN - AC03 MY KITY s", "JPG");
+AddArt("kipnjamey AC03 s", "", "Fenn - kipnjamey AC03 s", "JPG");
+AddArt("OTTERCUM ac03 S", "", "FENN - OTTERCUM ac03 S", "JPG");
+AddArt("BIGWUFFAC03 S", "", "FENN - BIGWUFFAC03 S", "JPG");
+AddArt("ABBAKANac03 S", "", "FENN - ABBAKANac03 S", "JPG");
+AddArt("INthestiffOFthenight", "", "Fenn - INthestiffOFthenight", "JPG");
+AddArt("KICKINBACK", "", "FENN- KICKINBACK", "JPG");
+AddArt("swdpose", "", "fenn - swdpose", "jpg");
+AddArt("stickymiles l bbs", "", "Fenn - stickymiles l bbs", "JPG");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

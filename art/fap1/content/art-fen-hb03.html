@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Fennec/Hboi 03/");
+AddArt("Cover and Back", "", "Fenn - HotFIT HB coverback", "JPG");
+AddArt("Pages 3 and 10", "", "Fenn - HotFIT HB pg 310", "JPG");
+AddArt("Pages 2 and 11", "", "Fenn - HotFIT HB pg 211", "JPG");
+AddArt("Pages 4 and 9", "", "Fenn - HotFIT HB pg 49", "JPG");
+AddArt("Pages 5 and 8", "", "Fenn - HotFIT HB pg 58", "JPG");
+AddArt("Pages 6 and 7", "", "Fenn - HotFIT HB pg 67", "JPG");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

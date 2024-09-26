@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Equis/");
+AddArt("savanna boy", "A generic spoogey lionboy I scribbled awhile back.<br>My friends ketp bugging me with cries of ''we want spoogey lion porn!''<br>So this is what they got.", "savanna_boy", "jpg");
+
+AddArt("huskypornstuff", "", "huskypornstuff", "jpg");
+AddArt("gryph-sktch", "", "gryph-sktch", "jpg");
+AddArt("sketch foxies", "", "sketch_foxies", "jpg");
+AddArt("biggod2", "", "biggod2", "jpg");
+AddArt("misha", "", "misha", "jpg");
+
+AddArt("vampire-boi", "", "vampire-boi", "jpg");
+AddArt("spear-otter", "", "spear-otter", "jpg");
+AddArt("coonbutt", "", "coonbutt", "jpg");
+AddArt("bunny2", "", "bunny2", "jpg");
+AddArt("eq bunny 700px", "", "eq_bunny_700px", "jpg");
+AddArt("4swim col", "", "4swim_col", "jpg");
+AddArt("Ferdiad", "", "Ferdiad", "jpg");
+AddArt("alcarde2", "", "alcarde2", "jpg");
+AddArt("volaircol finished", "The incredibly flamey and cute bisexual super spy fox from Allan Ecker's amusing webcomic ''Umlaut house''. When i discovered the comic, i couldnt resist drawing some fanart for Allan, who has kindly given me permission to use the image on this cd. Yay.", "volaircol_finished", "jpg");
+AddArt("sketch otter", "", "sketch_otter", "jpg");
+AddArt("joker prelim", "", "joker_prelim", "jpg");
+AddArt("marat unfinished", "", "marat_unfinished", "jpg");
+AddArt("morningstar", "", "morningstar", "jpg");
+AddArt("fel sketches", "", "fel_sketches", "jpg");
+AddArt("good puppy col", "", "good_puppy_col", "jpg");
+AddArt("equisfox1", "", "equisfox1", "jpg");
+AddArt("dragon unfinished", "", "dragon_unfinished", "jpg");
+AddArt("3friends", "", "3friends", "jpg");
+AddArt("rivet-hedge-col", "I was inspired to draw this by a friends pet hedgehog. She's a tough little thing, and bristly even if extremely adorable.", "rivet-hedge-col", "jpg");
+AddArt("chibi eq col", "A little scribble of me! He's so cute and and horsey! And yes, that IS a horse cock, and not a loincloth between his legs.", "chibi_eq_col", "jpg");
+AddArt("Calico-otter", "I drew this in a sketchbook for Christicalico on new years eve 2002.  I had drank more than my share of vodka by the time the sketchbooks came out,  so I'm amazed it is even recognizable as a figure.", "Calico-otter", "jpg");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

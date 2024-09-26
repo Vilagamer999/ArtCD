@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/NaniMoose/Not Totally Gay/");
+
+AddArt("Bunnies", "A pair of bunnies. (unreleased)", "Bunnies", "jpg");
+AddArt("3 Girls", "", "3girls", "jpg");
+AddArt("Powder-Pre", "Preliminary drawing of Powder (unreleased)", "Powder-Pre", "png");
+AddArt("Jasmine-in-Shirt", "", "Jasmine-in-Shirt", "jpg");
+AddArt("Red Panda Chick", "She floats and masturbates!", "Red_Panda_Chick", "png");
+AddArt("Red Panda Chick 2", "Now she's just horny!", "Red_Panda_Chick_2", "jpg");
+AddArt("Kilika in Mecha Cockpit", "", "Kilika_in_Mecha_Cockpit", "jpg");
+AddArt("Nurse", "", "Nurse", "jpg");
+AddArt("Catgirl and Mirror", "", "Catgirl_and_Mirror", "jpg");
+AddArt("Graveyard Shift", "Obligatory spooky halloween pic!", "Graveyard_Shift", "jpg");
+AddArt("Humiliation", "Somebody's been a bad pet.", "Humiliation", "png");
+AddArt("Saddle Up", "I don't usually do these open-vagina shots, but I had to prove to the Japanese perverts that they don't have a monopoly.  The kanji by the sig reads Na-Ni Mu-Su, if I got it right.", "Saddle_Up", "png");
+AddArt("Watercolor Vixen", "", "Watercolor_Vixen", "jpg");
+AddArt("Pet", "Adopt a kitten!", "Pet", "jpg");
+AddArt("Jasmine Sloppy", "", "Jasmine Sloppy", "png");
+AddArt("Quick N' Dirty", "A very quick and very very dirty sketch.", "Quick_N_Dirty", "png");
+AddArt("Deamon Bat", "Random generic demon bat girl.  With clothes, sort of.", "Deamon_Bat", "png");
+AddArt("Ride Em Cowgirl", "This must be what they call a ''Dude Ranch''.", "Ride_Em_Cowgirl", "png");
+AddArt("Foxy Style", "", "Foxy_Style", "jpg");
+AddArt("Love and Mohan", "", "Love and Mohan", "jpg");
+AddArt("Shower Diva", "", "Shower_Diva", "png");
+AddArt("Does A Body Good", "Blame Stylix.", "Does_A_Body_Good", "png");
+AddArt("Naughty Girls", "Homosexuality isn't just for bois!", "Naughty_Girls", "png");
+AddArt("Naughty Girls 2", "The People demanded more lesbians!  You sick, perverted people.", "Naughty_Girls_2", "png");
+AddArt("Patent Pending", "", "patent_pending", "png");
+AddArt("Herbal Remedy", "Her name's ''Horehound''. After the herb. Yup.", "Herbal_Remedy", "png");
+AddArt("Melt", "", "Melt", "png");
+AddArt("Siamese Twins", "Joined at the hip.", "Siamese_Twins", "png");
+AddArt("Flora", "I saw this weird book about painting cats. It claims (and it may all be a joke) that some artists will color a pet cat's fur with vegetable dye to create very intricate patterns for about $3000. So, here's what I think a painted anthro cat would look like.", "Flora", "jpg");
+AddArt("Piggie", "", "Piggie", "png");
+AddArt("Cat Girls", "", "Cat_Girls", "png");
+AddArt("Guppi", "It's Guppy's long-lost twin sister, who likes cock almost as much as he does!", "Guppi", "png");
+AddArt("Catgirl Practice", "", "Catgirl_Practice", "png");
+AddArt("Mousey Girl", "It looks like she was really enjoying what she was reading.", "Mousey_Girl", "png");
+AddArt("Vampires Question", "...Food or sex, food or sex? My first attempt at a more violent subject.", "Vampires_Question", "png");
+AddArt("Pearl Necklace", "", "Pearl_Necklace", "png");
+AddArt("Okapi Bukkake Oekaki", "", "Okapi_Bukkake_Oekaki", "png");
+AddArt("Mouse and Mushrooms", "", "Mouse_and_Mushrooms", "png");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

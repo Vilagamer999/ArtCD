@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/FoxxFire/inks/");
+AddArt("chiratani-ekiraith", "", "chiratani-ekiraith", "gif");
+AddArt("foxuni", "", "foxuni", "gif");
+AddArt("g-girl", "", "g-girl", "gif");
+AddArt("happy time", "", "happy time", "gif");
+AddArt("helpingpaw", "", "helpingpaw", "gif");
+AddArt("no sheets", "", "no_sheets", "gif");
+AddArt("rest stop", "", "rest_stop", "gif");
+AddArt("spermin", "", "spermin", "gif");
+AddArt("three by sea", "", "three_by_sea", "gif");
+AddArt("unstrapped", "", "unstrapped", "gif");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

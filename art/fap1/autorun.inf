@@ -1,0 +1,5 @@
+[autorun]
+icon=content\fap.ico
+label=FAP Session One
+open=explorer ClickMe.html
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Fennec/Fenn\'s Pics 2002/");
+AddArt("dj-fennec", "", "fenn - dj-fennec", "jpg");
+AddArt("togo-amunra", "", "fenn - togo-amunra", "jpg");
+AddArt("4 mav", "", "Fenn - 4 mav  cc", "JPG");
+AddArt("squeekfox", "", "fenn - squeekfoxS", "JPG");
+AddArt("kody's TOYS", "", "fenn - kody's TOYS", "JPG");
+AddArt("NiGHT WATCH", "", "FENN - NiGHT WATCH CC", "JPG");
+AddArt("makoto", "", "fenn - makoto (c)s", "JPG");
+AddArt("for rekky", "", "fenn - for rekky", "JPG");
+AddArt("eep", "", "fenn - eep Cs", "JPG");
+AddArt("4 FOXEN", "", "FENN - 4 FOXEN", "JPG");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

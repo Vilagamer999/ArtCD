@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/FoxxFire/sketches/");
+AddArt("with mayo", "", "with_mayo", "gif");
+AddArt("cheetahlionyank", "", "cheetahlionyank", "gif");
+AddArt("ddr", "", "ddr", "gif");
+AddArt("duh", "", "duh", "gif");
+AddArt("bunny spray", "", "bunny spray", "jpg");
+AddArt("measurments", "", "measurments", "jpg");
+AddArt("buck-colt-foxxfire", "", "buck-colt-foxxfire", "jpg");
+AddArt("2on1", "", "2on1", "jpg");
+AddArt("loup", "", "loup", "jpg");
+AddArt("bunnyhop", "", "bunnyhop", "jpg");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

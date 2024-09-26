@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Fennec/Fenn\'s Pics 2001/");
+AddArt("Rosco Coon", "", "Fenn - rosco coon c S", "JPG");
+AddArt("CABBITFOX", "", "FENN- CABBITFOX S", "JPG");
+AddArt("CIRRUS", "", "fenn - CIRRUS s", "JPG");
+AddArt("bounder", "", "Fenn - bounder s", "jpg");
+AddArt("TINTIN", "", "FENN-TINTIN CC", "JPG");
+AddArt("kenji", "", "fenn-kenji Cc", "JPG");
+AddArt("GRI G SPOT!", "", "FENN-GRI G SPOT!", "JPG");
+AddArt("TUCKcolss", "", "FENN-TUCKcolss", "JPG");
+AddArt("cha2-fennchibi", "", "cha2-fennchibiCOLs", "JPG");
+AddArt("cool chop", "", "fenn-cool chop", "JPG");
+AddArt("the eagle", "", "Fenn -the eagle (s)", "JPG");
+AddArt("LILHOUSES", "", "FENN-LILHOUSES", "JPG");
+AddArt("warm affection", "", "Fenn-warm affection", "jpg");
+AddArt("C I S2 PX", "", "C_I_S2 PX", "JPG");
+AddArt("STAIC CLING", "", "FENN-(STAIC CLING) (S)", "JPG");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

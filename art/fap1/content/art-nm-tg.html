@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/NaniMoose/Totally Gay/");
+
+AddArt("Fox In Corner", "He's touching himself innappropriately! (unreleased)", "Fox_In_Corner", "png");
+AddArt("Homo For The Holidays", "Yep, you guessed it.  Reindeer games.", "Homo_For_The_Holidays", "png");
+AddArt("Horny Wolf", "He likes to masaturbate!", "Horny_Wolf", "jpg");
+AddArt("Steamy Jungle", "", "Steamy_Jungle", "png");
+AddArt("Bad Fox", "He ought to be punished!", "Bad_Fox", "png");
+AddArt("Play With Me?", "He looks like he could use some company.", "Play_With_Me", "png");
+AddArt("Cotton Tail", "", "Cotton_Tail", "png");
+AddArt("Twilight", "", "Twilight", "png");
+AddArt("Pandas", "I made this pic to play on the differences between normal and red pandas.  And not just an excuse to draw a mammoth penis.  Honest.", "Pandas", "png");
+AddArt("Beating Around the Bush", "A canine of some sort takes a moment to satisfy himself.", "Beating_Around_the_Bush", "png");
+AddArt("In Da Wadda", "Just a pic of Randy and Spiedo doing naughty things in the lake.", "In_Da_Wadda", "png");
+AddArt("Mastedonic American Penis", "W00T indeed, little kitty.  W00T indeed.", "Mastedonic_American_Penis", "png");
+AddArt("Messy Wolf", "", "Messy_Wolf", "png");
+AddArt("Coon Boy", "", "Coon_Boy", "png");
+AddArt("The Night Before", "This is what Randy was up to the night before the first page of my comic, Randy's Glade", "The_Night_Before", "png");
+AddArt("Mouse Boy In Socks", "", "Mouse_Boy_In_Socks", "png");
+AddArt("Nice Shot", "", "Nice_Shot", "png");
+AddArt("One", "Drawn on Guppy's birthday in an obvious attempt to start a chain of similar pictures.", "One", "png");
+AddArt("Gratuitous Spooge", "I just have to draw it now and then.", "Gratuitous_Spooge", "png");
+AddArt("Starlight", "Another ''painted cat'' picture.", "Starlight", "png");
+AddArt("Spring Thaw", "Everyone seemed to miss the foxes, me included.  I managed to get all three dicks showing!", "Spring_Thaw", "png");
+AddArt("Beating A Rainy Day", "I pray to the immortal spirit of the great Bob Ross.  May he keep my waters reflective and my trees happy.", "Beating_A_Rainy_Day", "png");
+AddArt("MerryChristmas", "Don we now our gay apparel!", "MerryChristmas", "png");
+AddArt("PublicServiceAnnouncement", "Please be careful how you dispose of your anatomically-correct ice sculptures this winter. Passing snow cats could get seriously injured!", "PublicServiceAnnouncement", "png");
+AddArt("Mucho Muchacho", "''Care to join me for some drinks and a good hard fuck?''", "Mucho_Muchacho", "png");
+AddArt("69", "My 69th oekaki picture.", "69", "png");
+AddArt("Perspective Practice", "Okay, cock practice.", "Perspective_Practice", "png");
+AddArt("Seduction I", "Sacrilege is fun!", "Seduction", "png");
+AddArt("Seduction II", "More of the angelic/demonic pair.  They're so cute!", "Seduction_2", "png");
+AddArt("Seduction III", "The angel begins to suspect that this may not have been such a good idea after all.", "Seduction_3", "png");
+AddArt("Seduction IV", "Abandoned and outcast, the angel faces sorrow for his first time.", "Seduction_4", "png");
+AddArt("Seduction V", "Perhaps being stuck on the Earth won't too bad for our fallen angel, after all.  The moral of the story is ''Cock Is Good.''","Seduction_5", "png");
+AddArt("Sleepin With Fishes", "Well, the cuttlefishes at any rate. Just felt the need to disturb you all nice and good.", "Sleepin_With_Fishes", "png");
+AddArt("Slave Trade", "Poor little fennec boy is being purchased.", "Slave_Trade", "png");
+AddArt("Horny Rhino", "I don't do requests often, but since Complication_5 was the first poster on my new message board, I drew him a horny rhino.  It's kind of a quickie, but I'm using some weird shading technique I haven't done before to get a rougher look to the skin.", "Horny_Rhino", "png");
+AddArt("Penis Freshmaker", "It doesn't matter what comes, fresh goes better in life. With Penis, fresh and full of life! Nothing gets to you! Staying fresh, staying cool, with Penis, fresh and full of life! Fresh goes better! Penis, freshness! Fresh goes better, with Penis, fresh and full of life!", "Penis_Freshmaker", "png");
+AddArt("Best Brothers Ever", "Return of 3-way fox action!  I decided they should be brothers, too, because incest is hot.  When other people do it.", "Best_Brothers_Ever", "png");
+AddArt("Fox Brothers 2", "By popular demand, the fox brothers go at it.", "Fox_Brothers_2", "png");
+AddArt("Fox Brothers Climax", "Well, I drew them fondling, then fucking, so I had to finish the sequence.. Yay for spooge!", "Fox_Brothers_Climax", "png");
+AddArt("Black Cat on Halloween", "He doesn't have much of a costume, but he gets ALL the candy.", "Black_Cat_on_Halloween", "png");
+AddArt("Sepia Leopard", "An experiment in odd coloring, for Guppy's Spot-themed Iron Artist challenge.", "Sepia_Leopard", "png");
+AddArt("Woof", "Trying to get a better handle on how to draw dog/wolf canine types.  Yummeh.", "Woof", "png");
+AddArt("Armpit Sex", "Brand new sexy fetish.  Oh yeah!", "Armpit_Sex", "png");
+AddArt("Otter Sex", "Otters like to play in the water.", "Otter_Sex", "png");
+AddArt("Catnap", "", "Catnap", "png");
+AddArt("Swank", "Swank cheetah drinks a swank martini in his swank shag pad with a swank erection.  Did I mention the swank?", "Swank", "png");
+AddArt("More Kitty Porn", "", "More_Kitty_Porn", "png");
+AddArt("Bats Arent Gothy", "...they're cute!  I've always liked bats", "Bats_Arent_Gothy", "png");
+AddArt("Foxes", "My first 3-fox orgy picture.  Watch out, it's addictive!", "Foxes", "png");
+AddArt("Foxes2", "A second 3-fox orgy drawn right after the first.", "Foxes2", "png");
+AddArt("Cats Are Cocksluts", "The title says it all.  Go Guppy!", "Cats_Are_Cocksluts", "png");
+AddArt("Messy Kitty", "Oh no, Kitty made a mess!  Who will help him clean up?", "Messy_Kitty", "png");
+AddArt("Swedish Penis Pump", "This sort of thing really is my bag, baby.", "Swedish_Penis_Pump", "png");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

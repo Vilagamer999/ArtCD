@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Ian R. Soulfox/Still/");
+AddArt("SFX-Anubek", "", "SFX-Anubek", "jpg");
+AddArt("SFX-Brownbear Tigger", "", "SFX-Brownbear_Tigger", "gif");
+AddArt("SFX-Growth To Manhood Ritual", "", "SFX-Growth_To_Manhood_Ritual", "jpg");
+AddArt("SFX-NudeSkunk", "", "SFX-NudeSkunk", "jpg");
+AddArt("SFX-Mahmut", "", "SFX-Mahmut", "jpg");
+AddArt("SFX-Trejaan", "", "SFX-Trejaan", "jpg");
+AddArt("SFX-Djago Vlen", "", "SFX-Djago_Vlen", "jpg");
+AddArt("SFX-Midnight Flight", "", "SFX-Midnight_Flight", "jpg");
+AddArt("SFX-Consolation", "", "SFX-Consolation", "jpg");
+AddArt("SFX-Bik Lunarwolf-c", "", "SFX-Bik_Lunarwolf-c", "jpg");
+AddArt("SFX-SnoDrak Sucking", "", "SFX-SnoDrak_Sucking", "jpg");
+AddArt("SFX-Soulfox Bound2", "", "SFX-Soulfox_Bound2", "JPG");
+AddArt("SFX-Soulfox Behind", "", "SFX-Soulfox_Behind", "jpg");
+AddArt("SFX-Raamah's Dance", "", "SFX-Raamah's_Dance", "jpg");
+AddArt("SFX-Lion Balloon", "", "SFX-Lion_Balloon", "jpg");
+AddArt("SFX-Foxstar Soulfox", "", "SFX-Foxstar_Soulfox", "jpg");
+AddArt("SFX-for-guppy2", "", "SFX-for-guppy2", "jpg");
+AddArt("SFX-FEL-happyhalloween", "", "SFX-FEL-happyhalloween", "jpg");
+AddArt("SFX-Tight Fit-Pittman", "", "SFX-Tight_Fit-Pittman", "jpg");
+AddArt("SFX-FEL-Gloom-Fennec-Collaboration", "", "SFX-FEL-Gloom-Fennec-Collaboration", "jpg");
+AddArt("SFX-YSimbaSketchbook", "", "SFX-YSimbaSketchbook", "jpg");
+AddArt("SFX-TeserSketchbook", "", "SFX-TeserSketchbook", "jpg");
+AddArt("SFX-Bik Lunar Yiffy Final", "", "SFX-Bik_Lunar_Yiffy_Final", "jpg");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

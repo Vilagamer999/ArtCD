@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAP Session 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAP Session 1</h1>
+        </header>
+
+        <div id="iconrow"></div>
+
+        <div id="nav">
+            <img id="prevButton" src="img/prevoff.png" alt="Previous" onclick="DoPrev()">
+            <img id="zoomButton" src="img/full.png" alt="Full Size" onclick="openFullImage(ImgShown)">
+            <img id="nextButton" src="img/next.png" alt="Next" onclick="DoNext()">
+        </div>
+
+        <div id="disp" role="main"></div>
+    </div>
+
+    <script>
+        
+
+SetArtDirectory("../art/Fennec/Special 2002 print run/");
+AddArt("okapi", "", "Fenn - okapi c(print)", "JPG");
+AddArt("PLAYTIME 07", "", "FENN - PLAYTIME 07", "JPG");
+AddArt("swishy GS 05", "", "fenn - swishy GS 05", "JPG");
+AddArt("TREENYUM", "", "FENN - TREENYUM (10)", "JPG");
+AddArt("warmedup", "", "fenn - warmedup (print)", "JPG");
+AddArt("WHATARIDE 06", "", "FENN - WHATARIDE 06", "JPG");
+AddArt("MILESKNOCK 03", "", "FENN - MILESKNOCK 03", "JPG");
+AddArt("MESSYBED 01", "", "FENN - MESSYBED 01", "JPG");
+AddArt("herc", "", "fenn - herc - HP CL print", "JPG");
+AddArt("naughtyHURST", "", "fenn - naughtyHURST L", "JPG");
+
+
+
+        // Initialize the gallery
+        document.addEventListener("DOMContentLoaded", Init);
+    </script>
+</body>
+</html>

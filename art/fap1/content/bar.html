@@ -1,0 +1,32 @@
+<html><head><title>FAP Session 1</title>
+<link rel="stylesheet" type="text/css" href="style.css" title="Default">
+<script language="JavaScript">
+
+function SetBar(args) {
+  var c = "";
+  if (args == null) {
+    c = "<b>FAP Artists</b>";
+  } else {
+    c = "<a href=\"title.html\" target=\"content\">FAP Artists</a>";
+    var subs = args.split(";");
+    for (n = 0; n < subs.length; n++) {
+      var p = subs[n].split(",");
+      if (n == 0) {top.ThisArtist = p[1];}
+      if (n == subs.length - 1) {
+	c += " &gt; <b>"+p[0]+"</b>";
+      } else {
+	c += " &gt; <a href=\""+p[1]+"\" target=\"content\">"+p[0]+"</a>";
+      }
+    }
+  }
+
+  var e = document.getElementById("bar");
+  e.innerHTML = c;
+}
+
+</script>
+</head><body class="bar"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>
+<td class="l" id="bar">&nbsp;</td>
+<td class="r"><a target="content" href="title.html"><img src="img/daisy.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="equis.html"><img src="img/m-equis.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="fel.html"><img src="img/m-fel.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="fennec.html"><img src="img/m-fennec.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="foxxfire.html"><img src="img/m-foxx.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="greenmonkey.html"><img src="img/m-greenmonkey.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="grrrwolf.html"><img src="img/m-grrrwolf.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="guppy.html"><img src="img/m-guppy.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="soulfox.html"><img src="img/m-soulfox.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="nanimoose.html"><img src="img/m-nanimoose.gif" width="18" height="18" border="0"></a><img src="img/trans.gif" width="2" height="18"><a target="content" href="wookiee.html"><img src="img/m-wookiee.gif" width="18" height="18" border="0"></a></td>
+</tr></table>
+</body></html>
