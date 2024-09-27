@@ -24,43 +24,12 @@
         .gallery-item:hover {
             background-color: #f0f0f0;
         }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            justify-content: center;
-            align-items: center;
-        }
-        .popup-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <h1>Flash Animation Gallery</h1>
     <div class="gallery" id="gallery"></div>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <div id="ruffle-container"></div>
-        </div>
-    </div>
 
-    <script src='https://e9x.github.io/ruffle-example/ruffle.js'></script>
     <script>
         const flashAnimations = [
         { name: "Wet Hump On The Wall", file: "wet hump on the wall.swf" },
@@ -71,7 +40,6 @@
         { name: "Bunny And Dragon.Swf(Yaoi).Swf(Yaoi(=)", file: "Bunny_and_Dragon.swf(yaoi).swf(yaoi(=).swf" },
         { name: "Threesome", file: "threesome.swf" },
         { name: "Horsewerewolf.Swf", file: "horsewerewolf.swf.swf" },
-        { name: "Animationfinalehd", file: "AnimationfinaleHD.swf" },
         { name: "Thin Horse Solo Jerkoff", file: "thin horse solo jerkoff.swf" },
         { name: "M 1227351671639.Marvin The Secret Of The Restroom ", file: "m_1227351671639.marvin_the_secret_of_the_restroom_.swf" },
         { name: "Husky N Wolf Bj", file: "husky n wolf bj.swf" },
@@ -114,27 +82,8 @@
         }
 
         function openAnimation(file) {
-            const popup = document.getElementById('popup');
-            const container = document.getElementById('ruffle-container');
-            container.innerHTML = ''; // Clear previous content
-
-            const ruffle = window.RufflePlayer.newest();
-            const player = ruffle.createPlayer();
-            container.appendChild(player);
-            player.style.width = '800px';
-            player.style.height = '600px';
-            
-            const url = `https://raw.githubusercontent.com/user/user/refs/heads/main/${encodeURIComponent(file)}`;
-            player.load({ url: url });
-
-            popup.style.display = 'flex';
-        }
-
-        function closePopup() {
-            const popup = document.getElementById('popup');
-            popup.style.display = 'none';
-            const container = document.getElementById('ruffle-container');
-            container.innerHTML = ''; // Clear content when closing
+            const url = `player.html?file=${encodeURIComponent(file)}`;
+            window.open(url, '_blank');
         }
 
         // Initialize the gallery

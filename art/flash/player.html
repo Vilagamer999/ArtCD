@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset='utf8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Player</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #ruffle-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+    <div id="ruffle-container"></div>
+    <button id="play-button">Click to Play</button>
+    <script>
+        let player;
+
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const file = urlParams.get('file');
+            
+            if (file) {
+                const container = document.getElementById('ruffle-container');
+                const ruffle = window.RufflePlayer.newest();
+                player = ruffle.createPlayer();
+                container.appendChild(player);
+                
+                const url = `https://raw.githubusercontent.com/Vilagamer999/ArtCD/main/art/flash/${encodeURIComponent(file)}`;
+                
+                // Set initial size
+                player.style.width = '100%';
+                player.style.height = '100%';
+                
+                // Wait for user interaction to start the player
+                const playButton = document.getElementById('play-button');
+                playButton.addEventListener('click', () => {
+                    playButton.style.display = 'none';
+                    // Load the Flash file with the correct configuration
+                    player.load({
+                        url: url,
+                        allowScriptAccess: false,
+                        autoplay: "auto",
+                        backgroundColor: "#000000",
+                        wmode: "window"
+                    });
+                });
+                
+                // Resize function
+                function resizePlayer() {
+                    const aspectRatio = player.offsetWidth / player.offsetHeight;
+                    const windowRatio = window.innerWidth / window.innerHeight;
+                    
+                    if (windowRatio > aspectRatio) {
+                        player.style.height = '100%';
+                        player.style.width = 'auto';
+                    } else {
+                        player.style.width = '100%';
+                        player.style.height = 'auto';
+                    }
+                }
+                
+                // Resize on window resize
+                window.addEventListener('resize', resizePlayer);
+                
+                // Initial resize
+                resizePlayer();
+            } else {
+                document.body.innerHTML = 'No Flash file specified.';
+            }
+        });
+    </script>
+</body>
+</html>
