@@ -10,18 +10,32 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f0f0f0;
+            background-color: #000000;
+            overflow: hidden;
         }
         #container {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #ruffle-player {
+            max-width: 100vw;
+            max-height: 100vh;
         }
     </style>
 </head>
 <body>
-    <div id="container"></div>
+    <div id="container">
+        <div id="ruffle-player"></div>
+    </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -29,19 +43,43 @@
         const baseUrl = "https://raw.githubusercontent.com/Vilagamer999/ArtCD/main/art/flash/";
         
         if (file) {
-            const container = document.getElementById('container');
+            const container = document.getElementById('ruffle-player');
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
-            player.style.width = '800px';
-            player.style.height = '600px';
+            player.id = 'ruffle-player';
             container.appendChild(player);
 
             player.load(baseUrl + file);
 
             // Set the page title to the file name
             document.title = "Playing: " + file;
+
+            // Function to resize and center the player
+            function resizePlayer() {
+                const aspectRatio = 4/3; // Assuming most Flash content is 4:3
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                const windowRatio = windowWidth / windowHeight;
+                
+                let playerWidth, playerHeight;
+
+                if (windowRatio > aspectRatio) {
+                    playerHeight = windowHeight;
+                    playerWidth = playerHeight * aspectRatio;
+                } else {
+                    playerWidth = windowWidth;
+                    playerHeight = playerWidth / aspectRatio;
+                }
+
+                player.style.width = `${playerWidth}px`;
+                player.style.height = `${playerHeight}px`;
+            }
+
+            // Resize on load and window resize
+            window.addEventListener('load', resizePlayer);
+            window.addEventListener('resize', resizePlayer);
         } else {
-            document.body.innerHTML = '<p>No file specified</p>';
+            document.body.innerHTML = '<p style="color: white;">No file specified</p>';
         }
     </script>
 </body>

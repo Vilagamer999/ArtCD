@@ -1,82 +1,131 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset='utf8'>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Gallery with Ruffle</title>
+    <title>Flash Animation Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            justify-content: center;
         }
         .gallery-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .gallery-item:hover {
-            background-color: #f0f0f0;
+            transform: translateY(-5px);
+        }
+        .preview {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .file-name {
+            padding: 10px;
+            text-align: center;
+            word-break: break-word;
         }
     </style>
 </head>
 <body>
     <h1>Flash Animation Gallery</h1>
-    <div class="gallery" id="gallery"></div>
+    <div id="gallery" class="gallery"></div>
 
     <script>
         const flashAnimations = [
-        { name: "Wet Hump On The Wall", file: "wet hump on the wall.swf" },
-        { name: "1290460440.H0Rs3 Yiffyhusky2", file: "1290460440.h0rs3_yiffyhusky2.swf" },
-        { name: "Threesome With Bunny Dog And Dog", file: "threesome with bunny dog and dog.swf" },
-        { name: "Kaji", file: "kaji.swf" },
-        { name: "Masters Good Dog", file: "Masters Good Dog.swf" },
-        { name: "Bunny And Dragon.Swf(Yaoi).Swf(Yaoi(=)", file: "Bunny_and_Dragon.swf(yaoi).swf(yaoi(=).swf" },
-        { name: "Threesome", file: "threesome.swf" },
-        { name: "Horsewerewolf.Swf", file: "horsewerewolf.swf.swf" },
-        { name: "Thin Horse Solo Jerkoff", file: "thin horse solo jerkoff.swf" },
-        { name: "M 1227351671639.Marvin The Secret Of The Restroom ", file: "m_1227351671639.marvin_the_secret_of_the_restroom_.swf" },
-        { name: "Husky N Wolf Bj", file: "husky n wolf bj.swf" },
-        { name: "Balton Ff 3Way", file: "balton ff 3way.swf" },
-        { name: "Twinkle-Sez Bj.Swf(Yaoi Blowjob) (1)", file: "Twinkle-sez_bj.swf(yaoi blowjob) (1).swf" },
-        { name: "Wolf Top N Horse Christmas", file: "wolf top n horse christmas.swf" },
-        { name: "Loin And Foxs Humps Sideways", file: "loin and foxs humps sideways.swf" },
-        { name: "Foxgear Animation", file: "foxgear animation.swf" },
-        { name: "Threesome Hd", file: "threesome HD.swf" },
-        { name: "Husky Anal Loop", file: "husky anal loop.swf" },
-        { name: "Huskyndog", file: "huskyndog.swf" },
-        { name: "Solo Play", file: "solo play.swf" },
-        { name: "Yiff On The Dance Floor", file: "yiff on the dance floor.swf" },
-        { name: "Yiffy-Husky", file: "yiffy-husky.swf" },
-        { name: "Red13", file: "red13.swf" },
-        { name: "Wolfywetfurr Wolfy Mounts Owen", file: "wolfywetfurr_wolfy_mounts_owen.swf" },
-        { name: "Diamondanim1Hq", file: "diamondanim1HQ.swf" },
-        { name: "Everybody Loves Arti", file: "everybody_loves_arti.swf" },
-        { name: "Humping", file: "humping.swf" },
-        { name: "Fox And A Dragon", file: "fox and a dragon.swf" },
-        { name: "Canine W Mask Solo Jerkoff", file: "canine w mask solo jerkoff.swf" },
-        { name: "Straight Canine Missionary", file: "straight canine missionary.swf" },
-        { name: "Canines Missionary On Floor", file: "canines missionary on floor.swf" },
-        { name: "Horse Top N Wolf Anal", file: "horse top n wolf anal.swf" },
-        { name: "Solo Wolf Jerkoff Stripng Pole", file: "solo wolf jerkoff stripng pole.swf" },
-        { name: "Redrskr N Horse", file: "redrskr n horse.swf" },
-        { name: "Wereblood Foxessnowcom.Swf(Yaoi)", file: "wereblood_foxessnowcom.swf(yaoi).swf" },
-        { name: "Balto N Bolt Anal", file: "balto n bolt anal.swf" }
-    ];
+            { name: "Wet Hump On The Wall", file: "wet hump on the wall.swf" },
+            { name: "H0Rs3 Yiffyhusky2", file: "1290460440.h0rs3_yiffyhusky2.swf" },
+            { name: "Threesome With Bunny Dog And Dog", file: "threesome with bunny dog and dog.swf" },
+            { name: "Kaji", file: "kaji.swf" },
+            { name: "Masters Good Dog", file: "Masters Good Dog.swf" },
+            { name: "Bunny And Dragon (Yaoi)", file: "Bunny_and_Dragon.swf(yaoi).swf(yaoi(=).swf" },
+            { name: "Threesome", file: "threesome.swf" },
+            { name: "Horsewerewolf", file: "horsewerewolf.swf.swf" },
+            { name: "Thin Horse Solo Jerkoff", file: "thin horse solo jerkoff.swf" },
+            { name: "Marvin The Secret Of The Restroom", file: "m_1227351671639.marvin_the_secret_of_the_restroom_.swf" },
+            { name: "Husky N Wolf Bj", file: "husky n wolf bj.swf" },
+            { name: "Balton Ff 3Way", file: "balton ff 3way.swf" },
+            { name: "Twinkle-Sez Bj (Yaoi Blowjob)", file: "Twinkle-sez_bj.swf(yaoi blowjob) (1).swf" },
+            { name: "Wolf Top N Horse Christmas", file: "wolf top n horse christmas.swf" },
+            { name: "Loin And Foxs Humps Sideways", file: "loin and foxs humps sideways.swf" },
+            { name: "Foxgear Animation", file: "foxgear animation.swf" },
+            { name: "Threesome Hd", file: "threesome HD.swf" },
+            { name: "Husky Anal Loop", file: "husky anal loop.swf" },
+            { name: "Huskyndog", file: "huskyndog.swf" },
+            { name: "Solo Play", file: "solo play.swf" },
+            { name: "Yiff On The Dance Floor", file: "yiff on the dance floor.swf" },
+            { name: "Yiffy-Husky", file: "yiffy-husky.swf" },
+            { name: "Red13", file: "red13.swf" },
+            { name: "Wolfywetfurr Wolfy Mounts Owen", file: "wolfywetfurr_wolfy_mounts_owen.swf" },
+            { name: "Diamondanim1Hq", file: "diamondanim1HQ.swf" },
+            { name: "Everybody Loves Arti", file: "everybody_loves_arti.swf" },
+            { name: "Humping", file: "humping.swf" },
+            { name: "Fox And A Dragon", file: "fox and a dragon.swf" },
+            { name: "Canine W Mask Solo Jerkoff", file: "canine w mask solo jerkoff.swf" },
+            { name: "Straight Canine Missionary", file: "straight canine missionary.swf" },
+            { name: "Canines Missionary On Floor", file: "canines missionary on floor.swf" },
+            { name: "Horse Top N Wolf Anal", file: "horse top n wolf anal.swf" },
+            { name: "Solo Wolf Jerkoff Stripng Pole", file: "solo wolf jerkoff stripng pole.swf" },
+            { name: "Redrskr N Horse", file: "redrskr n horse.swf" },
+            { name: "Wereblood Foxessnowcom (Yaoi)", file: "wereblood_foxessnowcom.swf(yaoi).swf" },
+            { name: "Balto N Bolt Anal", file: "balto n bolt anal.swf" }
+        ];
+
 
         function createGallery() {
             const gallery = document.getElementById('gallery');
             flashAnimations.forEach(animation => {
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
-                item.textContent = animation.name;
                 item.onclick = () => openAnimation(animation.file);
+
+                const preview = document.createElement('div');
+                preview.className = 'preview';
+                const img = document.createElement('img');
+                img.src = 'unknown.jpg';
+                img.alt = 'Preview unavailable';
+                preview.appendChild(img);
+
+                const fileName = document.createElement('div');
+                fileName.className = 'file-name';
+                fileName.textContent = animation.name;
+
+                item.appendChild(preview);
+                item.appendChild(fileName);
                 gallery.appendChild(item);
             });
         }
