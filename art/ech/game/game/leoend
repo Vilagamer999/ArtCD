@@ -1,7 +1,0 @@
-label leoend:
-scene bg black 
-with slow_dissolve
-stop background fadeout 3.0
-"To be continued..."
-
-return
