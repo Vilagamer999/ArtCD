@@ -341,7 +341,7 @@
             $('.booklist').innerHTML = books.map(book => `
                 <li class="book">
                     <img class="cover" src="${book.cover}" alt="Cover of ${book.title}" 
-                        onerror="this.src='covers/generic.webp'">
+                        onerror="this.src='./covers/generic.webp'">
                     <div class="info">
                         <h2>${book.title}</h2>
                         <p class="meta">
@@ -349,8 +349,8 @@
                             ${book.genre} · ${book.format.toUpperCase()}
                         </p>
                         <div class="actions">
-                            <button data-book-path="${book.path}">Read</button>
-                            <a href="${book.path}" download>
+                            <button data-book-path="./books/${book.path}">Read</button>
+                            <a href="./books/${book.path}" download>
                                 <button>Download</button>
                             </a>
                         </div>
