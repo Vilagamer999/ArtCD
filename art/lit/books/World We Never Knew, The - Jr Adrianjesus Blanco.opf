@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">58</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">200e9447-be3e-4b61-a3e0-68fbaa148be8</dc:identifier>
+        <dc:title>The World We Never Knew</dc:title>
+        <dc:creator opf:file-as="Adrianjesus Blanco, Jr" opf:role="aut">Jr Adrianjesus Blanco</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+        <dc:description>The World We Never knew is an anthropomorphic story set in modern day which takes the reader to a different world.  It is a love story, and adventure with a wolf named Dotson and his love Crista.</dc:description>
+        <dc:language>eng</dc:language>
+        <dc:subject>comedy</dc:subject>
+        <dc:subject>anthropomorphic</dc:subject>
+        <dc:subject>love</dc:subject>
+        <meta content="{&quot;Jr Adrianjesus Blanco&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:06.251494+00:00" name="calibre:timestamp"/>
+        <meta content="World We Never Knew, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="World We Never Knew, The - Jr Adrianjesus Blanco.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

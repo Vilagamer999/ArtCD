@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">10</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">6b7ce3af-7186-4e06-8682-f2540cdd3177</dc:identifier>
+        <dc:title>Rocky Beginnings: Part 1 (The Snow Adventure)</dc:title>
+        <dc:creator opf:file-as="Estes, Danny C" opf:role="aut">Danny C Estes</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-11-12T23:00:00+00:00</dc:date>
+        <dc:identifier opf:scheme="MOBI-ASIN">B07KJRC98D</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Danny C Estes&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:49.370621+00:00" name="calibre:timestamp"/>
+        <meta content="Rocky Beginnings: Part 1 (The Snow Adventure)" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

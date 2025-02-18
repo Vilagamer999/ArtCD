@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">29</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">39da08c7-1ddc-4f47-b856-bcb750469494</dc:identifier>
+        <dc:title>Pit Fighters 1. The Opportunity</dc:title>
+        <dc:creator opf:file-as="Griffin, Rick" opf:role="aut">Griffin, Rick</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2019-01-12T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;Join the Pit Fighters in its 77th season! We need new, fresh fighters willing to shake up the status quo and go all the way! Fame and fortune could be yours! Ages 16+, any body type, any skill level, no formal training required! Average monthly winnings start at 6600Ƌ.   &lt;/p&gt;
+&lt;p&gt;The start of a new series by Rick Griffin takes place on the Mediterranean paradise island of St. Marten-Cristo. Paris the rabbit finds himself unhappy with how his romantic life has been going, but learns his favorite sport, Pit Fighting, is open to new recruits. Could he possibly find happiness in the seedy world of arena fighting?&lt;/p&gt;</dc:description>
+        <dc:publisher>Rick Griffin</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">pit-fighters-1-the-opportunity</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9780463946060</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">B07MMKSG8Z</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">43567558</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Science Fiction</dc:subject>
+        <meta content="{&quot;Griffin, Rick&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="8" name="calibre:rating"/>
+        <meta content="2019-05-16T19:30:55.226573+00:00" name="calibre:timestamp"/>
+        <meta content="Pit Fighters 1. The Opportunity" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Pit Fighters 1. The Opportunity - Griffin, Rick.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

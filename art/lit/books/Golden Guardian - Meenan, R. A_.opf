@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">50</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">38e62191-5cb6-49dc-9b93-87d35a5164b9</dc:identifier>
+        <dc:title>Golden Guardian</dc:title>
+        <dc:creator opf:file-as="Meenan, R. A." opf:role="aut">Meenan, R. A.</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-03-01T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;Izzy Gildspine must find a way to activate her Gem's special powers and take her place as a Golden Guardian in the Defender army. But first she must face a trial that might take her life. . . or the life of her close friend Roscoe.&lt;/p&gt;
+
+&lt;p&gt;Izzy Gildspine is a member of the Defender Army, hoping to someday earn the title of Golden Guardian. But before she can do that, she must earn her Gem’s specialty magic... and time is running out. So when the Master Guardian himself approaches Izzy and fellow Defender Roscoe Wendigo with a means to activate her Gem, Izzy immediately takes him up on it. But Izzy quickly discovers that forcing a Gem’s activation is no walk in the park - and now her life is at stake,&lt;br /&gt;
+as well as Roscoe’s. Izzy must find the courage and strength to pass this trial and earn her place as a Golden Guardian... before the trial takes her life.&lt;/p&gt;</dc:description>
+        <dc:publisher>R. A. Meenan</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">golden-guardian-2</dc:identifier>
+        <dc:identifier opf:scheme="FICTIONDB">ra-meenan~golden-guardian~2301854~b</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781370579396</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">00f97351-2e8f-4abe-b4a7-40e930fe7dcb</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">38906346</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>magic</dc:subject>
+        <dc:subject>furry fiction</dc:subject>
+        <dc:subject>military fiction</dc:subject>
+        <dc:subject>anthro fiction</dc:subject>
+        <dc:subject>contemporary fantasy</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>Speculative Fiction</dc:subject>
+        <meta content="{&quot;Meenan, R. A.&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:03.834895+00:00" name="calibre:timestamp"/>
+        <meta content="Golden Guardian" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Golden Guardian - Meenan, R. A_.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

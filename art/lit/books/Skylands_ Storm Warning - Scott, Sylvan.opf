@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">81</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">64b8b09e-7416-4d1a-a443-1ccbdd143617</dc:identifier>
+        <dc:title>Skylands: Storm Warning</dc:title>
+        <dc:creator opf:file-as="Scott, Sylvan" opf:role="aut">Scott, Sylvan</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-03-22T04:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;A storm was coming.  Antonia, who was all-too-often alone, could feel it in the air. She could feel it in her blood, in her bones, and in the words of her unusual, diminutive friend:  the mouse whose warnings rang in her ears.  This is the story of how she lost her home ... and found another.&lt;/p&gt;
+
+&lt;p&gt;The Skylands are floating continents, islands in the sky, of a fantasy realm known as Talvali. It is a patchwork world into which pieces of other lands are taken. But where do its inhabitants come from? Who are the men, women, and children who make up this diverse, strange world?
+Antonia was just a child when The Storm came. Powerful and foreboding, she nonetheless has one person at her side: a very special friend ... a human-shaped mouse who could speak. But on the playground, as the winds rise, she is torn between what she knows she must do and the words her diminutive companion tells her of the dragons to come.
+Cover art by Louis Frank.&lt;/p&gt;</dc:description>
+        <dc:publisher>Sylvan Scott</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">skylands-storm-warning</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781476185040</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Kurzgeschichten</dc:subject>
+        <dc:subject>furry</dc:subject>
+        <dc:subject>adventure</dc:subject>
+        <dc:subject>Belletristik &amp; Literatur</dc:subject>
+        <dc:subject>skylands</dc:subject>
+        <dc:subject>magic</dc:subject>
+        <dc:subject>thaylene</dc:subject>
+        <dc:subject>anthrofiction</dc:subject>
+        <dc:subject>Fantasy &amp; Sci-Fi</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>mouse</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>newcomer</dc:subject>
+        <dc:subject>storms</dc:subject>
+        <meta content="{&quot;Scott, Sylvan&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:13.460337+00:00" name="calibre:timestamp"/>
+        <meta content="Skylands: Storm Warning" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Skylands_ Storm Warning - Scott, Sylvan.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

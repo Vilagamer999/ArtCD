@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">76</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">efca4463-6d61-4a9f-b5e7-f6bfb28379f9</dc:identifier>
+        <dc:title>Genmos: Emily's Flight</dc:title>
+        <dc:creator opf:file-as="Coghlan, Stephen" opf:role="aut">Coghlan, Stephen</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-01-26T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;When news of her existence is leaked over the internet, a discarded teenage genetic weapon must embrace her unique characteristics and abilities in order to save herself from those who wish her destroyed.&lt;/p&gt;
+
+&lt;p&gt;When news of her existence is leaked over the internet, a discarded teenage genetic weapon must embrace her unique characteristics and abilities in order to save herself from those who wish her destroyed.&lt;br /&gt;
+Stephen Coghlan invites you to sample a short story involving a character from his upcoming novel, GENMOS: Gathering Storms, which is being published and released by Thurston Howl Publications later this year.&lt;/p&gt;</dc:description>
+        <dc:publisher>Stephen Coghlan</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">genmos-emily-s-flight</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781370725991</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">12175a9f-78dd-4433-a3d5-698a728a6ccf</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">34207354</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>genmos</dc:subject>
+        <dc:subject>action</dc:subject>
+        <dc:subject>adventure</dc:subject>
+        <dc:subject>Belletristik</dc:subject>
+        <dc:subject>ya</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>Kinderbücher</dc:subject>
+        <dc:subject>Action/Abenteuer</dc:subject>
+        <dc:subject>canadian</dc:subject>
+        <dc:subject>Jugendbücher</dc:subject>
+        <dc:subject>teen</dc:subject>
+        <meta content="{&quot;Coghlan, Stephen&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:11.672491+00:00" name="calibre:timestamp"/>
+        <meta content="Genmos: Emily's Flight" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Genmos_ Emily's Flight - Coghlan, Stephen.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

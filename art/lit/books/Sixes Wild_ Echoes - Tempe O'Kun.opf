@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">89</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">399b2e66-81ee-4669-94b9-5a9d4a9e485b</dc:identifier>
+        <dc:title>Sixes Wild: Echoes</dc:title>
+        <dc:creator opf:file-as="O'Kun, Tempe" opf:role="aut">Tempe O'Kun</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-07-21T22:00:00+00:00</dc:date>
+        <dc:publisher>Furplanet Productions</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B01IYNC2UK</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Tempe O'Kun&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:46.135828+00:00" name="calibre:timestamp"/>
+        <meta content="Sixes Wild: Echoes" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Sixes Wild_ Echoes - Tempe O'Kun.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

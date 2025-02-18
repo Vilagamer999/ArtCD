@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">48</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">0ef69980-5e34-49e9-b971-c888455fe400</dc:identifier>
+        <dc:title>Legendary Encounters (For Pokemon Fans Book 1)</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-10-09T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;If you've ever seen one of these majestic Pokemon, then fortune is said to smile upon you.   &lt;/p&gt;
+&lt;p&gt;If you've ever bedded one of them, however, you've got a truly special claim! Within are three tales of those who've been fortunate enough to encounter these legendary, mythical lovers in the wild, in the city, and even in the realms of virtual reality...   &lt;/p&gt;
+&lt;p&gt;Mewtwo, Zapdos and Articuno are waiting within, if you're up to the challenge!   &lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B076BX1QZQ</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">36393892</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:02.954357+00:00" name="calibre:timestamp"/>
+        <meta content="Legendary Encounters (For Pokemon Fans Book 1)" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Legendary Encounters (For Pokemon Fans Book 1) - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

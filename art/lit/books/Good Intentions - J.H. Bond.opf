@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">53</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">43fc7ce6-aaa0-49ed-ae61-e74fabedcafa</dc:identifier>
+        <dc:title>Good Intentions</dc:title>
+        <dc:creator opf:file-as="Bond, J.H." opf:role="aut">J.H. Bond</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+        <dc:description>Alex tries to help out when the male virgin can't perform in the annual fertility rite. Unfortunately the priestess sees through his disguise, and curses him with a female form. Now, Othar the Minotaur demi-god has two virgins to deflower. Can the curse be broken? Is it still a curse if Alex is enjoying it?</dc:description>
+        <dc:identifier opf:scheme="MOBI-ASIN">ccd26642-ad17-4248-bb94-cf58ce08f4d5</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>furry</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>gender swap</dc:subject>
+        <dc:subject>bestiality</dc:subject>
+        <dc:subject>public sex</dc:subject>
+        <dc:subject>zoophilia</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>furry on human</dc:subject>
+        <dc:subject>minotaur</dc:subject>
+        <dc:subject>rape</dc:subject>
+        <meta content="{&quot;J.H. Bond&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:04.761338+00:00" name="calibre:timestamp"/>
+        <meta content="Good Intentions" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Good Intentions - J.H. Bond.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">20</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">1192b42a-7419-453e-a5ef-f180c139d2e6</dc:identifier>
+        <dc:title>Twisted Tales</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-12-11T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;Let's face it: Fairy tales had this coming.   &lt;/p&gt;
+&lt;p&gt;This brand new anthology, featuring twelve never before seen stories, will forever change what it means to be in a fairy tale! Each story is dripping with sensuality, and just like Little Red, you might be more concerned with inspecting the Big Bad Wolf than you are with getting to Grandma's house.   &lt;/p&gt;
+&lt;p&gt;Don't expect to see a lesson in this tome: There's happy endings enough to go around, and you're sure to find your own, if you just keep reading...   &lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B0786WR4M7</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">37458746</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:52.396260+00:00" name="calibre:timestamp"/>
+        <meta content="Twisted Tales" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Twisted Tales - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

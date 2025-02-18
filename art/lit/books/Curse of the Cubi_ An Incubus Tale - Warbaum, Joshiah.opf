@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">33</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">9115b6d4-8d3c-4e5b-9955-4f4014d6e99e</dc:identifier>
+        <dc:title>Curse of the Cubi: An Incubus Tale</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-03-09T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;A drunk mind speaks a sober heart, or so the saying goes...   &lt;/p&gt;
+&lt;p&gt;Darien is a suave incubus that has been operating for centuries, never quite satisfying his appetite for carnal pleasures.   &lt;/p&gt;
+&lt;p&gt;His journey leads him into an old bar, where he captivates a handsome young mouse named Scott with tales from when he allowed his sexual fervor to run wild, knowing he may not have much time left to enjoy those memories...   &lt;/p&gt;
+&lt;p&gt;Scott listens on with an eager blush as Darien regales him with the story of why he must choose between lust and love...&lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B06XJ5LZHK</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">34658805</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="10" name="calibre:rating"/>
+        <meta content="2019-05-16T19:30:57.007731+00:00" name="calibre:timestamp"/>
+        <meta content="Curse of the Cubi: An Incubus Tale" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

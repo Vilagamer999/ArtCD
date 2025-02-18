@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">255</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">e91fee2f-d5c4-47f2-b719-70b9d8c5b9e8</dc:identifier>
+        <dc:title>The Queen and the Dagger (A Book of Theo Novella)</dc:title>
+        <dc:creator opf:file-as="Ansley, Melanie" opf:role="aut">Ansley, Melanie</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-01-29T05:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;The Queen and the Dagger is a prequel novella to Theo and the Forbidden Language. When the rabbit princess Indigo realizes her crown is threatened, she must battle her own aunt and mentor to save her throne, and her future. An action adventure fantasy for fans of Redwall or Watership Down.&lt;/p&gt;
+
+&lt;p&gt;In the land of Mankahar, humans have discovered Pacification: a poison whereby speaking animals are rendered mute and docile.   &lt;/p&gt;
+&lt;p&gt;Indigo, a rabbit princess of Alvareth, is on the cusp of inheriting the throne from her aunt, the Regent, who has ruled the northern steppes since Indigo’s mother and sister were killed years ago. When the Order, a society dedicated to fighting Pacification, asks Indigo to join their amassing army, her future seems clear: lead her queendom against the humans, and find the one who killed her mother and sister.   &lt;/p&gt;
+&lt;p&gt;But the day of Indigo’s initiation goes horribly wrong: Pacification has already arrived in Alvareth, and the Regent seizes the opportunity to take the crown.   &lt;/p&gt;
+&lt;p&gt;Threatened with the loss of both her throne and her dreams of revenge, Indigo must defeat her one time mentor and aunt if she is to save her queendom--and her future.&lt;/p&gt;</dc:description>
+        <dc:publisher>Melanie Ansley</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">the-queen-and-the-dagger-a-book-of-theo-novella</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">28835321</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781310621475</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>teen 11 and up</dc:subject>
+        <dc:subject>Belletristik &amp; Literatur</dc:subject>
+        <dc:subject>animals</dc:subject>
+        <dc:subject>fable</dc:subject>
+        <dc:subject>sword and magic fantasy</dc:subject>
+        <dc:subject>action adventure</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>anthropomorphic</dc:subject>
+        <dc:subject>literature fantasy</dc:subject>
+        <dc:subject>fantasy 2016 new release</dc:subject>
+        <dc:subject>Actionthriller</dc:subject>
+        <dc:subject>rabbit adventure</dc:subject>
+        <meta content="{&quot;Ansley, Melanie&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="10" name="calibre:rating"/>
+        <meta content="2019-05-17T23:34:15.605472+00:00" name="calibre:timestamp"/>
+        <meta content="Queen and the Dagger (A Book of Theo Novella), The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">6</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">2d23a80e-a602-4af2-94d6-a76c69ce93a1</dc:identifier>
+        <dc:title>Sixes Wild: Manifest Destiny</dc:title>
+        <dc:creator opf:file-as="O'Kun, Tempe" opf:role="aut">O'Kun, Tempe</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2011-01-01T00:00:00+00:00</dc:date>
+        <dc:description>&lt;div&gt;&lt;span id="freeText3765736889628307210" style=""&gt;On the frontier, death 
+runs close at hand--so close, some say the dead linger on as echos in 
+family heirlooms.  &lt;/span&gt;&lt;div&gt;&lt;span style=""&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=""&gt;Armed with her late father's guns, a sharp wit, and a
+ quick pair of paws, the gunslinger known as 'Six Shooter' thought she 
+had a bead on her way in the world. That is, until a routine bit of 
+larceny drops her into the depths of some very unusual and dangerous 
+schemes. &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=""&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=""&gt;Power-mad lions, mind-bending rock, and whispers from her dead 
+father: these a bunny can handle. &lt;/span&gt;&lt;div&gt;&lt;span style=""&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=""&gt;Falling in love with the local 
+sheriff, though... That's trouble.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class="description"&gt;To survive in the Frontier, one needs quick wits and a quicker draw. Death runs close at paw out here, close enough that the dead whisper in the ears of the living, speaking to them through heirlooms and echoes. In the paws of a bunny gunslinger rest one such inheritance: a pair of silver pistols tied to her fallen father's spirit. Armed against an unknown destiny, it'll take all her grit and gumption to survive. Six Shooter talks tough, fights tougher, and draws faster than the most of men. In fact, most folks are convinced she is one, which is fine by her. After robbing a lion tycoon with a deadly source of power, though, she gets more than she bargained for. On the run, her only chance at survival is to work with the local sheriff, a handsome fruit bat who knows her secret. Together, they must fight to uncover a mystery her father left behind, or watch their luck—and their lives—run out. With cover and interior illustrations by ShinigamiGirl. Chapter art by Yuki-chi.&lt;/p&gt;</dc:description>
+        <dc:publisher>Sofawolf Press</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9781936689071</dc:identifier>
+        <dc:identifier opf:scheme="GOOGLE">qyVUMwEACAAJ</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">B00CFRQNX4</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">16192936</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>anthropomorphic</dc:subject>
+        <dc:subject>action</dc:subject>
+        <dc:subject>romance</dc:subject>
+        <dc:subject>furry</dc:subject>
+        <dc:subject>western</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <meta content="{&quot;O'Kun, Tempe&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="Sixes Wild" name="calibre:series"/>
+        <meta content="1" name="calibre:series_index"/>
+        <meta content="8" name="calibre:rating"/>
+        <meta content="2019-05-16T19:30:48.623686+00:00" name="calibre:timestamp"/>
+        <meta content="Sixes Wild: Manifest Destiny" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Sixes Wild_ Manifest Destiny - O'Kun, Tempe.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

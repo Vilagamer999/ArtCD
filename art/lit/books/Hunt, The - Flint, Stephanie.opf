@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">63</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">87746b2a-4f98-45ec-ae23-e8cf1b3c2fca</dc:identifier>
+        <dc:title>The Hunt</dc:title>
+        <dc:creator opf:file-as="Flint, Stephanie" opf:role="aut">Flint, Stephanie</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-04-13T04:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;1000 words. A young hunter defends herself against an intelligent cougar stalking her family's village.&lt;/p&gt;
+
+&lt;p&gt;1000 words. A young hunter defends herself against an intelligent cougar stalking her family's village.
+Written by Stephanie Flint (formerly published under her maiden name, Stephanie Bibb).&lt;/p&gt;</dc:description>
+        <dc:publisher>Stephanie Flint</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">the-hunt-17</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781476133171</dc:identifier>
+        <dc:identifier opf:scheme="FICTIONDB">stephanie-flint~the-hunt~1164465~b</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Kurzgeschichten</dc:subject>
+        <dc:subject>hunter</dc:subject>
+        <dc:subject>sbibb</dc:subject>
+        <dc:subject>Belletristik &amp; Literatur</dc:subject>
+        <dc:subject>family</dc:subject>
+        <dc:subject>protector</dc:subject>
+        <dc:subject>cougar</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>fighting</dc:subject>
+        <dc:subject>hunted</dc:subject>
+        <dc:subject>stephanie flint</dc:subject>
+        <dc:subject>hunt</dc:subject>
+        <dc:subject>adventure</dc:subject>
+        <dc:subject>animals</dc:subject>
+        <dc:subject>stephanie bibb</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <meta content="{&quot;Flint, Stephanie&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:07.865192+00:00" name="calibre:timestamp"/>
+        <meta content="Hunt, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Hunt, The - Flint, Stephanie.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>
