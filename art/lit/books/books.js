@@ -1,34 +1,88 @@
-// Generated on 2025-02-18T12:40:39.574167
+// Generated on 2025-02-18T16:32:11.591493
 const books = [
   {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Taken_by_Six_Raptors_draft_1.pdf",
-    "cover": "covers/4457df37.webp",
+    "title": "[foster Alan Dean] Chorus Skating",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] Chorus Skating.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C2_-_2.pdf",
-    "cover": "covers/0d2d7207.webp",
+    "title": "[foster Alan Dean] Son Of Spellsinger",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] Son of Spellsinger.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "1_-_Chastity_-_Jeeves.pdf",
-    "cover": "covers/3b3b1a90.webp",
+    "title": "[foster Alan Dean] Spellsinger",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] Spellsinger.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "",
+    "title": "[foster Alan Dean] The Day Of The Dissonance",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] The Day of the Dissonance.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "[foster Alan Dean] The Hour Of The Gate",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] The Hour of the Gate.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "[foster Alan Dean] The Moment Of The Magician",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] The Moment of the Magician.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "[foster Alan Dean] The Paths Of The Perambulator",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] The Paths of the Perambulator.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "[foster Alan Dean] The Time Of The Transferance",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Foster Alan Dean] The Time Of The Transferance.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "[gallico Paul] The Abandoned (jennie)(bookzz",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "[Gallico_Paul]_The_Abandoned_(Jennie)(BookZZ.org).mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "[mccaffrey Anne] Anne Mccaffrey Pegasus 1 Get (b Ok",
     "author": "",
     "year": "2007",
     "format": "pdf",
@@ -37,1919 +91,11 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "Fang 1.pdf",
-    "cover": "covers/3618290e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Bukefalos06_-_Claimed_by_the_Gang_draft_1.pdf",
-    "cover": "covers/8881d484.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C2_-_3.pdf",
-    "cover": "covers/bc876d0e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "boys only final draft.pdf",
-    "cover": "covers/99d3e64c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Shapeshifter_set_of_stories_-_collection_idea.pdf",
-    "cover": "covers/6c312d81.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "The_Slave_Mare__the_Breeding_Farm_-_Paying_Her_Way.pdf",
-    "cover": "covers/c061ee6a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Trigger_profile.pdf",
-    "cover": "covers/a5c3ed1d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "One_off_-_Hot_or_Iced_complete_draft_1.pdf",
-    "cover": "covers/6b07e115.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Draconian_Desire_scrap_19.7.15.pdf",
-    "cover": "covers/8b13cbd8.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C2_-_1.pdf",
-    "cover": "covers/9287e704.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Davies Lorna",
-    "year": "2017",
-    "format": "pdf",
-    "path": "The_Princess_and_her_Lost_Innocence_draft_1.pdf",
-    "cover": "covers/39e1d089.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Power_draft_1.pdf",
-    "cover": "covers/3d2cac5f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "Fang 3.pdf",
-    "cover": "covers/7a852caa.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Idea_-_Hot_or_Iced.pdf",
-    "cover": "covers/3864c604.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "darkest desires final draft master copy.pdf",
-    "cover": "covers/28f4d536.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "Fang 2.pdf",
-    "cover": "covers/32c22e41.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Class_Taste_draft_4.pdf",
-    "cover": "covers/137f311a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "My_Kind_of_Vegas_WIP_20.02.16.pdf",
-    "cover": "covers/ce6ddd80.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2024",
-    "format": "pdf",
-    "path": "The Prophecies Begin Graphic Novel Vol 1.pdf",
-    "cover": "covers/95ab96fe.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Darkfox88_-_Inner_Workings_draft1.pdf",
-    "cover": "covers/a1fad64e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Preyitem_-_Predator_chapter_2_draft_2.pdf",
-    "cover": "covers/4297cbcd.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "Embracing her role as queen final draft.pdf",
-    "cover": "covers/55382c2b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "A_Hiking_Mishap_draft1.pdf",
-    "cover": "covers/70e5eb5c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "TheCuddlingFox_-_Skinny_Dipping_draft_2.pdf",
-    "cover": "covers/92c00bb4.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Razak_-_Mares_Seeking_Stallions_Ace.pdf",
-    "cover": "covers/08cd5989.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_Chapter_3_draft_2.pdf",
-    "cover": "covers/1402a836.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Genki - An Integrated Course in Elementary Japanese I [Second Edition] (2011), WITH PDF BOOKMARKS!.pdf",
-    "cover": "covers/db6ed5a1.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lust_draft_1_complete_first_draft.pdf",
-    "cover": "covers/7f7e0fec.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "BtB_-_Squats_complete_draft_1.pdf",
-    "cover": "covers/b167caf9.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Class_Taste_draft_2.pdf",
-    "cover": "covers/e52ab3d4.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Stallion_at_Stud_draft_1.pdf",
-    "cover": "covers/c680c4d2.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "mind_games_-_idea.pdf",
-    "cover": "covers/b87a5052.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fyrdrgon - Caught Cheating, draft 1.pdf",
-    "cover": "covers/0bfed173.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Scrap_-_fantasy_lyrics.pdf",
-    "cover": "covers/ca00d520.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Razak_-_Mares_Seeking_Stallions_Menna.pdf",
-    "cover": "covers/e372c662.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Jasiri_-_Gender_Swapped_Spots_draft_1.pdf",
-    "cover": "covers/37a436eb.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fyrdrgon_-_Cheating_on_his_Wife_with_her_Mother_draft_1.pdf",
-    "cover": "covers/163cc43f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Thatguyintherobes_Her_Maze_Game_draft_1.pdf",
-    "cover": "covers/4c68be96.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Idea_-_M-M_A_Hiking_Mishap.pdf",
-    "cover": "covers/ba73b483.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "BtB_-_Personal_Training_draft_1_-_WIP_incomplete.pdf",
-    "cover": "covers/60fcfe8c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
+    "title": "[mccaffrey Anne] Get Off The Unicorn(b Ok",
+    "author": "Unknown Author",
     "year": "Unknown Year",
-    "format": "pdf",
-    "path": "Windfall.pdf",
-    "cover": "covers/0dd9ce75.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Luster_Unicorn_-_Unlikely_Angel_draft_1.pdf",
-    "cover": "covers/0403151b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Stallions_Release.pdf",
-    "cover": "covers/c194f0bb.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2014",
-    "format": "pdf",
-    "path": "Fapp+Primer.pdf",
-    "cover": "covers/eb40aa55.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "5_-_Cock_Ring_-_Antoneth.pdf",
-    "cover": "covers/87cccf7d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Pwca_name_scrap.pdf",
-    "cover": "covers/e0e28f24.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Scrap_-_foolproof.pdf",
-    "cover": "covers/66947f52.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2011",
-    "format": "pdf",
-    "path": "Draw Furries.pdf",
-    "cover": "covers/4ecbb239.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "6-_Egg_Laying_Oviposition_-_Fyrdrgon.pdf",
-    "cover": "covers/8ce4cca6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lads_Night_5-6.pdf",
-    "cover": "covers/ec74219f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Eric_Aquasia_-_Heartbeat_Passage_editing_draft_7_-_upload_for_3_usd_tier.pdf",
-    "cover": "covers/92e832fc.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "curse of the cubi final draft 1.pdf",
-    "cover": "covers/c906fced.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Duncan_-_Vampiric_Activity_draft_1.pdf",
-    "cover": "covers/07623d9f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Preyitem_-_Predator_chapter_1_draft_2.pdf",
-    "cover": "covers/ae26f06e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Chapter_5_draft_1.pdf",
-    "cover": "covers/b2ba4844.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "Unknown Year",
-    "format": "pdf",
-    "path": "Hatchling Delight.pdf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "IA, Lugia Seagull - Sexual Torture, draft 1.pdf",
-    "cover": "covers/de6a94d6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "story_inspiration_-_trigger.pdf",
-    "cover": "covers/6b77f89d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Cadman_-_Sensual_Siblings_draft_2.pdf",
-    "cover": "covers/89720811.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Corrilly_-_Gryphon_against_the_Grain_draft_4.pdf",
-    "cover": "covers/d6b3605c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Preyitem_-_Predator_chapter_4_draft_2.pdf",
-    "cover": "covers/49a485ef.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Furry_problems.pdf",
-    "cover": "covers/da45e88a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "The_Cry_of_Sodom_Book_2_-_update_31.07.15.pdf",
-    "cover": "covers/88f152ca.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Dark_Waters_draft_1.pdf",
-    "cover": "covers/199ff68a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Draconian_Enrichment_Their_Bound_Toy_draft_2.pdf",
-    "cover": "covers/fe0851d0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "double play, final draft master copy.pdf",
-    "cover": "covers/90b79ce0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "7_-_Transformation_-_Catprog.pdf",
-    "cover": "covers/b74b2dd3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Mated_to_the_Dragon_Lord_draft_1.pdf",
-    "cover": "covers/6aad6292.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lads_Night_1-4.pdf",
-    "cover": "covers/aa14260e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C4_p22-28.pdf",
-    "cover": "covers/c59b5b72.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_6-10.pdf",
-    "cover": "covers/9823f51f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "PP_Chapter_5_draft_1.pdf",
-    "cover": "covers/0de25ec6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Idea_-_M-M_straight_to_gay_with_bison.pdf",
-    "cover": "covers/7a367455.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Davies Lorna",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fyrdrgon - Family Intimacy, C1, draft 1.pdf",
-    "cover": "covers/c3c69e0f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Darkfox88_-_Tasting_Session_draft_1.pdf",
-    "cover": "covers/3c35b4ab.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Razak_-_Mares_Seeking_Stallions_Arian.pdf",
-    "cover": "covers/19432c94.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "History_and_world_building_draft_2.pdf",
-    "cover": "covers/e07f8672.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Fuzimir_-_Mare_Minding_draft_1.pdf",
-    "cover": "covers/e66a678c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Latex_-_Becoming_Cat_complete_first_draft.pdf",
-    "cover": "covers/2a975678.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Metalr169_-_Role_Reversal_draft_1.pdf",
-    "cover": "covers/fa90ebb8.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "9_-_Breeding_-_Anaria_and_Nex.pdf",
-    "cover": "covers/2fa530ea.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "BtB_mini.pdf",
-    "cover": "covers/709e24cf.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Bukefalos06_-_Becoming_a_Broodmare_draft_1.pdf",
-    "cover": "covers/a0e66776.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "quote1.pdf",
-    "cover": "covers/bb1ffb8d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Eragon18666_-_At_Celestias_Hooves.pdf",
-    "cover": "covers/28576169.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "Unknown Year",
-    "format": "pdf",
-    "path": "dog days of arthur cane.pdf",
-    "cover": "covers/3a76c901.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Story_idea_-_the_black_dog.pdf",
-    "cover": "covers/c5532b24.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "Unknown Year",
-    "format": "pdf",
-    "path": "Captured By the Cowboy Cougers.pdf",
-    "cover": "covers/0b14fa83.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Gryphon_idea.pdf",
-    "cover": "covers/807c1697.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fyrdrgon - Becoming a CuckQuean, draft 1.pdf",
-    "cover": "covers/8f879619.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Cuckold_Colt_draft_1.pdf",
-    "cover": "covers/82850673.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Seeded_by_Three_Gryphons_draft_1.pdf",
-    "cover": "covers/949fd88f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "scrap_-_office2.pdf",
-    "cover": "covers/625685b0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Borrowing_Freedom_draft_2_-_complete_for_posting.pdf",
-    "cover": "covers/e488093d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "quote2.pdf",
-    "cover": "covers/58e21ab9.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Losing_Him_draft_1.pdf",
-    "cover": "covers/62c582db.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Darkhorse_-_The_Horsewife_Stealing_Kisses_draft_2.pdf",
-    "cover": "covers/87a9903e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "PP_Chapter_7_draft_2.pdf",
-    "cover": "covers/27f034bd.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "1 - Thoroughbred horse, female, Pleasing a Mare, draft 1.pdf",
-    "cover": "covers/c8ea656c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_-_C3_18-19.pdf",
-    "cover": "covers/67f53006.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "8_-_Milking_-_Coaldust.pdf",
-    "cover": "covers/6c23d6e0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Eric_Aquasia_-_Heartbeat_Passage_editing_draft_7.pdf",
-    "cover": "covers/3e53f125.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lads_Night_7-8.pdf",
-    "cover": "covers/9a12695a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna",
-    "year": "2015",
-    "format": "pdf",
-    "path": "A_Wolfess_and_Her_Stallion_-_story_WIP.pdf",
-    "cover": "covers/480464ea.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Daniel_Yote_-_Screw_the_Roses_draft_1.pdf",
-    "cover": "covers/9140be95.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Idea_-_were_story.pdf",
-    "cover": "covers/eabc3d84.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Chapter_2_draft_1.pdf",
-    "cover": "covers/603a2428.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lads_Night_11-12.pdf",
-    "cover": "covers/874e5eef.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Straight_story_collection_idea.pdf",
-    "cover": "covers/0abbfe1f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C1_p2.pdf",
-    "cover": "covers/7aca0740.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "My_Masters_Hoof_draft_1.pdf",
-    "cover": "covers/6fadb2de.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "BtB_-_Dont_Tell_the_Wife_draft_1.pdf",
-    "cover": "covers/e4ad816a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Alyaerin_-_Working_out_the_Beast_draft_2.pdf",
-    "cover": "covers/d807befa.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Stud_Farm_Stallion_draft_1.pdf",
-    "cover": "covers/e27ae9cd.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Hot_and_Cold_story_idea_and_plan.pdf",
-    "cover": "covers/0244cd37.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "11_-_Impregnation_Mating_-_yui_olp.pdf",
-    "cover": "covers/c430e14f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Davies Lorna",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fyrdrgon - Family Intimacy, C2, draft 1.pdf",
-    "cover": "covers/34b7552d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "TheKatPop_-_Summer_Lovin_draft_1.pdf",
-    "cover": "covers/20c3b0df.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "Unknown Year",
-    "format": "pdf",
-    "path": "The Furred Reich.pdf",
-    "cover": "covers/539ce323.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Story_collection_idea_-_mental_health_collection.pdf",
-    "cover": "covers/29fa7f4e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Zarosdrahkiin_-_Dragons_after_Dark.pdf",
-    "cover": "covers/1538715d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "burning passion edited draft.pdf",
-    "cover": "covers/e28c62ca.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Alyaerin_-_Working_out_the_Beast_draft_3.pdf",
-    "cover": "covers/9a2deae6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C1_p1.pdf",
-    "cover": "covers/a3e871fe.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "Unknown Year",
-    "format": "pdf",
-    "path": "Reborn_ A Tale of Second Skins - J RW Conway.pdf",
-    "cover": "covers/597b56c6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Colts Vegas, draft 6.pdf",
-    "cover": "covers/8e8c38e6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Chapter_8_draft_1.pdf",
-    "cover": "covers/f309bad7.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Davies Lorna",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Artistic_Interpretation_draft_1.pdf",
-    "cover": "covers/117b72b1.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Bengalic_Tigeran_-_Under_the_Lion_King_draft_1.pdf",
-    "cover": "covers/9dbd1192.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Idea_M-F_lioness.pdf",
-    "cover": "covers/4b622dea.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Kickstarter - Princely Desires - idea.pdf",
-    "cover": "covers/9f6d4c89.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Human_furry_romance_idea.pdf",
-    "cover": "covers/22b583ca.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Chapter_10_draft_2.pdf",
-    "cover": "covers/ab067daf.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Seduced_in_the_Stables_draft_1.pdf",
-    "cover": "covers/3d51e13d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "PP_C7_11-20.pdf",
-    "cover": "covers/6d6edda5.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Mistress_of_the_Whip_draft_1.pdf",
-    "cover": "covers/396b382a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Sandy.pdf",
-    "cover": "covers/8218b4f5.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Keeper_of_Dragons_-_outline_idea.pdf",
-    "cover": "covers/cfcd3894.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Tales_from_the_Guild.pdf",
-    "cover": "covers/07067a8d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "The_Mistress_Dog.pdf",
-    "cover": "covers/cb354bad.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Used_by_the_Stallion_draft_1.pdf",
-    "cover": "covers/30b8fa3c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Eric_Aquasia_-_Breeding_a_Future_draft_7_final_complete_first_draft (1).pdf",
-    "cover": "covers/4f715895.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Cornell_-_Educating_the_Concubine_draft_2.pdf",
-    "cover": "covers/72985451.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "3_-_French_Maid_-_Antoneth.pdf",
-    "cover": "covers/13106494.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Dealing_with_Dragons_-_plan.pdf",
-    "cover": "covers/b94b0749.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Razak_-_Mares_Seeking_Stallions_Amethyst.pdf",
-    "cover": "covers/5489dabc.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Cornell_-_Educating_the_Concubine_draft_3.pdf",
-    "cover": "covers/2258f903.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna.Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "C1.pdf",
-    "cover": "covers/35b5c864.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "2_-_Twincest_-_Goatie.pdf",
-    "cover": "covers/ab280be8.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_Chapter_4_draft_2.pdf",
-    "cover": "covers/c19ebe20.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Vulpine_Dominance_draft_2.pdf",
-    "cover": "covers/ca34ba3b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fyrdrgon_-_Steamy_Evenings_with_Mom_draft_1.pdf",
-    "cover": "covers/582a55f2.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Chapter_4_draft_1.pdf",
-    "cover": "covers/aa4638c0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "4_-_Collaring_-_Carmel_Tia.pdf",
-    "cover": "covers/bc649b86.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "The_woman_in_the_coffee_shop_-_idea.pdf",
-    "cover": "covers/eb6c709a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Dinner for a Gryphon, draft 1.pdf",
-    "cover": "covers/dedaa0e6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Duncan_-_Warming_up_the_Slopes_draft_1.pdf",
-    "cover": "covers/d66a06bb.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "Roar 1.pdf",
-    "cover": "covers/9f191ade.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lyrics_-_two_way_street.pdf",
-    "cover": "covers/8b496fe3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Duncan123_-_Fourth_of_July_Sweethearts_draft_1.pdf",
-    "cover": "covers/77718645.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_Chapter_1_draft_2.pdf",
-    "cover": "covers/7e83999b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Daniel_Yote_-_Lock_and_Load_draft_1.pdf",
-    "cover": "covers/661b147d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "me",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Past Dealings, draft 1.pdf",
-    "cover": "covers/bca2a78d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Cuckolded_by_a_Gryphon_draft_1.pdf",
-    "cover": "covers/ba3a4d30.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2018",
-    "format": "pdf",
-    "path": "legendary encounters edited draft.pdf",
-    "cover": "covers/69df0274.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2015",
-    "format": "pdf",
-    "path": "TheCuddlingFox_-_The_Vixen_and_the_Wolf_draft_2.pdf",
-    "cover": "covers/6d9f301b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Razak_-_Unwrapping_the_Reindeer_draft_1.pdf",
-    "cover": "covers/22fddb6d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Mounting_His_Herd_Mate.pdf",
-    "cover": "covers/cacdb764.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "PP_Chapter_8_draft_2.pdf",
-    "cover": "covers/0f04b472.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Cadman_-_Last_Days_of_Summer_draft_1.pdf",
-    "cover": "covers/e59bb5c0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Mascara_handwritten_draft_1.pdf",
-    "cover": "covers/1fefb714.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "Lorna Davies",
-    "year": "2016",
-    "format": "pdf",
-    "path": "Homer_-_Shatter_Me_draft_1.pdf",
-    "cover": "covers/aa6bdcb3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Overheard_in_office.pdf",
-    "cover": "covers/5d5184a3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "Lads_Night_9-10.pdf",
-    "cover": "covers/10dd5efd.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "",
-    "author": "",
-    "year": "2015",
-    "format": "pdf",
-    "path": "PP_C4_p8-14.pdf",
-    "cover": "covers/c0421f7f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "1 - Redwall",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "1 - Redwall.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "1 Daggerspell -Kerr Katharine",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "1 Daggerspell -Kerr Katharine.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "10 - The Long Patrol",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "10 - The Long Patrol.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "11 - Marlfox",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "11 - Marlfox.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "11 The Fire Dragon - Kerr Katharine",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "epub",
-    "path": "11 The Fire Dragon - Kerr Katharine.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "12 - The Legend of Luke",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "12 - The Legend of Luke.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "13 - Lord Brocktree",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "13 - Lord Brocktree.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "14 - Taggerung",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "14 - Taggerung.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "15 - Triss",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "15 - Triss.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "16 - Loamhedge",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "16 - Loamhedge.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "17 - Rakkety Tam",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "17 - Rakkety Tam.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "18 - High Rhulain",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "18 - High Rhulain.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "19 - Eulalia",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "19 - Eulalia.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "2 Darkspell -Kerr Katharine",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "2 Darkspell -Kerr Katharine.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "20 - Doomwyte",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "20 - Doomwyte.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "21 - The Sable Quean",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "21 - The Sable Quean.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "22 - The Rogue Crew",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "22 - The Rogue Crew.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "4 - Mariel of Redwall",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "4 - Mariel of Redwall.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "5 A Time of Exile - Kerr Katharine",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "epub",
-    "path": "5 A Time of Exile - Kerr Katharine.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "6 - Martin the Warrior",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "6 - Martin the Warrior.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "7 - The Bellmaker",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "7 - The Bellmaker.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "7 A Time of War(Days of Blood and fire) - Kerr Katharine",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "7 A Time of War(Days of Blood and fire) - Kerr Katharine.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "8 - Outcast of Redwall",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "8 - Outcast of Redwall.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "8 A Time of Justice (Days of Air and justice) - Kerr Katharine",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "8 A Time of Justice (Days of Air and justice) - Kerr Katharine.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "9 - Pearls of Lutra",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "9 - Pearls of Lutra.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] Chorus Skating",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] Chorus Skating.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] Son of Spellsinger",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] Son of Spellsinger.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] Spellsinger",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] Spellsinger.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] The Day of the Dissonance",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Day of the Dissonance.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] The Hour of the Gate",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Hour of the Gate.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] The Moment of the Magician",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Moment of the Magician.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] The Paths of the Perambulator",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Paths of the Perambulator.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Foster Alan Dean] The Time Of The Transferance",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Time Of The Transferance.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[Gallico_Paul]_The_Abandoned_(Jennie)(BookZZ.org)",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "[Gallico_Paul]_The_Abandoned_(Jennie)(BookZZ.org).mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[McCaffrey_Anne]_Get_Off_the_Unicorn(b-ok.org)",
-    "author": "Unknown Author",
-    "year": "2025",
     "format": "mobi",
     "path": "[McCaffrey_Anne]_Get_Off_the_Unicorn(b-ok.org).mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "a",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "txt",
-    "path": "a-divine-consistency.txt",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "a",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "txt",
-    "path": "a-trifold-spiral-knot.txt",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "a",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "txt",
-    "path": "a-distant-sun.txt",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -1972,12 +118,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "A Brand New You",
-    "author": "Sabertooth, Serathin",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Brand New You, A - Sabertooth, Serathin.pdf",
-    "cover": "covers/358de6fe.webp",
+    "title": "A Distant Sun",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "txt",
+    "path": "a-distant-sun.txt",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "A Divine Consistency",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "txt",
+    "path": "a-divine-consistency.txt",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -1996,6 +151,15 @@ const books = [
     "format": "epub",
     "path": "2. A Familiar Death - Sylvain St-Pierre.epub",
     "cover": "covers/11e261b5.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "A Hiking Mishap Draft1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "A_Hiking_Mishap_draft1.pdf",
+    "cover": "covers/70e5eb5c.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2044,6 +208,24 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "A Time Of Exile Kerr Katharine",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "epub",
+    "path": "5 A Time of Exile - Kerr Katharine.epub",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "A Time Of Justice (days Of Air And Justice) Kerr Katharine",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "8 A Time of Justice (Days of Air and justice) - Kerr Katharine.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "A Time of Omens",
     "author": "Katharine Kerr",
     "year": "1992",
@@ -2051,6 +233,15 @@ const books = [
     "path": "6 A Time of Omens - Kerr Katharine.epub",
     "cover": "covers/generic.webp",
     "genre": "Fantasy"
+  },
+  {
+    "title": "A Time Of War(days Of Blood And Fire) Kerr Katharine",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "7 A Time of War(Days of Blood and fire) - Kerr Katharine.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "A Trifold Spiral Knot",
@@ -2062,12 +253,12 @@ const books = [
     "genre": "perspective"
   },
   {
-    "title": "A Wasteful Death (Death by Predation Book 1)",
-    "author": "Sylvain St-Pierre",
-    "year": "2016",
-    "format": "epub",
-    "path": "1. A Wasteful Death - Sylvain St-Pierre.epub",
-    "cover": "covers/0e459bd7.webp",
+    "title": "A Trifold Spiral Knot",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "txt",
+    "path": "a-trifold-spiral-knot.txt",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2075,8 +266,8 @@ const books = [
     "author": "Sylvain St-Pierre",
     "year": "2016",
     "format": "epub",
-    "path": "A Wasteful Death (Death by Pred - Sylvain St-Pierre.epub",
-    "cover": "covers/75c7bcef.webp",
+    "path": "1. A Wasteful Death - Sylvain St-Pierre.epub",
+    "cover": "covers/0e459bd7.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2089,21 +280,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Afflicted, The - Kalante, Kjorteo",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Afflicted, The - Kalante, Kjorteo.mobi",
-    "cover": "covers/generic.webp",
+    "title": "A Wolfess And Her Stallion Story Wip",
+    "author": "Lorna",
+    "year": "2015",
+    "format": "pdf",
+    "path": "A_Wolfess_and_Her_Stallion_-_story_WIP.pdf",
+    "cover": "covers/480464ea.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Afflicted, The - Kalante, Kjorteo",
+    "title": "Afflicted, The Kalante, Kjorteo",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Afflicted, The - Kalante, Kjorteo.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Afflicted, The - Kalante, Kjorteo.mobi",
+    "cover": "covers/640a5b0b.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2125,15 +316,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Akio's House (Todd and Colton Book 3)",
-    "author": "Aldrington, Todd",
-    "year": "2019",
-    "format": "epub",
-    "path": "Akio's House  (Todd and Colton Book 3) - Todd Aldrington.epub",
-    "cover": "covers/7105f946.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "All Tied up in Knotz",
     "author": "Andres Cyanni Halden",
     "year": "2013",
@@ -2149,6 +331,24 @@ const books = [
     "format": "epub",
     "path": "Altered States - Ajax B. Coriander.epub",
     "cover": "covers/cd357353.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Alyaerin Working Out The Beast Draft 2",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Alyaerin_-_Working_out_the_Beast_draft_2.pdf",
+    "cover": "covers/d807befa.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Alyaerin Working Out The Beast Draft 3",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Alyaerin_-_Working_out_the_Beast_draft_3.pdf",
+    "cover": "covers/9a2deae6.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2179,7 +379,7 @@ const books = [
     "genre": "Fantasy"
   },
   {
-    "title": "anadi",
+    "title": "Anadi Dolls",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -2197,21 +397,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Anniversary Surprises (Furry BDSM and Vore Erotica)",
-    "author": "Wolf, The",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Anniversary Surprises (Furry BDSM and Vore Erotica) - Wolf, The.pdf",
-    "cover": "covers/c86a7eb8.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Anniversary Surprises (Furry BDSM and Vore Erotica) - Wolf, The",
+    "title": "Anniversary Surprises (furry Bdsm And Vore Erotica) Wolf, The",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Anniversary Surprises (Furry BDSM and Vore Erotica) - Wolf, The.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/a9202b0d.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2242,15 +433,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Argus the Werewolf Spanker",
-    "author": "S. G. Croup",
-    "year": "2015",
-    "format": "epub",
-    "path": "Argus the Werewolf Spanker - S. G. Croup.epub",
-    "cover": "covers/396016ac.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Argus the Werewolf Spanker: Clash of Alphas",
     "author": "S. G. Croup",
     "year": "0101",
@@ -2260,21 +442,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick",
+    "title": "Arligent Experiment A Tale Of Charinthosse, The Bane, Nick",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/c0a69f41.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick.opf",
-    "cover": "covers/generic.webp",
+    "title": "Artistic Interpretation Draft 1",
+    "author": "Davies Lorna",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Artistic_Interpretation_draft_1.pdf",
+    "cover": "covers/117b72b1.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2296,12 +478,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Beasts of Burden - Scott, Sylvan",
+    "title": "Beasts Of Burden Scott, Sylvan",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Beasts of Burden - Scott, Sylvan.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/b07d5d4d.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2332,6 +514,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Bengalic Tigeran Under The Lion King Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Bengalic_Tigeran_-_Under_the_Lion_King_draft_1.pdf",
+    "cover": "covers/9dbd1192.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Beyond Hallowed Walls",
     "author": "Andres Cyanni Halden",
     "year": "2014",
@@ -2341,7 +532,7 @@ const books = [
     "genre": "Palading Trilogy"
   },
   {
-    "title": "bitter",
+    "title": "Bitter Apples",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -2356,15 +547,6 @@ const books = [
     "format": "epub",
     "path": "3 Black-Angel-BDB.epub",
     "cover": "covers/8d9caf56.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Black Angel",
-    "author": "Kyell Gold",
-    "year": "Unknown Year",
-    "format": "epub",
-    "path": "Black Angel (Dangerous Spirits 3) - Kyell Gold.epub",
-    "cover": "covers/cfc5fc35.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2422,6 +604,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Borrowing Freedom Draft 2 Complete For Posting",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Borrowing_Freedom_draft_2_-_complete_for_posting.pdf",
+    "cover": "covers/e488093d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Boys Only",
     "author": "Warbaum, Joshiah",
     "year": "2016",
@@ -2431,30 +622,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Boys Only",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
+    "title": "Boys Only Final Draft",
+    "author": "",
+    "year": "2018",
     "format": "pdf",
-    "path": "Boys Only - Warbaum, Joshiah.pdf",
-    "cover": "covers/75bf6166.webp",
+    "path": "boys only final draft.pdf",
+    "cover": "covers/99d3e64c.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Boys Only - Warbaum, Joshiah",
+    "title": "Boys Only Party Of Three Joshiah Warbaum",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Boys Only_ Party of Three - Joshiah Warbaum.mobi",
+    "cover": "covers/c4eaaf08.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Boys Only Warbaum, Joshiah",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Boys Only - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Boys Only - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Boys Only - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/0d050c3a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2476,39 +667,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Boys Only: Party of Three",
-    "author": "Joshiah Warbaum",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Boys Only_ Party of Three - Joshiah Warbaum.pdf",
-    "cover": "covers/9b1340a4.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Boys Only_ Party of Three - Joshiah Warbaum",
+    "title": "Brand New You, A Sabertooth, Serathin",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Boys Only_ Party of Three - Joshiah Warbaum.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Boys Only_ Party of Three - Joshiah Warbaum",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Boys Only_ Party of Three - Joshiah Warbaum.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Brand New You, A - Sabertooth, Serathin",
-    "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Brand New You, A - Sabertooth, Serathin.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/51ca5920.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2521,56 +685,20 @@ const books = [
     "genre": "science fiction, family, furry"
   },
   {
-    "title": "Braxton Snow P.I. (The Snow Adventures Book 1)",
-    "author": "Danny C Estes",
-    "year": "2017",
-    "format": "epub",
-    "path": "Snow Adventures 1 - Braxton Snow P.I. - Danny C Estes.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Braxton Snow P.I. (The Snow Adventures Book 1)",
-    "author": "Danny C Estes",
-    "year": "2017",
-    "format": "epub",
-    "path": "Braxton Snow P.I. (The Snow Adventures Book 1) - Danny C Estes.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Braxton Snow P.I. (The Snow Adventures Book 1)",
-    "author": "Danny C Estes",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Snow Adventures 1 - Braxton Snow P.I. - Danny C Estes.pdf",
-    "cover": "covers/d6786c1d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Braxton Snow P.I. (The Snow Adventures Book 1)",
-    "author": "Danny C Estes",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Braxton Snow P.I. (The Snow Adventures Book 1) - Danny C Estes.pdf",
-    "cover": "covers/14d6d767.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Braxton Snow P.I. (The Snow Adventures Book 1) - Danny C Estes",
+    "title": "Braxton Snow P",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Braxton Snow P.I. (The Snow Adventures Book 1) - Danny C Estes.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Braxton Snow P.I. (The Snow Adventures Book 1) - Danny C Estes",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Braxton Snow P.I. (The Snow Adventures Book 1) - Danny C Estes.opf",
+    "title": "Braxton Snow P.I. (The Snow Adventures Book 1)",
+    "author": "Danny C Estes",
+    "year": "2017",
+    "format": "epub",
+    "path": "Snow Adventures 1 - Braxton Snow P.I. - Danny C Estes.epub",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -2584,12 +712,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "breaths",
+    "title": "Breaths Long As Years",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
     "path": "breaths-long-as-years.txt",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Breeding Anaria And Nex",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "9_-_Breeding_-_Anaria_and_Nex.pdf",
+    "cover": "covers/2fa530ea.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2611,15 +748,6 @@ const books = [
     "genre": "romance"
   },
   {
-    "title": "Bridges",
-    "author": "Gold, Kyell",
-    "year": "2011",
-    "format": "epub",
-    "path": "Bridges - Gold, Kyell.epub",
-    "cover": "covers/5b6458bf.webp",
-    "genre": "romance"
-  },
-  {
     "title": "Briendon\u2019s First Hunt",
     "author": "",
     "year": "2017",
@@ -2638,21 +766,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Brotherhood of the Jackal",
-    "author": "Warren, Raven",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Brotherhood of the Jackal - Warren, Raven.pdf",
-    "cover": "covers/ea315217.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Brotherhood of the Jackal - Warren, Raven",
+    "title": "Brotherhood Of The Jackal Warren, Raven",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Brotherhood of the Jackal - Warren, Raven.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/b19d877d.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2665,12 +784,39 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Brothersong",
-    "author": "TJ Klune",
-    "year": "2020",
-    "format": "epub",
-    "path": "Brothersong - TJ Klune.epub",
-    "cover": "covers/4c4dfe1f.webp",
+    "title": "Btb Dont Tell The Wife Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "BtB_-_Dont_Tell_the_Wife_draft_1.pdf",
+    "cover": "covers/e4ad816a.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Btb Mini",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "BtB_mini.pdf",
+    "cover": "covers/709e24cf.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Btb Personal Training Draft 1 Wip Incomplete",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "BtB_-_Personal_Training_draft_1_-_WIP_incomplete.pdf",
+    "cover": "covers/60fcfe8c.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Btb Squats Complete Draft 1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "BtB_-_Squats_complete_draft_1.pdf",
+    "cover": "covers/b167caf9.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2683,30 +829,48 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Bucking the System",
-    "author": "Cobolt, Dragon",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Bucking the System - Cobolt, Dragon.pdf",
-    "cover": "covers/83af3462.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Bucking the System - Cobolt, Dragon",
+    "title": "Bucking The System Cobolt, Dragon",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Bucking the System - Cobolt, Dragon.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/bcd4ab4f.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Bucking the System - Cobolt, Dragon",
+    "title": "Bukefalos06 Becoming A Broodmare Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Bukefalos06_-_Becoming_a_Broodmare_draft_1.pdf",
+    "cover": "covers/a0e66776.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Bukefalos06 Claimed By The Gang Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Bukefalos06_-_Claimed_by_the_Gang_draft_1.pdf",
+    "cover": "covers/8881d484.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Burning Passion Edited Draft",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "burning passion edited draft.pdf",
+    "cover": "covers/e28c62ca.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Burning Passions For The Love Of Fire Types (for Pokemon Fans Book 2) Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Bucking the System - Cobolt, Dragon.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Burning Passions_ For the Love of Fire Types (For Pokemon Fans Book 2) - Warbaum, Joshiah.mobi",
+    "cover": "covers/5a0d6b8d.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2719,25 +883,7 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Burning Passions_ For the Love of Fire Types (For Pokemon Fans Book 2) - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Burning Passions_ For the Love of Fire Types (For Pokemon Fans Book 2) - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Burning Passions_ For the Love of Fire Types (For Pokemon Fans Book 2) - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Burning Passions_ For the Love of Fire Types (For Pokemon Fans Book 2) - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "butterfly",
+    "title": "Butterfly",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -2755,30 +901,39 @@ const books = [
     "genre": "fantasy"
   },
   {
+    "title": "C1",
+    "author": "Lorna.Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "C1.pdf",
+    "cover": "covers/35b5c864.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Cadman Last Days Of Summer Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Cadman_-_Last_Days_of_Summer_draft_1.pdf",
+    "cover": "covers/e59bb5c0.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Cadman Sensual Siblings Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Cadman_-_Sensual_Siblings_draft_2.pdf",
+    "cover": "covers/89720811.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Camouflage",
     "author": "Kyell Gold",
     "year": "Unknown Year",
     "format": "epub",
     "path": "Camouflage - Kyell Gold.epub",
     "cover": "covers/0de9b049.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Camouflage",
-    "author": "Kyell Gold",
-    "year": "2014",
-    "format": "epub",
-    "path": "Camouflage - Kyell Gold (1).epub",
-    "cover": "covers/d4154113.webp",
-    "genre": "Forester Universe"
-  },
-  {
-    "title": "Camouflage",
-    "author": "Kyell Gold",
-    "year": "2014",
-    "format": "epub",
-    "path": "Kyell--Camouflage.epub",
-    "cover": "covers/df4b3d5d.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2800,6 +955,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Captured By The Cowboy Cougers",
+    "author": "",
+    "year": "Unknown Year",
+    "format": "pdf",
+    "path": "Captured By the Cowboy Cougers.pdf",
+    "cover": "covers/0b14fa83.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Chasing Colton's Tail (Todd and Colton Book 1)",
     "author": "Todd Aldrington",
     "year": "2018",
@@ -2809,12 +973,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Chasing Colton's Tail (Todd and Colton Book 1)",
-    "author": "Todd Aldrington",
-    "year": "2018",
-    "format": "epub",
-    "path": "Chasing Colton's Tail - Todd Aldrington.epub",
-    "cover": "covers/37280933.webp",
+    "title": "Chastity Jeeves",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "1_-_Chastity_-_Jeeves.pdf",
+    "cover": "covers/3b3b1a90.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2827,30 +991,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Chimera",
-    "author": "T.E.S T.E.S",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Chimera - T.E.S T.E.S.pdf",
-    "cover": "covers/ca63f6d6.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Chimera - T.E.S T.E.S",
+    "title": "Chimera T",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Chimera - T.E.S T.E.S.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/30b0e9c9.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Chimera - T.E.S T.E.S",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Chimera - T.E.S T.E.S.opf",
-    "cover": "covers/generic.webp",
+    "title": "Class Taste Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Class_Taste_draft_2.pdf",
+    "cover": "covers/e52ab3d4.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Class Taste Draft 4",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Class_Taste_draft_4.pdf",
+    "cover": "covers/137f311a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2863,7 +1027,16 @@ const books = [
     "genre": "humor"
   },
   {
-    "title": "Coffee",
+    "title": "Cock Ring Antoneth",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "5_-_Cock_Ring_-_Antoneth.pdf",
+    "cover": "covers/87cccf7d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Coffee Strangers Wip",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -2890,12 +1063,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Collared",
-    "author": "Shep Otterpaw",
-    "year": "2015",
-    "format": "epub",
-    "path": "Collared - Shep Otterpaw.epub",
-    "cover": "covers/4b6ddc73.webp",
+    "title": "Collaring Carmel Tia",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "4_-_Collaring_-_Carmel_Tia.pdf",
+    "cover": "covers/bc649b86.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Colts Vegas, Draft 6",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Colts Vegas, draft 6.pdf",
+    "cover": "covers/8e8c38e6.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2926,6 +1108,69 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Cornell Educating The Concubine Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Cornell_-_Educating_the_Concubine_draft_2.pdf",
+    "cover": "covers/72985451.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Cornell Educating The Concubine Draft 3",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Cornell_-_Educating_the_Concubine_draft_3.pdf",
+    "cover": "covers/2258f903.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Corrilly Gryphon Against The Grain Draft 4",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Corrilly_-_Gryphon_against_the_Grain_draft_4.pdf",
+    "cover": "covers/d6b3605c.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Cuckold Colt Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Cuckold_Colt_draft_1.pdf",
+    "cover": "covers/82850673.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Cuckolded By A Gryphon Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Cuckolded_by_a_Gryphon_draft_1.pdf",
+    "cover": "covers/ba3a4d30.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Curse Of The Cubi An Incubus Tale Warbaum, Joshiah",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah.mobi",
+    "cover": "covers/cfa021c0.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Curse Of The Cubi Final Draft 1",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "curse of the cubi final draft 1.pdf",
+    "cover": "covers/c906fced.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Curse of the Cubi: An Incubus Tale",
     "author": "Warbaum, Joshiah",
     "year": "2017",
@@ -2935,29 +1180,20 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Curse of the Cubi: An Incubus Tale",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah.pdf",
-    "cover": "covers/58cf2a80.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah",
+    "title": "Daggerspell Kerr Katharine",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
-    "path": "Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah.mobi",
+    "path": "1 Daggerspell -Kerr Katharine.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah",
+    "title": "Dan's Dirty Kitty An Anthro Furry Erotic Love Story Syndara Longfoot",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Curse of the Cubi_ An Incubus Tale - Warbaum, Joshiah.opf",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Dan's Dirty Kitty_ An Anthro-Furry Erotic Love Story - Syndara Longfoot.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -2971,33 +1207,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Dan's Dirty Kitty: An Anthro-Furry Erotic Love Story",
-    "author": "Syndara Longfoot",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Dan's Dirty Kitty_ An Anthro-Furry Erotic Love Story - Syndara Longfoot.pdf",
-    "cover": "covers/8bdc7988.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Dan's Dirty Kitty_ An Anthro-Furry Erotic Love Story - Syndara Longfoot",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Dan's Dirty Kitty_ An Anthro-Furry Erotic Love Story - Syndara Longfoot.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Dan's Dirty Kitty_ An Anthro-Furry Erotic Love Story - Syndara Longfoot",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Dan's Dirty Kitty_ An Anthro-Furry Erotic Love Story - Syndara Longfoot.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Dangerous Love",
     "author": "Meanybeany",
     "year": "0101",
@@ -3007,21 +1216,30 @@ const books = [
     "genre": "macrophilia"
   },
   {
-    "title": "Dangerous Love",
-    "author": "Meanybeany",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Dangerous Love - Meanybeany.pdf",
-    "cover": "covers/6ccddded.webp",
+    "title": "Dangerous Love Meanybeany",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Dangerous Love - Meanybeany.mobi",
+    "cover": "covers/7b6a2fca.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Dangerous Love - Meanybeany",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Dangerous Love - Meanybeany.mobi",
-    "cover": "covers/generic.webp",
+    "title": "Daniel Yote Lock And Load Draft 1",
+    "author": "",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Daniel_Yote_-_Lock_and_Load_draft_1.pdf",
+    "cover": "covers/661b147d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Daniel Yote Screw The Roses Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Daniel_Yote_-_Screw_the_Roses_draft_1.pdf",
+    "cover": "covers/9140be95.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3034,6 +1252,60 @@ const books = [
     "genre": "romance"
   },
   {
+    "title": "Dark Waters Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Dark_Waters_draft_1.pdf",
+    "cover": "covers/199ff68a.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Darkest Desires Final Draft Master Copy",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "darkest desires final draft master copy.pdf",
+    "cover": "covers/28f4d536.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Darkfox88 Inner Workings Draft1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Darkfox88_-_Inner_Workings_draft1.pdf",
+    "cover": "covers/a1fad64e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Darkfox88 Tasting Session Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Darkfox88_-_Tasting_Session_draft_1.pdf",
+    "cover": "covers/3c35b4ab.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Darkhorse The Horsewife Stealing Kisses Draft 2",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Darkhorse_-_The_Horsewife_Stealing_Kisses_draft_2.pdf",
+    "cover": "covers/87a9903e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Darkspell Kerr Katharine",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "2 Darkspell -Kerr Katharine.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Daybreak",
     "author": "Jones, Gareth D.",
     "year": "2012",
@@ -3043,20 +1315,29 @@ const books = [
     "genre": "Science Fiction"
   },
   {
-    "title": "Daybreak",
-    "author": "Jones, Gareth D.",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Daybreak - Jones, Gareth D_.pdf",
-    "cover": "covers/bd604b04.webp",
+    "title": "Daybreak Jones, Gareth D",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Daybreak - Jones, Gareth D_.mobi",
+    "cover": "covers/8aedb74d.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Daybreak - Jones, Gareth D_",
+    "title": "Dealing With Dragons Plan",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Dealing_with_Dragons_-_plan.pdf",
+    "cover": "covers/b94b0749.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Descent Book 1 Descent From Man Geusz, Phil",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
-    "path": "Daybreak - Jones, Gareth D_.mobi",
+    "path": "Descent Book 1_ Descent From Man - Geusz, Phil.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -3070,30 +1351,21 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Descent Book 1: Descent From Man",
-    "author": "Geusz, Phil",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Descent Book 1_ Descent From Man - Geusz, Phil.pdf",
-    "cover": "covers/a20b2f37.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Descent Book 1_ Descent From Man - Geusz, Phil",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Descent Book 1_ Descent From Man - Geusz, Phil.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Destruction",
     "author": "Anthony Milhorn",
     "year": "2019",
     "format": "epub",
     "path": "Anthony Milhorn - Destruction.epub",
     "cover": "covers/e2ab0586.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Dinner For A Gryphon, Draft 1",
+    "author": "Lorna",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Dinner for a Gryphon, draft 1.pdf",
+    "cover": "covers/dedaa0e6.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3115,15 +1387,6 @@ const books = [
     "genre": "lee"
   },
   {
-    "title": "Divisions (Dev and Lee)",
-    "author": "Gold, Kyell",
-    "year": "2013",
-    "format": "epub",
-    "path": "3 Divisions (Dev and Lee) - Gold, Kyell.epub",
-    "cover": "covers/8222d94f.webp",
-    "genre": "lee"
-  },
-  {
     "title": "Dog Country",
     "author": "Malcolm F. Cross",
     "year": "2016",
@@ -3133,48 +1396,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Dog Country",
-    "author": "Malcolm F. Cross",
-    "year": "2016",
-    "format": "epub",
-    "path": "Dog Country - Malcolm F. Cross.epub",
-    "cover": "covers/547f5a4e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Dog Country",
-    "author": "Malcolm F. Cross",
-    "year": "2016",
-    "format": "epub",
-    "path": "MalcolmCross-DogCountry.epub",
-    "cover": "covers/dfef9e12.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Dog Country",
-    "author": "Malcolm F. Cross",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Dog Country - Malcolm F. Cross.pdf",
-    "cover": "covers/7781a3a3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Dog Country - Malcolm F. Cross",
+    "title": "Dog Country Malcolm F",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Dog Country - Malcolm F. Cross.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/d5bbf46a.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Dog Country - Malcolm F. Cross",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Dog Country - Malcolm F. Cross.opf",
-    "cover": "covers/generic.webp",
+    "title": "Dog Days Of Arthur Cane",
+    "author": "",
+    "year": "Unknown Year",
+    "format": "pdf",
+    "path": "dog days of arthur cane.pdf",
+    "cover": "covers/3a76c901.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3214,6 +1450,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Doomwyte",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "20 - Doomwyte.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Double Play",
     "author": "Warbaum, Joshiah",
     "year": "2017",
@@ -3223,21 +1468,66 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Double Play",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Double Play - Warbaum, Joshiah.pdf",
-    "cover": "covers/630a2c19.webp",
+    "title": "Double Play Warbaum, Joshiah",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Double Play - Warbaum, Joshiah.mobi",
+    "cover": "covers/59198e5d.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Double Play - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Double Play - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
+    "title": "Double Play, Final Draft Master Copy",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "double play, final draft master copy.pdf",
+    "cover": "covers/90b79ce0.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Draconian Desire Scrap 19",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Draconian_Desire_scrap_19.7.15.pdf",
+    "cover": "covers/8b13cbd8.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Draconian Enrichment Their Bound Toy Draft 2",
+    "author": "",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Draconian_Enrichment_Their_Bound_Toy_draft_2.pdf",
+    "cover": "covers/fe0851d0.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Chapter_5_draft_1.pdf",
+    "cover": "covers/b2ba4844.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Chapter_10_draft_2.pdf",
+    "cover": "covers/ab067daf.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Draw Furries",
+    "author": "",
+    "year": "2011",
+    "format": "pdf",
+    "path": "Draw Furries.pdf",
+    "cover": "covers/4ecbb239.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3286,15 +1576,6 @@ const books = [
     "genre": "Romance"
   },
   {
-    "title": "Dude, Where's My Fox?",
-    "author": "Kyell Gold",
-    "year": "2014",
-    "format": "epub",
-    "path": "Dude, Where_s My Fox_ - Kyell Gold.epub",
-    "cover": "covers/c087f23d.webp",
-    "genre": "Romance"
-  },
-  {
     "title": "Dude, Where\u2019s My Pack?",
     "author": "Kyell Gold",
     "year": "Unknown Year",
@@ -3304,39 +1585,48 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Duncan Vampiric Activity Draft 1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Duncan_-_Vampiric_Activity_draft_1.pdf",
+    "cover": "covers/07623d9f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Duncan Warming Up The Slopes Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Duncan_-_Warming_up_the_Slopes_draft_1.pdf",
+    "cover": "covers/d66a06bb.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Duncan123 Fourth Of July Sweethearts Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Duncan123_-_Fourth_of_July_Sweethearts_draft_1.pdf",
+    "cover": "covers/77718645.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Ears And Tail Required Bundle (cat Girl Erotica) Books 1 2 Heidi Fisk",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk.mobi",
+    "cover": "covers/e958ec84.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Ears and Tail Required: Bundle (Cat Girl Erotica): Books 1-2",
     "author": "Heidi Fisk",
     "year": "2018",
     "format": "epub",
     "path": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk.epub",
     "cover": "covers/e8d6bf73.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Ears and Tail Required: Bundle (Cat Girl Erotica): Books 1-2",
-    "author": "Heidi Fisk",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk.pdf",
-    "cover": "covers/56f5f079.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Ears and Tail Required_ Bundle (Cat Girl Erotica)_ Books 1-2 - Heidi Fisk.opf",
-    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3358,7 +1648,7 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Earths new masters anthro GSD",
+    "title": "Earths New Masters Anthro Gsd",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -3382,6 +1672,15 @@ const books = [
     "format": "epub",
     "path": "Eco (Gay Monster Erotica) - Ashke B_.epub",
     "cover": "covers/75a9d2ca.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Egg Laying Oviposition Fyrdrgon",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "6-_Egg_Laying_Oviposition_-_Fyrdrgon.pdf",
+    "cover": "covers/8ce4cca6.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3412,29 +1711,20 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Embracing Her Role as Queen",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
+    "title": "Embracing Her Role As Queen Final Draft",
+    "author": "",
+    "year": "2018",
     "format": "pdf",
-    "path": "Embracing Her Role as Queen - Warbaum, Joshiah.pdf",
-    "cover": "covers/68e07870.webp",
+    "path": "Embracing her role as queen final draft.pdf",
+    "cover": "covers/55382c2b.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Embracing Her Role as Queen - Warbaum, Joshiah",
+    "title": "Embracing Her Role As Queen Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Embracing Her Role as Queen - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Embracing Her Role as Queen - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Embracing Her Role as Queen - Warbaum, Joshiah.opf",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -3448,11 +1738,56 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Eragon18666 At Celestias Hooves",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Eragon18666_-_At_Celestias_Hooves.pdf",
+    "cover": "covers/28576169.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Eric and Danny by zemaes",
     "author": "Unknown Author",
     "year": "Unknown Year",
     "format": "epub",
     "path": "Eric and Danny by zemaes.epub",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Eric Aquasia Breeding A Future Draft 7 Final Complete First Draft (1)",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Eric_Aquasia_-_Breeding_a_Future_draft_7_final_complete_first_draft (1).pdf",
+    "cover": "covers/4f715895.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Eric Aquasia Heartbeat Passage Editing Draft 7",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Eric_Aquasia_-_Heartbeat_Passage_editing_draft_7.pdf",
+    "cover": "covers/3e53f125.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Eric Aquasia Heartbeat Passage Editing Draft 7 Upload For 3 Usd Tier",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Eric_Aquasia_-_Heartbeat_Passage_editing_draft_7_-_upload_for_3_usd_tier.pdf",
+    "cover": "covers/92e832fc.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Eulalia",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "19 - Eulalia.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -3472,15 +1807,6 @@ const books = [
     "format": "epub",
     "path": "Everwinter - Raedwulf.epub",
     "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Everwinter",
-    "author": "Raedwulf",
-    "year": "2023",
-    "format": "epub",
-    "path": "Raedwulf-Everwinter.epub",
-    "cover": "covers/df496a37.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3547,6 +1873,33 @@ const books = [
     "genre": "fish out of water"
   },
   {
+    "title": "Fang 1",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "Fang 1.pdf",
+    "cover": "covers/3618290e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fang 2",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "Fang 2.pdf",
+    "cover": "covers/32c22e41.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fang 3",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "Fang 3.pdf",
+    "cover": "covers/7a852caa.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "FANG Volume 4",
     "author": "Skip Ruddertail",
     "year": "2012",
@@ -3556,9 +1909,9 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "FANG Volume 4",
+    "title": "Fang Volume 4",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "FANG Volume 4.mobi",
     "cover": "covers/generic.webp",
@@ -3574,21 +1927,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "FANG Volume 5",
+    "title": "Fang Volume 5",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "FANG Volume 5.mobi",
     "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Fapp - Endgame",
-    "author": "Kah",
-    "year": "2017",
-    "format": "pdf",
-    "path": "Fapp - Endgame.pdf",
-    "cover": "covers/2f7f3c8e.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3608,6 +1952,15 @@ const books = [
     "path": "Feralsong - TJ Klune.epub",
     "cover": "covers/f7591fae.webp",
     "genre": "Fiction"
+  },
+  {
+    "title": "Feralsong Tj Klune",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "docx",
+    "path": "Feralsong - TJ Klune.docx",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Field Research",
@@ -3655,30 +2008,12 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Fire Destroys",
-    "author": "Ieperen, Geert van",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Fire Destroys - Ieperen, Geert van.pdf",
-    "cover": "covers/4df653c8.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Fire Destroys - Ieperen, Geert van",
+    "title": "Fire Destroys Ieperen, Geert Van",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Fire Destroys - Ieperen, Geert van.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Fire Destroys - Ieperen, Geert van",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Fire Destroys - Ieperen, Geert van.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/08af5fee.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3709,15 +2044,6 @@ const books = [
     "genre": "gay"
   },
   {
-    "title": "Fit Flexing Felines",
-    "author": "danath",
-    "year": "2019",
-    "format": "epub",
-    "path": "Fit Flexing Felines - Danath Tiger.epub",
-    "cover": "covers/1669d352.webp",
-    "genre": "gay"
-  },
-  {
     "title": "Flight of the Godkin Griffin",
     "author": "M.C.A. Hogarth",
     "year": "Unknown Year",
@@ -3725,6 +2051,15 @@ const books = [
     "path": "Flight of the Godkin Griffin.epub",
     "cover": "covers/94bab8ce.webp",
     "genre": "romance"
+  },
+  {
+    "title": "For Her A Furry Pregnancy Story Rahheemme",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "For Her_ A Furry Pregnancy Story - Rahheemme.mobi",
+    "cover": "covers/cfda2134.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "For Her: A Furry Pregnancy Story",
@@ -3736,47 +2071,11 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "For Her: A Furry Pregnancy Story",
-    "author": "Rahheemme",
-    "year": "2019",
-    "format": "pdf",
-    "path": "For Her_ A Furry Pregnancy Story - Rahheemme.pdf",
-    "cover": "covers/15c4835e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "For Her_ A Furry Pregnancy Story - Rahheemme",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "For Her_ A Furry Pregnancy Story - Rahheemme.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "For Her_ A Furry Pregnancy Story - Rahheemme",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "For Her_ A Furry Pregnancy Story - Rahheemme.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Fox and the Jocks",
     "author": "danath",
     "year": "2014",
     "format": "epub",
     "path": "Fox and the Jocks - Danath Tiger.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Fox and the Jocks",
-    "author": "danath",
-    "year": "2014",
-    "format": "epub",
-    "path": "danath--Fox_and_the_Jocks.epub",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -3799,30 +2098,12 @@ const books = [
     "genre": "dance"
   },
   {
-    "title": "Freaky Furry (Side Quest #5)",
-    "author": "Rover, Joe",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Freaky Furry (Side Quest #5) - Rover, Joe.pdf",
-    "cover": "covers/dcf44081.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Freaky Furry (Side Quest #5) - Rover, Joe",
+    "title": "Freaky Furry (side Quest #5) Rover, Joe",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Freaky Furry (Side Quest #5) - Rover, Joe.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Freaky Furry (Side Quest #5) - Rover, Joe",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Freaky Furry (Side Quest #5) - Rover, Joe.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/a0e39ddb.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3844,21 +2125,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Furry Club, The - Towers, Trystana & Culkin, Justin",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Furry Club, The - Towers, Trystana & Culkin, Justin.mobi",
-    "cover": "covers/generic.webp",
+    "title": "French Maid Antoneth",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "3_-_French_Maid_-_Antoneth.pdf",
+    "cover": "covers/13106494.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Furry Club, The - Towers, Trystana & Culkin, Justin",
+    "title": "Furry Club, The Towers, Trystana & Culkin, Justin",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Furry Club, The - Towers, Trystana & Culkin, Justin.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Furry Club, The - Towers, Trystana & Culkin, Justin.mobi",
+    "cover": "covers/a0b21153.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3871,6 +2152,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Furry Problems",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Furry_problems.pdf",
+    "cover": "covers/da45e88a.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Furry Zombies",
     "author": "Handrahan, John",
     "year": "2013",
@@ -3880,30 +2170,21 @@ const books = [
     "genre": "romance horror"
   },
   {
-    "title": "Furry Zombies",
-    "author": "Handrahan, John",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Furry Zombies - Handrahan, John.pdf",
-    "cover": "covers/e7eb417e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Furry Zombies - Handrahan, John",
+    "title": "Furry Zombies Handrahan, John",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Furry Zombies - Handrahan, John.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/ed0e40f4.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Furry Zombies - Handrahan, John",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Furry Zombies - Handrahan, John.opf",
-    "cover": "covers/generic.webp",
+    "title": "Fuzimir Mare Minding Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Fuzimir_-_Mare_Minding_draft_1.pdf",
+    "cover": "covers/e66a678c.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3916,12 +2197,66 @@ const books = [
     "genre": "anthro on human"
   },
   {
-    "title": "Fuzzy Magic",
-    "author": "Bond, J. H.",
-    "year": "2019",
+    "title": "Fyrdrgon Becoming A Cuckquean, Draft 1",
+    "author": "me",
+    "year": "2017",
     "format": "pdf",
-    "path": "Fuzzy Magic - Bond, J. H_.pdf",
-    "cover": "covers/5f1104f9.webp",
+    "path": "Fyrdrgon - Becoming a CuckQuean, draft 1.pdf",
+    "cover": "covers/8f879619.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fyrdrgon Caught Cheating, Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Fyrdrgon - Caught Cheating, draft 1.pdf",
+    "cover": "covers/0bfed173.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fyrdrgon Cheating On His Wife With Her Mother Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Fyrdrgon_-_Cheating_on_his_Wife_with_her_Mother_draft_1.pdf",
+    "cover": "covers/163cc43f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fyrdrgon Family Intimacy, C1, Draft 1",
+    "author": "Davies Lorna",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Fyrdrgon - Family Intimacy, C1, draft 1.pdf",
+    "cover": "covers/c3c69e0f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fyrdrgon Family Intimacy, C2, Draft 1",
+    "author": "Davies Lorna",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Fyrdrgon - Family Intimacy, C2, draft 1.pdf",
+    "cover": "covers/34b7552d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Fyrdrgon Steamy Evenings With Mom Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Fyrdrgon_-_Steamy_Evenings_with_Mom_draft_1.pdf",
+    "cover": "covers/582a55f2.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Genmos Emily's Flight Coghlan, Stephen",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Genmos_ Emily's Flight - Coghlan, Stephen.mobi",
+    "cover": "covers/3fbfc89e.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3934,39 +2269,12 @@ const books = [
     "genre": "genmos"
   },
   {
-    "title": "Genmos: Emily's Flight",
-    "author": "Coghlan, Stephen",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Genmos_ Emily's Flight - Coghlan, Stephen.pdf",
-    "cover": "covers/5099e588.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Genmos_ Emily's Flight - Coghlan, Stephen",
+    "title": "Gladiator And His Mistress, The Matthew Chapel",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Genmos_ Emily's Flight - Coghlan, Stephen.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Genmos_ Emily's Flight - Coghlan, Stephen",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Genmos_ Emily's Flight - Coghlan, Stephen.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Gladiator and His Mistress, The - Matthew Chapel",
-    "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Gladiator and His Mistress, The - Matthew Chapel.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/98bec9b2.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -3988,30 +2296,12 @@ const books = [
     "genre": "magic"
   },
   {
-    "title": "Golden Guardian",
-    "author": "Meenan, R. A.",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Golden Guardian - Meenan, R. A_.pdf",
-    "cover": "covers/2e8b1bcf.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Golden Guardian - Meenan, R. A_",
+    "title": "Golden Guardian Meenan, R",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Golden Guardian - Meenan, R. A_.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Golden Guardian - Meenan, R. A_",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Golden Guardian - Meenan, R. A_.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/0f95c7da.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4024,30 +2314,12 @@ const books = [
     "genre": "furry"
   },
   {
-    "title": "Good Intentions",
-    "author": "J.H. Bond",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Good Intentions - J.H. Bond.pdf",
-    "cover": "covers/97f2340a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Good Intentions - J.H. Bond",
+    "title": "Good Intentions J",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Good Intentions - J.H. Bond.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Good Intentions - J.H. Bond",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Good Intentions - J.H. Bond.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/195c2f36.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4114,30 +2386,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Green Fairy (Dangerous Spirits)",
-    "author": "Gold, Kyell",
-    "year": "2012",
-    "format": "epub",
-    "path": "1 Green Fairy (Dangerous Spirits) - Gold, Kyell.epub",
-    "cover": "covers/c9138878.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Grey Elk, The - Hendrickson, Kevis",
+    "title": "Grey Elk, The Hendrickson, Kevis",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Grey Elk, The - Hendrickson, Kevis.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/22cef81b.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Grey Elk, The - Hendrickson, Kevis",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Grey Elk, The - Hendrickson, Kevis.opf",
-    "cover": "covers/generic.webp",
+    "title": "Gryphon Idea",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Gryphon_idea.pdf",
+    "cover": "covers/807c1697.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4147,6 +2410,15 @@ const books = [
     "format": "epub",
     "path": "Halfax_ A Book of Deacon Novell - Lallo, Joseph.epub",
     "cover": "covers/9f8710df.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Hatchling Delight",
+    "author": "",
+    "year": "Unknown Year",
+    "format": "pdf",
+    "path": "Hatchling Delight.pdf",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4174,15 +2446,6 @@ const books = [
     "format": "epub",
     "path": "Rukis--Heretic.epub",
     "cover": "covers/5a32001e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Heretic",
-    "author": "Rukis",
-    "year": "2013",
-    "format": "epub",
-    "path": "Rukis - Heretic.epub",
-    "cover": "covers/08a6b59b.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4222,21 +2485,48 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Hieretic - Vogel, Alicia & Vogel, Michael",
+    "title": "Hieretic Vogel, Alicia & Vogel, Michael",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Hieretic - Vogel, Alicia & Vogel, Michael.mobi",
+    "cover": "covers/1d6259e4.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "High Rhulain",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "18 - High Rhulain.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Hieretic - Vogel, Alicia & Vogel, Michael",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Hieretic - Vogel, Alicia & Vogel, Michael.opf",
-    "cover": "covers/generic.webp",
+    "title": "History And World Building Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "History_and_world_building_draft_2.pdf",
+    "cover": "covers/e07f8672.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Homer Shatter Me Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Homer_-_Shatter_Me_draft_1.pdf",
+    "cover": "covers/aa6bdcb3.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Hot And Cold Story Idea And Plan",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Hot_and_Cold_story_idea_and_plan.pdf",
+    "cover": "covers/0244cd37.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4258,7 +2548,7 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "HT",
+    "title": "Ht",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -4267,25 +2557,7 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "HT",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "rtf",
-    "path": "HT chap 6.rtf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "HT",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "rtf",
-    "path": "HT chap 7.rtf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "HT",
+    "title": "Ht 4",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -4294,39 +2566,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "HT",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "rtf",
-    "path": "HT chap 9.rtf",
-    "cover": "covers/generic.webp",
+    "title": "Human Furry Romance Idea",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Human_furry_romance_idea.pdf",
+    "cover": "covers/22b583ca.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "HT",
+    "title": "Hunt, The Flint, Stephanie",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "rtf",
-    "path": "HT chap 8.rtf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Hunt, The - Flint, Stephanie",
-    "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Hunt, The - Flint, Stephanie.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Hunt, The - Flint, Stephanie",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Hunt, The - Flint, Stephanie.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/a0f546c0.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4339,30 +2593,12 @@ const books = [
     "genre": "antarctica"
   },
   {
-    "title": "Hunted",
-    "author": "FoxesAreLife",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Hunted - FoxesAreLife.pdf",
-    "cover": "covers/c0593301.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Hunted - FoxesAreLife",
+    "title": "Hunted Foxesarelife",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Hunted - FoxesAreLife.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Hunted - FoxesAreLife",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Hunted - FoxesAreLife.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/615e25ec.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4375,12 +2611,66 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "ice",
+    "title": "Ia, Lugia Seagull Sexual Torture, Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "IA, Lugia Seagull - Sexual Torture, draft 1.pdf",
+    "cover": "covers/de6a94d6.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Ice",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
     "path": "ice.rtf",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Idea Hot Or Iced",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Idea_-_Hot_or_Iced.pdf",
+    "cover": "covers/3864c604.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Idea M F Lioness",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Idea_M-F_lioness.pdf",
+    "cover": "covers/4b622dea.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Idea M M A Hiking Mishap",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Idea_-_M-M_A_Hiking_Mishap.pdf",
+    "cover": "covers/ba73b483.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Idea M M Straight To Gay With Bison",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Idea_-_M-M_straight_to_gay_with_bison.pdf",
+    "cover": "covers/7a367455.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Idea Were Story",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Idea_-_were_story.pdf",
+    "cover": "covers/eabc3d84.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4411,6 +2701,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Impregnation Mating Yui Olp",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "11_-_Impregnation_Mating_-_yui_olp.pdf",
+    "cover": "covers/c430e14f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "In Extremis",
     "author": "M.C.A. Hogarth",
     "year": "2017",
@@ -4438,30 +2737,12 @@ const books = [
     "genre": "Kurzgeschichten"
   },
   {
-    "title": "In the Shadow of Titans",
-    "author": "Scott, Sylvan",
-    "year": "2019",
-    "format": "pdf",
-    "path": "In the Shadow of Titans - Scott, Sylvan.pdf",
-    "cover": "covers/5aca52a8.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "In the Shadow of Titans - Scott, Sylvan",
+    "title": "In The Shadow Of Titans Scott, Sylvan",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "In the Shadow of Titans - Scott, Sylvan.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "In the Shadow of Titans - Scott, Sylvan",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "In the Shadow of Titans - Scott, Sylvan.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/1f8293c1.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4528,39 +2809,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Infinite Wisdom (The Snow Adventures Book 2), The - Estes, Danny C_",
+    "title": "Infinite Wisdom (the Snow Adventures Book 2), The Estes, Danny C",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Infinite Wisdom (The Snow Adventures Book 2), The - Estes, Danny C_.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/51e79447.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Infinite Wisdom (The Snow Adventures Book 2), The - Estes, Danny C_",
+    "title": "Infinite Wisdom, The Estes, Danny C",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Infinite Wisdom (The Snow Adventures Book 2), The - Estes, Danny C_.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Infinite Wisdom, The - Estes, Danny C_",
-    "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Infinite Wisdom, The - Estes, Danny C_.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Infinite Wisdom, The - Estes, Danny C_",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Infinite Wisdom, The - Estes, Danny C_.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/ee1b464e.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4591,15 +2854,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Isolation Play (Dev and Lee)",
-    "author": "Gold, Kyell",
-    "year": "2011",
-    "format": "epub",
-    "path": "Isolation Play (OoP #2) - Kyell Gold.epub",
-    "cover": "covers/209c35aa.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Jade (The Book of Deacon series)",
     "author": "Joseph Lallo",
     "year": "2011",
@@ -4618,15 +2872,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Jake's List",
-    "author": "Tagenar",
-    "year": "2014",
-    "format": "epub",
-    "path": "Jake's List - Tagenar.epub",
-    "cover": "covers/635c4b5c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "January",
     "author": "Brett Brooks",
     "year": "2019",
@@ -4636,30 +2881,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "January",
-    "author": "Brett Brooks",
-    "year": "2019",
-    "format": "pdf",
-    "path": "January - Brett Brooks.pdf",
-    "cover": "covers/63513655.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "January - Brett Brooks",
+    "title": "January Brett Brooks",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "January - Brett Brooks.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/79697e27.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "January - Brett Brooks",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "January - Brett Brooks.opf",
-    "cover": "covers/generic.webp",
+    "title": "Jasiri Gender Swapped Spots Draft 1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Jasiri_-_Gender_Swapped_Spots_draft_1.pdf",
+    "cover": "covers/37a436eb.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4699,30 +2935,30 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Jonathin Quackup of the Planet Weralt #1 (Raytoons Comic Book)",
-    "author": "Mullikin, Raymond",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Jonathin Quackup of the Planet Weralt #1 (Raytoons Comic Book) - Mullikin, Raymond.pdf",
-    "cover": "covers/62d05914.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Jonathin Quackup of the Planet Weralt #1 (Raytoons Comic Book) - Mullikin, Raymond",
+    "title": "Jonathin Quackup Of The Planet Weralt #1 (raytoons Comic Book) Mullikin, Raymond",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Jonathin Quackup of the Planet Weralt #1 (Raytoons Comic Book) - Mullikin, Raymond.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/e63b3c93.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Jonathin Quackup of the Planet Weralt #1 (Raytoons Comic Book) - Mullikin, Raymond",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Jonathin Quackup of the Planet Weralt #1 (Raytoons Comic Book) - Mullikin, Raymond.opf",
-    "cover": "covers/generic.webp",
+    "title": "Keeper Of Dragons Outline Idea",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Keeper_of_Dragons_-_outline_idea.pdf",
+    "cover": "covers/cfcd3894.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Kickstarter Princely Desires Idea",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Kickstarter - Princely Desires - idea.pdf",
+    "cover": "covers/9f6d4c89.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4753,30 +2989,57 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Ladies Night",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Ladies Night - Warbaum, Joshiah.pdf",
-    "cover": "covers/3ca5e57f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Ladies Night - Warbaum, Joshiah",
+    "title": "Ladies Night Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Ladies Night - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/0e108fa8.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Ladies Night - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Ladies Night - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
+    "title": "Lads Night 1 4",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lads_Night_1-4.pdf",
+    "cover": "covers/aa14260e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Lads Night 11 12",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lads_Night_11-12.pdf",
+    "cover": "covers/874e5eef.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Lads Night 5 6",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lads_Night_5-6.pdf",
+    "cover": "covers/ec74219f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Lads Night 7 8",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lads_Night_7-8.pdf",
+    "cover": "covers/9a12695a.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Lads Night 9 10",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lads_Night_9-10.pdf",
+    "cover": "covers/10dd5efd.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4798,6 +3061,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Latex Becoming Cat Complete First Draft",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Latex_-_Becoming_Cat_complete_first_draft.pdf",
+    "cover": "covers/2a975678.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Leaping Lizards",
     "author": "McCoy, Elizabeth",
     "year": "2011",
@@ -4807,21 +3079,12 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Leaping Lizards",
-    "author": "McCoy, Elizabeth",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Leaping Lizards - McCoy, Elizabeth.pdf",
-    "cover": "covers/38877108.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Leaping Lizards - McCoy, Elizabeth",
+    "title": "Leaping Lizards Mccoy, Elizabeth",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Leaping Lizards - McCoy, Elizabeth.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/9d102845.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4861,30 +3124,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Legendary Encounters (For Pokemon Fans Book 1)",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Legendary Encounters (For Pokemon Fans Book 1) - Warbaum, Joshiah.pdf",
-    "cover": "covers/6f8f1a9a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Legendary Encounters (For Pokemon Fans Book 1) - Warbaum, Joshiah",
+    "title": "Legendary Encounters (for Pokemon Fans Book 1) Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Legendary Encounters (For Pokemon Fans Book 1) - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/c90d23fa.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Legendary Encounters (For Pokemon Fans Book 1) - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Legendary Encounters (For Pokemon Fans Book 1) - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
+    "title": "Legendary Encounters Edited Draft",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "legendary encounters edited draft.pdf",
+    "cover": "covers/69df0274.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4894,6 +3148,15 @@ const books = [
     "format": "epub",
     "path": "Anthony Milhorn - Limbo.epub",
     "cover": "covers/fb15f648.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Loamhedge",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "16 - Loamhedge.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4915,21 +3178,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "London Calling - Ravenwood, Nathan & Kadath",
+    "title": "London Calling Ravenwood, Nathan & Kadath",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "London Calling - Ravenwood, Nathan & Kadath.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/85815a6e.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "London Calling - Ravenwood, Nathan & Kadath",
+    "title": "Long Journey Home A Velorian Tale (tales Of Veloria Book 2) Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "London Calling - Ravenwood, Nathan & Kadath.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah.mobi",
+    "cover": "covers/d7e84488.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4939,33 +3202,6 @@ const books = [
     "format": "epub",
     "path": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah.epub",
     "cover": "covers/99050a45.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Long Journey Home: A Velorian Tale (Tales of Veloria Book 2)",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah.pdf",
-    "cover": "covers/a5dc581a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -4987,12 +3223,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Loonatics Undressed",
-    "author": "Kyell Gold",
+    "title": "Lord Brocktree",
+    "author": "Unknown Author",
     "year": "Unknown Year",
-    "format": "epub",
-    "path": "Loonatics Undressed - Kyell.epub",
+    "format": "mobi",
+    "path": "13 - Lord Brocktree.mobi",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Losing Him Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Losing_Him_draft_1.pdf",
+    "cover": "covers/62c582db.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5005,12 +3250,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Losing My Religion",
-    "author": "Kyell Gold",
+    "title": "Louie The Bee The Insects Prevail",
+    "author": "Unknown Author",
     "year": "Unknown Year",
-    "format": "epub",
-    "path": "Losing my religion.epub",
-    "cover": "covers/c15ecb99.webp",
+    "format": "mobi",
+    "path": "Louie the Bee_ The Insects Prevail. - Corrick, Dave.mobi",
+    "cover": "covers/f6123e43.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5023,11 +3268,11 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Louie the Bee_ The Insects Prevail. - Corrick, Dave",
+    "title": "Love Match 3 Kindle Vr5gdh",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
-    "path": "Louie the Bee_ The Insects Prevail. - Corrick, Dave.mobi",
+    "path": "Love-Match-3-Kindle-vr5gdh.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -5038,15 +3283,6 @@ const books = [
     "format": "epub",
     "path": "Love Match - Kyell Gold.epub",
     "cover": "covers/6d69fb97.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Love Match Book One",
-    "author": "Kyell Gold",
-    "year": "2016",
-    "format": "epub",
-    "path": "Love Match - Kyell Gold (1).epub",
-    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5068,15 +3304,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Love-Match-3-Kindle-vr5gdh",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Love-Match-3-Kindle-vr5gdh.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Lovesong",
     "author": "TJ Klune",
     "year": "2018",
@@ -5086,12 +3313,48 @@ const books = [
     "genre": "Fiction"
   },
   {
+    "title": "Lovesong Tj Klune",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "docx",
+    "path": "Lovesong - TJ Klune.docx",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Luca: the Mercenary",
     "author": "AveatsOtter",
     "year": "2021",
     "format": "epub",
     "path": "AveatsOtter--LucaTheMercenary.epub",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Lust Draft 1 Complete First Draft",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lust_draft_1_complete_first_draft.pdf",
+    "cover": "covers/7f7e0fec.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Luster Unicorn Unlikely Angel Draft 1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Luster_Unicorn_-_Unlikely_Angel_draft_1.pdf",
+    "cover": "covers/0403151b.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Lyrics Two Way Street",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Lyrics_-_two_way_street.pdf",
+    "cover": "covers/8b496fe3.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5104,6 +3367,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Magus Vol",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Magus Vol.1 - Freeman, Jesse.mobi",
+    "cover": "covers/bd8eec5e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Magus Vol.1",
     "author": "Freeman, Jesse",
     "year": "2014",
@@ -5111,33 +3383,6 @@ const books = [
     "path": "Magus Vol.1 - Freeman, Jesse.epub",
     "cover": "covers/01448bd5.webp",
     "genre": "adventure"
-  },
-  {
-    "title": "Magus Vol.1",
-    "author": "Freeman, Jesse",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Magus Vol.1 - Freeman, Jesse.pdf",
-    "cover": "covers/82fc5797.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Magus Vol.1 - Freeman, Jesse",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Magus Vol.1 - Freeman, Jesse.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Magus Vol.1 - Freeman, Jesse",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Magus Vol.1 - Freeman, Jesse.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "Marcus & Reis Shorts",
@@ -5158,6 +3403,51 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Mariel Of Redwall",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "4 - Mariel of Redwall.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Marlfox",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "11 - Marlfox.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Martin The Warrior",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "6 - Martin the Warrior.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Mascara Handwritten Draft 1",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Mascara_handwritten_draft_1.pdf",
+    "cover": "covers/1fefb714.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Mated To The Dragon Lord Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Mated_to_the_Dragon_Lord_draft_1.pdf",
+    "cover": "covers/6aad6292.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Mercy Gets Beasted",
     "author": "McCain, E. Z.",
     "year": "2017",
@@ -5167,30 +3457,12 @@ const books = [
     "genre": "anthro on human"
   },
   {
-    "title": "Mercy Gets Beasted",
-    "author": "McCain, E. Z.",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Mercy Gets Beasted - McCain, E. Z_.pdf",
-    "cover": "covers/b18d93d4.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Mercy Gets Beasted - McCain, E. Z_",
+    "title": "Mercy Gets Beasted Mccain, E",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Mercy Gets Beasted - McCain, E. Z_.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Mercy Gets Beasted - McCain, E. Z_",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Mercy Gets Beasted - McCain, E. Z_.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/499ff42a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5203,6 +3475,33 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Metalr169 Role Reversal Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Metalr169_-_Role_Reversal_draft_1.pdf",
+    "cover": "covers/fa90ebb8.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Milking Coaldust",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "8_-_Milking_-_Coaldust.pdf",
+    "cover": "covers/6c23d6e0.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Mind Games Idea",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "mind_games_-_idea.pdf",
+    "cover": "covers/b87a5052.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Mindline",
     "author": "Hogarth, M.C.A.",
     "year": "2013",
@@ -5212,30 +3511,12 @@ const books = [
     "genre": "The Dreamhealers"
   },
   {
-    "title": "Mindline",
-    "author": "Hogarth, M.C.A.",
-    "year": "2013",
-    "format": "epub",
-    "path": "Mindline  (The Dreamhealers 2) - M. C. A. Hogarth (1).epub",
-    "cover": "covers/80bc21ee.webp",
-    "genre": "The Dreamhealers"
-  },
-  {
     "title": "Mindtouch",
     "author": "Hogarth, M.C.A.",
     "year": "2013",
     "format": "epub",
     "path": "Mindtouch (The Dreamhealers 1) - M. C. A. Hogarth.epub",
     "cover": "covers/7d9bfbee.webp",
-    "genre": "The Dreamhealers"
-  },
-  {
-    "title": "Mindtouch",
-    "author": "Hogarth, M.C.A.",
-    "year": "2013",
-    "format": "epub",
-    "path": "Mindtouch (The Dreamhealers 1) - M. C. A. Hogarth (1).epub",
-    "cover": "covers/b8e808a0.webp",
     "genre": "The Dreamhealers"
   },
   {
@@ -5257,30 +3538,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Miss Nolly's Class",
-    "author": "Arlet, Helen",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Miss Nolly's Class - Arlet, Helen.pdf",
-    "cover": "covers/274e69a7.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Miss Nolly's Class - Arlet, Helen",
+    "title": "Miss Nolly's Class Arlet, Helen",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Miss Nolly's Class - Arlet, Helen.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Miss Nolly's Class - Arlet, Helen",
+    "title": "Missing Person A Hybrid Nation Story Pauli, Frances",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Miss Nolly's Class - Arlet, Helen.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Missing Person_ A Hybrid Nation Story - Pauli, Frances.mobi",
+    "cover": "covers/8de3585a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5293,30 +3565,12 @@ const books = [
     "genre": "Fiction"
   },
   {
-    "title": "Missing Person: A Hybrid Nation Story",
-    "author": "Pauli, Frances",
-    "year": "2019",
+    "title": "Mistress Of The Whip Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
     "format": "pdf",
-    "path": "Missing Person_ A Hybrid Nation Story - Pauli, Frances.pdf",
-    "cover": "covers/ba8404c5.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Missing Person_ A Hybrid Nation Story - Pauli, Frances",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Missing Person_ A Hybrid Nation Story - Pauli, Frances.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Missing Person_ A Hybrid Nation Story - Pauli, Frances",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Missing Person_ A Hybrid Nation Story - Pauli, Frances.opf",
-    "cover": "covers/generic.webp",
+    "path": "Mistress_of_the_Whip_draft_1.pdf",
+    "cover": "covers/396b382a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5347,6 +3601,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Mounting His Herd Mate",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Mounting_His_Herd_Mate.pdf",
+    "cover": "covers/cacdb764.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Murder at the Gala",
     "author": "Warbaum, Joshiah",
     "year": "2016",
@@ -5356,30 +3619,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Murder at the Gala",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Murder at the Gala - Warbaum, Joshiah.pdf",
-    "cover": "covers/696740fc.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Murder at the Gala - Warbaum, Joshiah",
+    "title": "Murder At The Gala Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Murder at the Gala - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/a6bb7c85.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Murder at the Gala - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Murder at the Gala - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
+    "title": "My Kind Of Vegas Wip 20",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "My_Kind_of_Vegas_WIP_20.02.16.pdf",
+    "cover": "covers/ce6ddd80.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "My Masters Hoof Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "My_Masters_Hoof_draft_1.pdf",
+    "cover": "covers/6fadb2de.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5401,6 +3664,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Noah Padgett And The Dog People Potter, Sarah",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Noah Padgett and the Dog-People - Potter, Sarah.mobi",
+    "cover": "covers/5f21a921.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Noah Padgett and the Dog-People",
     "author": "Potter, Sarah",
     "year": "2016",
@@ -5408,33 +3680,6 @@ const books = [
     "path": "Noah Padgett and the Dog-People - Potter, Sarah.epub",
     "cover": "covers/69b2a8d0.webp",
     "genre": "fantasy"
-  },
-  {
-    "title": "Noah Padgett and the Dog-People",
-    "author": "Potter, Sarah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Noah Padgett and the Dog-People - Potter, Sarah.pdf",
-    "cover": "covers/c62d91e3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Noah Padgett and the Dog-People - Potter, Sarah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Noah Padgett and the Dog-People - Potter, Sarah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Noah Padgett and the Dog-People - Potter, Sarah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Noah Padgett and the Dog-People - Potter, Sarah.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "North",
@@ -5455,7 +3700,7 @@ const books = [
     "genre": "Science Fiction"
   },
   {
-    "title": "not",
+    "title": "Not Now Not Ever",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -5509,21 +3754,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Omni : City of Desires",
-    "author": "Reed, Zolina",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Omni _ City of Desires - Reed, Zolina.pdf",
-    "cover": "covers/bdfb001c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Omni _ City of Desires - Reed, Zolina",
+    "title": "Omni City Of Desires Reed, Zolina",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Omni _ City of Desires - Reed, Zolina.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/c144430a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5545,7 +3781,16 @@ const books = [
     "genre": "fantasy"
   },
   {
-    "title": "Online Conversion tool",
+    "title": "One Off Hot Or Iced Complete Draft 1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "One_off_-_Hot_or_Iced_complete_draft_1.pdf",
+    "cover": "covers/6b07e115.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Online Conversion Tool",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -5563,7 +3808,7 @@ const books = [
     "genre": "science fiction, space opera"
   },
   {
-    "title": "other",
+    "title": "Other Sides 12 Webfiction Tales",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -5590,15 +3835,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Out of Position (Dev and Lee)",
-    "author": "Gold, Kyell",
-    "year": "2009",
-    "format": "epub",
-    "path": "1 Out of Position (Dev and Lee) - Gold, Kyell.epub",
-    "cover": "covers/8f6d4275.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Out on the Highway (Todd and Colton Book 2)",
     "author": "Aldrington, Todd",
     "year": "2019",
@@ -5608,12 +3844,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Out on the Highway (Todd and Colton Book 2)",
-    "author": "Aldrington, Todd",
-    "year": "2019",
-    "format": "epub",
-    "path": "Out on the Highway (Todd and Colton Book 2) - Todd Aldrington.epub",
-    "cover": "covers/a719f135.webp",
+    "title": "Outcast Of Redwall",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "8 - Outcast of Redwall.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5626,21 +3862,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Over Time",
-    "author": "Kyell Gold",
-    "year": "Unknown Year",
-    "format": "epub",
-    "path": "5 Over-Time-BDB.epub",
-    "cover": "covers/9de3292e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Over Time",
-    "author": "Kyell Gold",
-    "year": "2016",
-    "format": "epub",
-    "path": "Kyell-Dev+Lee5-OverTime.epub",
-    "cover": "covers/fa3b42c1.webp",
+    "title": "Overheard In Office",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Overheard_in_office.pdf",
+    "cover": "covers/5d5184a3.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5662,30 +3889,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Owo *whats this*: A Guide to the Furry Fandom",
-    "author": "Avery Miller",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Owo _whats this__ A Guide to the Furry Fandom - Avery Miller.pdf",
-    "cover": "covers/be6876e0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Owo _whats this__ A Guide to the Furry Fandom - Avery Miller",
+    "title": "Owo Whats This A Guide To The Furry Fandom Avery Miller",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Owo _whats this__ A Guide to the Furry Fandom - Avery Miller.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Owo _whats this__ A Guide to the Furry Fandom - Avery Miller",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Owo _whats this__ A Guide to the Furry Fandom - Avery Miller.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/e03706e6.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5698,12 +3907,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Past Dealings, Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Past Dealings, draft 1.pdf",
+    "cover": "covers/bca2a78d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Pearl in the Void",
     "author": "M.C.A. Hogarth",
     "year": "2015",
     "format": "epub",
     "path": "Pearl in the Void.epub",
     "cover": "covers/25144ca8.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pearls Of Lutra",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "9 - Pearls of Lutra.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5725,12 +3952,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Perspective Flip - Schnee, Kris",
+    "title": "Perspective Flip Schnee, Kris",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Perspective Flip - Schnee, Kris.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/3ccfb23a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5743,6 +3970,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Pit Fighters 1",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Pit Fighters 1. The Opportunity - Griffin, Rick.mobi",
+    "cover": "covers/d6391ec2.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Pit Fighters 1. The Opportunity",
     "author": "Griffin, Rick",
     "year": "2019",
@@ -5750,42 +3986,6 @@ const books = [
     "path": "Pit Fighters 1. The Opportunity - Griffin, Rick.epub",
     "cover": "covers/03c10b46.webp",
     "genre": "Science Fiction"
-  },
-  {
-    "title": "Pit Fighters 1. The Opportunity",
-    "author": "Griffin, Rick",
-    "year": "2019",
-    "format": "epub",
-    "path": "Pit Fighters 1. The Opportunity.epub",
-    "cover": "covers/53cdb831.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Pit Fighters 1. The Opportunity",
-    "author": "Griffin, Rick",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Pit Fighters 1. The Opportunity - Griffin, Rick.pdf",
-    "cover": "covers/2a41b6be.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Pit Fighters 1. The Opportunity - Griffin, Rick",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Pit Fighters 1. The Opportunity - Griffin, Rick.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Pit Fighters 1. The Opportunity - Griffin, Rick",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Pit Fighters 1. The Opportunity - Griffin, Rick.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "Pit Fighters 2. Orientation",
@@ -5806,6 +4006,123 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Power Draft 1",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Power_draft_1.pdf",
+    "cover": "covers/3d2cac5f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp 6 10",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_6-10.pdf",
+    "cover": "covers/9823f51f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C1 P1",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C1_p1.pdf",
+    "cover": "covers/a3e871fe.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C1 P2",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C1_p2.pdf",
+    "cover": "covers/7aca0740.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C2 1",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C2_-_1.pdf",
+    "cover": "covers/9287e704.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C2 2",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C2_-_2.pdf",
+    "cover": "covers/0d2d7207.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C2 3",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C2_-_3.pdf",
+    "cover": "covers/bc876d0e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C3 18 19",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_-_C3_18-19.pdf",
+    "cover": "covers/67f53006.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C4 P22 28",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C4_p22-28.pdf",
+    "cover": "covers/c59b5b72.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C4 P8 14",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_C4_p8-14.pdf",
+    "cover": "covers/c0421f7f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp C7 11 20",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "PP_C7_11-20.pdf",
+    "cover": "covers/6d6edda5.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "PP_Chapter_5_draft_1.pdf",
+    "cover": "covers/0de25ec6.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Pp Draft 2",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "PP_Chapter_3_draft_2.pdf",
+    "cover": "covers/1402a836.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Precious Things",
     "author": "M.C.A. Hogarth",
     "year": "2014",
@@ -5815,13 +4132,13 @@ const books = [
     "genre": "holidays"
   },
   {
-    "title": "Precious Things",
-    "author": "M.C.A. Hogarth",
-    "year": "2014",
-    "format": "epub",
-    "path": "Precious Things.epub",
-    "cover": "covers/5ff54bee.webp",
-    "genre": "holidays"
+    "title": "Preyitem Predator Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Preyitem_-_Predator_chapter_2_draft_2.pdf",
+    "cover": "covers/4297cbcd.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Price of Peace",
@@ -5842,21 +4159,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie.mobi",
-    "cover": "covers/generic.webp",
+    "title": "Pwca Name Scrap",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Pwca_name_scrap.pdf",
+    "cover": "covers/e0e28f24.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie",
+    "title": "Queen And The Dagger (a Book Of Theo Novella), The Ansley, Melanie",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie.mobi",
+    "cover": "covers/dffff90e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Queen Of Anarchy Book 1 Venomous Vengeance Of Viper Nichols Vernon, Jessica Kylie",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Queen of Anarchy Book 1_Venomous Vengeance of Viper - Nichols-Vernon, Jessica Kylie.mobi",
+    "cover": "covers/6e57959f.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5869,30 +4195,21 @@ const books = [
     "genre": "thriller"
   },
   {
-    "title": "Queen of Anarchy Book 1:Venomous Vengeance of Viper",
-    "author": "Nichols-Vernon, Jessica Kylie",
-    "year": "2019",
+    "title": "Quote1",
+    "author": "",
+    "year": "2016",
     "format": "pdf",
-    "path": "Queen of Anarchy Book 1_Venomous Vengeance of Viper - Nichols-Vernon, Jessica Kylie.pdf",
-    "cover": "covers/618edcd3.webp",
+    "path": "quote1.pdf",
+    "cover": "covers/bb1ffb8d.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Queen of Anarchy Book 1_Venomous Vengeance of Viper - Nichols-Vernon, Jessica Kylie",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Queen of Anarchy Book 1_Venomous Vengeance of Viper - Nichols-Vernon, Jessica Kylie.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Queen of Anarchy Book 1_Venomous Vengeance of Viper - Nichols-Vernon, Jessica Kylie",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Queen of Anarchy Book 1_Venomous Vengeance of Viper - Nichols-Vernon, Jessica Kylie.opf",
-    "cover": "covers/generic.webp",
+    "title": "Quote2",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "quote2.pdf",
+    "cover": "covers/58e21ab9.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5905,6 +4222,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Rakkety Tam",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "17 - Rakkety Tam.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Ravensong",
     "author": "TJ Klune",
     "year": "2018",
@@ -5912,6 +4238,51 @@ const books = [
     "path": "Ravensong - TJ Klune.epub",
     "cover": "covers/cb0e0719.webp",
     "genre": "Fiction"
+  },
+  {
+    "title": "Razak Mares Seeking Stallions Ace",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Razak_-_Mares_Seeking_Stallions_Ace.pdf",
+    "cover": "covers/08cd5989.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Razak Mares Seeking Stallions Amethyst",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Razak_-_Mares_Seeking_Stallions_Amethyst.pdf",
+    "cover": "covers/5489dabc.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Razak Mares Seeking Stallions Arian",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Razak_-_Mares_Seeking_Stallions_Arian.pdf",
+    "cover": "covers/19432c94.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Razak Mares Seeking Stallions Menna",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Razak_-_Mares_Seeking_Stallions_Menna.pdf",
+    "cover": "covers/e372c662.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Razak Unwrapping The Reindeer Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Razak_-_Unwrapping_the_Reindeer_draft_1.pdf",
+    "cover": "covers/22fddb6d.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Reaper's Lottery (The Tori Mysteries Book 1)",
@@ -5932,21 +4303,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Reborn_ A Tale of Second Skins - J RW Conway",
+    "title": "Reborn A Tale Of Second Skins J Rw Conway",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Reborn_ A Tale of Second Skins - J RW Conway.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Red",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "rtf",
-    "path": "Red_Lantern_Sacrifice_first_quarter.rtf",
-    "cover": "covers/generic.webp",
+    "title": "Reborn A Tale Of Second Skins J Rw Conway",
+    "author": "",
+    "year": "Unknown Year",
+    "format": "pdf",
+    "path": "Reborn_ A Tale of Second Skins - J RW Conway.pdf",
+    "cover": "covers/597b56c6.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5959,13 +4330,22 @@ const books = [
     "genre": "furry ghost gay russia"
   },
   {
-    "title": "Red Devil (Dangerous Spirits)",
-    "author": "Kyell Gold",
-    "year": "2013",
-    "format": "epub",
-    "path": "Red Devil (Dangerous Spirits 2) - Kyell Gold.epub",
+    "title": "Red Lantern Sacrifice First Quarter",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "rtf",
+    "path": "Red_Lantern_Sacrifice_first_quarter.rtf",
     "cover": "covers/generic.webp",
-    "genre": "furry ghost gay russia"
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Redwall",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "1 - Redwall.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Resistance (Reborn Book 3)",
@@ -5995,21 +4375,39 @@ const books = [
     "genre": "fable"
   },
   {
-    "title": "Rhea's Cubs (Songs of Enneaus)",
-    "author": "Duckhouse, Andrew",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Rhea's Cubs (Songs of Enneaus) - Duckhouse, Andrew.pdf",
-    "cover": "covers/01d31f7b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Rising World",
     "author": "Kris Schnee",
     "year": "2021",
     "format": "epub",
     "path": "Rising World - Kris Schnee.epub",
     "cover": "covers/419a5377.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Roar 1",
+    "author": "",
+    "year": "2018",
+    "format": "pdf",
+    "path": "Roar 1.pdf",
+    "cover": "covers/9f191ade.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Rocky Beginnings Part 1 (the Snow Adventure) Danny C Estes",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Rocky Beginnings Part 2 (the Snow Adventure) Danny C Estes",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Rocky Beginnings_ Part 2 (The Snow Adventure) - Danny C Estes.mobi",
+    "cover": "covers/d07766f1.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6022,57 +4420,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Rocky Beginnings: Part 1 (The Snow Adventure)",
-    "author": "Danny C Estes",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes.pdf",
-    "cover": "covers/2b4b5ae0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Rocky Beginnings: Part 2 (The Snow Adventure)",
     "author": "Danny C Estes",
     "year": "2019",
     "format": "epub",
     "path": "Rocky Beginnings_ Part 2 (The Snow Adventure) - Danny C Estes.epub",
     "cover": "covers/993d4ee0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Rocky Beginnings: Part 2 (The Snow Adventure)",
-    "author": "Danny C Estes",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Rocky Beginnings_ Part 2 (The Snow Adventure) - Danny C Estes.pdf",
-    "cover": "covers/94cb6b60.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Rocky Beginnings_ Part 1 (The Snow Adventure) - Danny C Estes.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Rocky Beginnings_ Part 2 (The Snow Adventure) - Danny C Estes",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Rocky Beginnings_ Part 2 (The Snow Adventure) - Danny C Estes.mobi",
-    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6085,7 +4438,7 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "rosettes",
+    "title": "Rosettes And Ribbons",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -6103,6 +4456,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Sandy",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Sandy.pdf",
+    "cover": "covers/8218b4f5.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Sapien Strife",
     "author": "Ross, Jordon",
     "year": "2012",
@@ -6112,30 +4474,12 @@ const books = [
     "genre": "human"
   },
   {
-    "title": "Sapien Strife",
-    "author": "Ross, Jordon",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Sapien Strife - Ross, Jordon.pdf",
-    "cover": "covers/2718e937.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sapien Strife - Ross, Jordon",
+    "title": "Sapien Strife Ross, Jordon",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Sapien Strife - Ross, Jordon.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sapien Strife - Ross, Jordon",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Sapien Strife - Ross, Jordon.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/4313102e.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6148,30 +4492,21 @@ const books = [
     "genre": "Fiction"
   },
   {
-    "title": "Saraynea",
-    "author": "Pluchino, Natalie",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Saraynea - Pluchino, Natalie.pdf",
-    "cover": "covers/890a37b7.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Saraynea - Pluchino, Natalie",
+    "title": "Saraynea Pluchino, Natalie",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Saraynea - Pluchino, Natalie.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/e41b106f.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Saraynea - Pluchino, Natalie",
+    "title": "Saraynea Return To The Frostpeak Mountains Territory Natalie Pluchino",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Saraynea - Pluchino, Natalie.opf",
-    "cover": "covers/generic.webp",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino.mobi",
+    "cover": "covers/5985d957.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6184,33 +4519,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Saraynea: Return to the FrostPeak Mountains Territory",
-    "author": "Natalie Pluchino",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino.pdf",
-    "cover": "covers/c1c8ceb0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Science Friction",
     "author": "Kyell Gold",
     "year": "2012",
@@ -6220,13 +4528,31 @@ const books = [
     "genre": "Forester Universe"
   },
   {
-    "title": "Science Friction",
-    "author": "Kyell Gold",
-    "year": "2012",
-    "format": "epub",
-    "path": "Science Friction - Kyell Gold.epub",
-    "cover": "covers/d03bfc60.webp",
-    "genre": "Forester Universe"
+    "title": "Scrap Fantasy Lyrics",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Scrap_-_fantasy_lyrics.pdf",
+    "cover": "covers/ca00d520.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Scrap Foolproof",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Scrap_-_foolproof.pdf",
+    "cover": "covers/66947f52.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Scrap Office2",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "scrap_-_office2.pdf",
+    "cover": "covers/625685b0.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Searching the Shore",
@@ -6245,6 +4571,24 @@ const books = [
     "path": "Second.epub",
     "cover": "covers/f2346884.webp",
     "genre": "adventure"
+  },
+  {
+    "title": "Seduced In The Stables Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Seduced_in_the_Stables_draft_1.pdf",
+    "cover": "covers/3d51e13d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Seeded By Three Gryphons Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Seeded_by_Three_Gryphons_draft_1.pdf",
+    "cover": "covers/949fd88f.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Seeing Spots",
@@ -6274,13 +4618,13 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Shadow of the Father",
-    "author": "Kyell Gold",
-    "year": "2014",
-    "format": "epub",
-    "path": "5 Shadow of the Father (Argaea Series 4) - Kyell Gold.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Argaea Series"
+    "title": "Shapeshifter Set Of Stories Collection Idea",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Shapeshifter_set_of_stories_-_collection_idea.pdf",
+    "cover": "covers/6c312d81.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Sharing Is Caring",
@@ -6292,34 +4636,16 @@ const books = [
     "genre": "human"
   },
   {
-    "title": "Sharing Is Caring",
-    "author": "Chapel, Matthew",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Sharing Is Caring - Chapel, Matthew.pdf",
-    "cover": "covers/91fc58a3.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sharing Is Caring - Chapel, Matthew",
+    "title": "Sharing Is Caring Chapel, Matthew",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Sharing Is Caring - Chapel, Matthew.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/daf31f8c.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Sharing Is Caring - Chapel, Matthew",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Sharing Is Caring - Chapel, Matthew.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "shell",
+    "title": "Shell",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -6337,30 +4663,12 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Shiny Things",
-    "author": "S., Brett P.",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Shiny Things - S., Brett P_.pdf",
-    "cover": "covers/1f47fc6c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Shiny Things - S., Brett P_",
+    "title": "Shiny Things S",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Shiny Things - S., Brett P_.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Shiny Things - S., Brett P_",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Shiny Things - S., Brett P_.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/676afa3b.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6373,6 +4681,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Shorts The Furry Years John Van Stry",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Shorts_ The Furry Years - John Van Stry.mobi",
+    "cover": "covers/9873d029.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Shorts: The Furry Years",
     "author": "John Van Stry",
     "year": "2013",
@@ -6380,33 +4697,6 @@ const books = [
     "path": "Shorts_ The Furry Years - John Van Stry.epub",
     "cover": "covers/10e8beb8.webp",
     "genre": "Science Fiction"
-  },
-  {
-    "title": "Shorts: The Furry Years",
-    "author": "John Van Stry",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Shorts_ The Furry Years - John Van Stry.pdf",
-    "cover": "covers/efe52e4b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Shorts_ The Furry Years - John Van Stry",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Shorts_ The Furry Years - John Van Stry.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Shorts_ The Furry Years - John Van Stry",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Shorts_ The Furry Years - John Van Stry.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "Side Stories from Red Lantern",
@@ -6418,13 +4708,40 @@ const books = [
     "genre": "furry"
   },
   {
-    "title": "Side Stories from Red Lantern",
-    "author": "Rukis Croax",
-    "year": "2016",
-    "format": "epub",
-    "path": "Rukis_Side_Stories.epub",
-    "cover": "covers/d30ebf40.webp",
-    "genre": "furry"
+    "title": "Sixes Wild Echoes O'kun, Tempe",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Sixes Wild_ Echoes - O'Kun, Tempe.mobi",
+    "cover": "covers/093f4f37.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Sixes Wild Echoes Tempe O'kun",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Sixes Wild_ Echoes - Tempe O'Kun.mobi",
+    "cover": "covers/cea4bc6e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Sixes Wild Manifest Destiny O'kun, Tempe",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Sixes Wild_ Manifest Destiny - O'Kun, Tempe.mobi",
+    "cover": "covers/a1270564.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Sixes Wild The Bluff Tempe O'kun",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Sixes Wild_ The Bluff - Tempe O'Kun.mobi",
+    "cover": "covers/89c4aa8f.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Sixes Wild: Echoes",
@@ -6442,24 +4759,6 @@ const books = [
     "format": "epub",
     "path": "Sixes Wild_ Echoes - Tempe O'Kun.epub",
     "cover": "covers/5755fac0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild: Echoes",
-    "author": "Tempe O'Kun",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Sixes Wild_ Echoes - Tempe O'Kun.pdf",
-    "cover": "covers/61ffd56a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild: Echoes",
-    "author": "O'Kun, Tempe",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Sixes Wild_ Echoes - O'Kun, Tempe.pdf",
-    "cover": "covers/b932dd6a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6481,102 +4780,12 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "Sixes Wild: Manifest Destiny",
-    "author": "O'Kun, Tempe",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Sixes Wild_ Manifest Destiny - O'Kun, Tempe.pdf",
-    "cover": "covers/83126f30.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Sixes Wild: The Bluff",
     "author": "Tempe O'Kun",
     "year": "2013",
     "format": "epub",
     "path": "Sixes Wild_ The Bluff - Tempe O'Kun.epub",
     "cover": "covers/a189403b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild: The Bluff",
-    "author": "Tempe O'Kun",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Sixes Wild_ The Bluff - Tempe O'Kun.pdf",
-    "cover": "covers/26b92897.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ Echoes - O'Kun, Tempe",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Sixes Wild_ Echoes - O'Kun, Tempe.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ Echoes - O'Kun, Tempe",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Sixes Wild_ Echoes - O'Kun, Tempe.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ Echoes - Tempe O'Kun",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Sixes Wild_ Echoes - Tempe O'Kun.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ Echoes - Tempe O'Kun",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Sixes Wild_ Echoes - Tempe O'Kun.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ Manifest Destiny - O'Kun, Tempe",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Sixes Wild_ Manifest Destiny - O'Kun, Tempe.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ Manifest Destiny - O'Kun, Tempe",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Sixes Wild_ Manifest Destiny - O'Kun, Tempe.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ The Bluff - Tempe O'Kun",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Sixes Wild_ The Bluff - Tempe O'Kun.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Sixes Wild_ The Bluff - Tempe O'Kun",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Sixes Wild_ The Bluff - Tempe O'Kun.opf",
-    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6589,7 +4798,7 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "skip",
+    "title": "Skip Leveling",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -6607,6 +4816,24 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Skylands Large Living Scott, Sylvan",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Skylands_ Large Living - Scott, Sylvan.mobi",
+    "cover": "covers/9e93d110.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Skylands Storm Warning Scott, Sylvan",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Skylands_ Storm Warning - Scott, Sylvan.mobi",
+    "cover": "covers/9dca0eec.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Skylands: Large Living",
     "author": "Scott, Sylvan",
     "year": "2012",
@@ -6616,15 +4843,6 @@ const books = [
     "genre": "Kurzgeschichten"
   },
   {
-    "title": "Skylands: Large Living",
-    "author": "Scott, Sylvan",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Skylands_ Large Living - Scott, Sylvan.pdf",
-    "cover": "covers/8928019b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Skylands: Storm Warning",
     "author": "Scott, Sylvan",
     "year": "2012",
@@ -6632,51 +4850,6 @@ const books = [
     "path": "Skylands_ Storm Warning - Scott, Sylvan.epub",
     "cover": "covers/f3b2ca19.webp",
     "genre": "Kurzgeschichten"
-  },
-  {
-    "title": "Skylands: Storm Warning",
-    "author": "Scott, Sylvan",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Skylands_ Storm Warning - Scott, Sylvan.pdf",
-    "cover": "covers/4a4f295a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Skylands_ Large Living - Scott, Sylvan",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Skylands_ Large Living - Scott, Sylvan.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Skylands_ Large Living - Scott, Sylvan",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Skylands_ Large Living - Scott, Sylvan.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Skylands_ Storm Warning - Scott, Sylvan",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Skylands_ Storm Warning - Scott, Sylvan.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Skylands_ Storm Warning - Scott, Sylvan",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Skylands_ Storm Warning - Scott, Sylvan.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "Slave Trade",
@@ -6706,30 +4879,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Smalls, Talls and All",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Smalls, Talls and All - Warbaum, Joshiah.pdf",
-    "cover": "covers/c27b1dea.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Smalls, Talls and All - Warbaum, Joshiah",
+    "title": "Smalls, Talls And All Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Smalls, Talls and All - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Smalls, Talls and All - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Smalls, Talls and All - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/f302f619.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6742,18 +4897,18 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Snow Adventures 1 - Braxton Snow P.I. - Danny C Estes",
+    "title": "Snow Adventures 1 Braxton Snow P",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Snow Adventures 1 - Braxton Snow P.I. - Danny C Estes.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Snow Adventures 2 - The Infinite Wisdom - Danny C Estes",
+    "title": "Snow Adventures 2 The Infinite Wisdom Danny C Estes",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Snow Adventures 2 - The Infinite Wisdom - Danny C Estes.mobi",
     "cover": "covers/generic.webp",
@@ -6787,7 +4942,25 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "stone",
+    "title": "Stallion At Stud Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Stallion_at_Stud_draft_1.pdf",
+    "cover": "covers/c680c4d2.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Stallions Release",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Stallions_Release.pdf",
+    "cover": "covers/c194f0bb.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Stone Moon Silk Scarves",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -6832,7 +5005,43 @@ const books = [
     "genre": "adventure"
   },
   {
-    "title": "strand",
+    "title": "Story Collection Idea Mental Health Collection",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Story_collection_idea_-_mental_health_collection.pdf",
+    "cover": "covers/29fa7f4e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Story Idea The Black Dog",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Story_idea_-_the_black_dog.pdf",
+    "cover": "covers/c5532b24.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Story Inspiration Trigger",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "story_inspiration_-_trigger.pdf",
+    "cover": "covers/6b77f89d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Straight Story Collection Idea",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Straight_story_collection_idea.pdf",
+    "cover": "covers/0abbfe1f.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Strand",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -6850,12 +5059,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Striking Out",
+    "title": "Stud Farm Stallion Draft 1",
     "author": "Lorna Davies",
-    "year": "2015",
+    "year": "2016",
     "format": "pdf",
-    "path": "Striking_Out_part_one_-_complete_final_draft.pdf",
-    "cover": "covers/3f40e28a.webp",
+    "path": "Stud_Farm_Stallion_draft_1.pdf",
+    "cover": "covers/e27ae9cd.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6868,21 +5077,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Summerhill",
-    "author": "Kevin Frane",
-    "year": "2013",
-    "format": "epub",
-    "path": "Summerhill - Kevin Frane (1).epub",
-    "cover": "covers/43b40f65.webp",
+    "title": "Taggerung",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "14 - Taggerung.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Tails of transformation bob stein",
+    "title": "Tails Of Transformation Bob Stein",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Tails of transformation bob stein.mobi",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Taken By Six Raptors Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Taken_by_Six_Raptors_draft_1.pdf",
+    "cover": "covers/4457df37.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6904,6 +5122,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Tales From The Guild",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Tales_from_the_Guild.pdf",
+    "cover": "covers/07067a8d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Tales of the Firebirds",
     "author": "Kyell Gold",
     "year": "Unknown Year",
@@ -6913,12 +5140,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Tales of the Firebirds",
-    "author": "Kyell Gold",
+    "title": "Tales Of Veloria, Book 1 The Wolf And The Huntress Warbaum, Joshiah",
+    "author": "Unknown Author",
     "year": "Unknown Year",
-    "format": "epub",
-    "path": "Tales-of-the-Firebirds-BDB.epub",
-    "cover": "covers/3eb7b4b6.webp",
+    "format": "mobi",
+    "path": "Tales of Veloria, Book 1_ The Wolf and the Huntress - Warbaum, Joshiah.mobi",
+    "cover": "covers/dd8216c8.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6928,24 +5155,6 @@ const books = [
     "format": "epub",
     "path": "Tales of Veloria, Book 1_ The Wolf and the Huntress - Warbaum, Joshiah.epub",
     "cover": "covers/e5bb9b96.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Tales of Veloria, Book 1: The Wolf and the Huntress",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Tales of Veloria, Book 1_ The Wolf and the Huntress - Warbaum, Joshiah.pdf",
-    "cover": "covers/1445c251.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Tales of Veloria, Book 1_ The Wolf and the Huntress - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Tales of Veloria, Book 1_ The Wolf and the Huntress - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -6976,21 +5185,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "the",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "txt",
-    "path": "the-smell-of-intelligence.txt",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "the",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "txt",
-    "path": "the-elements-of-freedom.txt",
-    "cover": "covers/generic.webp",
+    "title": "Thatguyintherobes Her Maze Game Draft 1",
+    "author": "Lorna Davies",
+    "year": "2017",
+    "format": "pdf",
+    "path": "Thatguyintherobes_Her_Maze_Game_draft_1.pdf",
+    "cover": "covers/4c68be96.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7003,30 +5203,12 @@ const books = [
     "genre": "anthropomorphic"
   },
   {
-    "title": "The Afflicted",
-    "author": "Kalante, Kjorteo",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Afflicted, The - Kalante, Kjorteo.pdf",
-    "cover": "covers/c566829a.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "The Arligent Experiment: A Tale of Charinthosse",
     "author": "Bane, Nick",
     "year": "2018",
     "format": "epub",
     "path": "Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick.epub",
     "cover": "covers/9c004ced.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The Arligent Experiment: A Tale of Charinthosse",
-    "author": "Bane, Nick",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick.pdf",
-    "cover": "covers/c4d27ba3.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7037,6 +5219,15 @@ const books = [
     "path": "4 The Battle of Verril (The Book Of Deacon 3) - Joseph Lallo.epub",
     "cover": "covers/39905eda.webp",
     "genre": "The Book Of Deacon"
+  },
+  {
+    "title": "The Bellmaker",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "7 - The Bellmaker.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "The Black Raven",
@@ -7075,15 +5266,6 @@ const books = [
     "genre": "psychology"
   },
   {
-    "title": "The Case of the Poisoned House and Other Xenopsychiatric Studies",
-    "author": "M.C.A. Hogarth",
-    "year": "Unknown Year",
-    "format": "epub",
-    "path": "The Case of the Poisoned House and.epub",
-    "cover": "covers/5e6174dd.webp",
-    "genre": "psychology"
-  },
-  {
     "title": "The Coin of Kenvard (The Book of Deacon 6)",
     "author": "Joseph Lallo",
     "year": "2020",
@@ -7099,6 +5281,15 @@ const books = [
     "format": "epub",
     "path": "The Crescents (The Book of Deacon 5) - Joseph Lallo.epub",
     "cover": "covers/40a23a0d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Cry Of Sodom Book 2 Update 31",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "The_Cry_of_Sodom_Book_2_-_update_31.07.15.pdf",
+    "cover": "covers/88f152ca.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7120,15 +5311,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "The Demon and the Fox",
-    "author": "Tim Susman",
-    "year": "Unknown Year",
-    "format": "epub",
-    "path": "The-Demon-and-the-Fox-BDB.epub",
-    "cover": "covers/43ba37bc.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "The Dragon Revenant",
     "author": "Katharine Kerr",
     "year": "1991",
@@ -7138,12 +5320,39 @@ const books = [
     "genre": "Deverry (Imaginary place)"
   },
   {
+    "title": "The Elements Of Freedom",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "txt",
+    "path": "the-elements-of-freedom.txt",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Fire Dragon Kerr Katharine",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "epub",
+    "path": "11 The Fire Dragon - Kerr Katharine.epub",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The Fox Child's Journey (Lost Stories of the Wild Book 2)",
     "author": "Jim Galford",
     "year": "2016",
     "format": "epub",
     "path": "The Fox Child's Journey - Jim Galford.epub",
     "cover": "covers/56789a19.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Furred Reich",
+    "author": "",
+    "year": "Unknown Year",
+    "format": "pdf",
+    "path": "The Furred Reich.pdf",
+    "cover": "covers/539ce323.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7180,15 +5389,6 @@ const books = [
     "format": "epub",
     "path": "Gladiator and His Mistress, The - Matthew Chapel.epub",
     "cover": "covers/d6362319.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The Gladiator and His Mistress",
-    "author": "Matthew Chapel",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Gladiator and His Mistress, The - Matthew Chapel.pdf",
-    "cover": "covers/279dafe4.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7264,15 +5464,6 @@ const books = [
     "genre": "Kurzgeschichten"
   },
   {
-    "title": "The Hunt",
-    "author": "Flint, Stephanie",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Hunt, The - Flint, Stephanie.pdf",
-    "cover": "covers/a47dd598.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "The Infected Holiday Special",
     "author": "Andrea Speed",
     "year": "2016",
@@ -7288,15 +5479,6 @@ const books = [
     "format": "epub",
     "path": "Infinite Wisdom, The - Estes, Danny C_.epub",
     "cover": "covers/c902e70c.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The Infinite Wisdom",
-    "author": "Estes, Danny C.",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Infinite Wisdom, The - Estes, Danny C_.pdf",
-    "cover": "covers/f0257843.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7318,29 +5500,20 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "The Infinite Wisdom (The Snow Adventures Book 2)",
-    "author": "Estes, Danny C.",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Infinite Wisdom (The Snow Adventures Book 2), The - Estes, Danny C_.pdf",
-    "cover": "covers/ce7d709e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The Infinite Wisdom (The Snow Adventures Book 2)",
-    "author": "Danny C Estes",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Snow Adventures 2 - The Infinite Wisdom - Danny C Estes.pdf",
-    "cover": "covers/5cf925de.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "The Lead Crown",
     "author": "comidacomida",
     "year": "2016",
     "format": "epub",
     "path": "comidacomida--The_Lead_Crown.epub",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Legend Of Luke",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "12 - The Legend of Luke.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -7351,6 +5524,24 @@ const books = [
     "format": "epub",
     "path": "The Life of Another - Jake Atkinson.epub",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Long Patrol",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "10 - The Long Patrol.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Mistress Dog",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "The_Mistress_Dog.pdf",
+    "cover": "covers/cb354bad.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7390,6 +5581,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "The Princess And Her Lost Innocence Draft 1",
+    "author": "Davies Lorna",
+    "year": "2017",
+    "format": "pdf",
+    "path": "The_Princess_and_her_Lost_Innocence_draft_1.pdf",
+    "cover": "covers/39e1d089.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The Prisoner's Release and Other Stories",
     "author": "Gold, Kyell",
     "year": "2009",
@@ -7406,15 +5606,6 @@ const books = [
     "path": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie.epub",
     "cover": "covers/6619b142.webp",
     "genre": "teen 11 and up"
-  },
-  {
-    "title": "The Queen and the Dagger (A Book of Theo Novella)",
-    "author": "Ansley, Melanie",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Queen and the Dagger (A Book of Theo Novella), The - Ansley, Melanie.pdf",
-    "cover": "covers/eae614ba.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "The Red Wyvern: Book One of the Dragon Mage",
@@ -7459,6 +5650,24 @@ const books = [
     "format": "epub",
     "path": "The Rising World Company - Kris Schnee.epub",
     "cover": "covers/a055f004.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Rogue Crew",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "22 - The Rogue Crew.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Sable Quean",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "21 - The Sable Quean.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7516,6 +5725,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "The Slave Mare The Breeding Farm Paying Her Way",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "The_Slave_Mare__the_Breeding_Farm_-_Paying_Her_Way.pdf",
+    "cover": "covers/c061ee6a.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The Smell of Intelligence",
     "author": "M.C.A. Hogarth",
     "year": "Unknown Year",
@@ -7523,6 +5741,15 @@ const books = [
     "path": "the-smell-of-intelligence.epub",
     "cover": "covers/a95876eb.webp",
     "genre": "love"
+  },
+  {
+    "title": "The Smell Of Intelligence",
+    "author": "Unknown Author",
+    "year": "2025",
+    "format": "txt",
+    "path": "the-smell-of-intelligence.txt",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "The Snow Maiden, or the Case with the Holiday Blues",
@@ -7543,30 +5770,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "The Snowfall Trials - First Chapter (Preview)",
-    "author": "Zach",
-    "year": "2019",
-    "format": "pdf",
-    "path": "The Snowfall Trials - First Chapter (preview) - Zach.pdf",
-    "cover": "covers/d883dd39.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The Snowfall Trials - First Chapter (preview) - Zach",
+    "title": "The Snowfall Trials First Chapter (preview) Zach",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "The Snowfall Trials - First Chapter (preview) - Zach.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The Snowfall Trials - First Chapter (preview) - Zach",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "The Snowfall Trials - First Chapter (preview) - Zach.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/1168b349.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7624,11 +5833,11 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "The Time He Desires",
-    "author": "Kyell Gold",
+    "title": "The Time He Desires Kindle",
+    "author": "Unknown Author",
     "year": "Unknown Year",
-    "format": "epub",
-    "path": "The-Time-He-Desires-BDB.epub",
+    "format": "mobi",
+    "path": "The-Time-He-Desires-Kindle.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -7696,21 +5905,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "The Woman In The Coffee Shop Idea",
+    "author": "",
+    "year": "2015",
+    "format": "pdf",
+    "path": "The_woman_in_the_coffee_shop_-_idea.pdf",
+    "cover": "covers/eb6c709a.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The World of Fur We Live In: Bundle 1 (Furry Erotica): Books 1-2",
     "author": "Heidi Fisk",
     "year": "2018",
     "format": "epub",
     "path": "World of Fur We Live In_ Bundle 1 (Furry Erotica)_ Books 1-2, The - Heidi Fisk.epub",
     "cover": "covers/3e885c5e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The World of Fur We Live In: Bundle 1 (Furry Erotica): Books 1-2",
-    "author": "Heidi Fisk",
-    "year": "2019",
-    "format": "pdf",
-    "path": "World of Fur We Live In_ Bundle 1 (Furry Erotica)_ Books 1-2, The - Heidi Fisk.pdf",
-    "cover": "covers/ad07964a.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7732,24 +5941,6 @@ const books = [
     "genre": "comedy"
   },
   {
-    "title": "The World We Never Knew",
-    "author": "Jr Adrianjesus Blanco",
-    "year": "2019",
-    "format": "pdf",
-    "path": "World We Never Knew, The - Jr Adrianjesus Blanco.pdf",
-    "cover": "covers/4c035e0f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "The World We Never Knew",
-    "author": "Blanco, Adrian Jesus",
-    "year": "2019",
-    "format": "pdf",
-    "path": "World We Never Knew, The - Blanco, Adrian Jesus.pdf",
-    "cover": "covers/d30ad58e.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "The Worth of a Shell",
     "author": "M.C.A. Hogarth",
     "year": "2015",
@@ -7768,12 +5959,30 @@ const books = [
     "genre": "science fiction"
   },
   {
-    "title": "The-Time-He-Desires-Kindle",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "The-Time-He-Desires-Kindle.mobi",
-    "cover": "covers/generic.webp",
+    "title": "Thecuddlingfox Skinny Dipping Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "TheCuddlingFox_-_Skinny_Dipping_draft_2.pdf",
+    "cover": "covers/92c00bb4.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Thecuddlingfox The Vixen And The Wolf Draft 2",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "TheCuddlingFox_-_The_Vixen_and_the_Wolf_draft_2.pdf",
+    "cover": "covers/6d9f301b.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Thekatpop Summer Lovin Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "TheKatPop_-_Summer_Lovin_draft_1.pdf",
+    "cover": "covers/20c3b0df.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7786,9 +5995,18 @@ const books = [
     "genre": "Romance"
   },
   {
-    "title": "Thousand Tales - How We Won the Game",
+    "title": "Thoroughbred Horse, Female, Pleasing A Mare, Draft 1",
+    "author": "me",
+    "year": "2017",
+    "format": "pdf",
+    "path": "1 - Thoroughbred horse, female, Pleasing a Mare, draft 1.pdf",
+    "cover": "covers/c8ea656c.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Thousand Tales How We Won The Game",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Thousand Tales - How We Won the Game.mobi",
     "cover": "covers/generic.webp",
@@ -7822,12 +6040,39 @@ const books = [
     "genre": "Palading Trilogy"
   },
   {
+    "title": "Transformation Catprog",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "7_-_Transformation_-_Catprog.pdf",
+    "cover": "covers/b74b2dd3.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Trevor's Tricks",
     "author": "FuzzWolf",
     "year": "2007",
     "format": "epub",
     "path": "Trevors-Tricks-FuzzWolf.epub",
     "cover": "covers/7eca1171.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Trigger Profile",
+    "author": "",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Trigger_profile.pdf",
+    "cover": "covers/a5c3ed1d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Triss",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "15 - Triss.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -7948,6 +6193,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Twincest Goatie",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "2_-_Twincest_-_Goatie.pdf",
+    "cover": "covers/ab280be8.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Twisted Tales",
     "author": "Warbaum, Joshiah",
     "year": "2017",
@@ -7957,30 +6211,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Twisted Tales",
-    "author": "Warbaum, Joshiah",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Twisted Tales - Warbaum, Joshiah.pdf",
-    "cover": "covers/8209df23.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Twisted Tales - Warbaum, Joshiah",
+    "title": "Twisted Tales Warbaum, Joshiah",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Twisted Tales - Warbaum, Joshiah.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Twisted Tales - Warbaum, Joshiah",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Twisted Tales - Warbaum, Joshiah.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/da59fd29.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8011,30 +6247,12 @@ const books = [
     "genre": "furries"
   },
   {
-    "title": "Typewriter Emergencies December 2017",
-    "author": "Weasel",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Typewriter Emergencies December 2017 - Weasel.pdf",
-    "cover": "covers/91c288c9.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Typewriter Emergencies December 2017 - Weasel",
+    "title": "Typewriter Emergencies December 2017 Weasel",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Typewriter Emergencies December 2017 - Weasel.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Typewriter Emergencies December 2017 - Weasel",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Typewriter Emergencies December 2017 - Weasel.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/139925d3.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8047,30 +6265,12 @@ const books = [
     "genre": "furry nation"
   },
   {
-    "title": "Typewriter Emergencies May 2017",
-    "author": "Weasel Press",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Typewriter Emergencies May 2017 - Weasel Press.pdf",
-    "cover": "covers/ac1dbe37.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Typewriter Emergencies May 2017 - Weasel Press",
+    "title": "Typewriter Emergencies May 2017 Weasel Press",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Typewriter Emergencies May 2017 - Weasel Press.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Typewriter Emergencies May 2017 - Weasel Press",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Typewriter Emergencies May 2017 - Weasel Press.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/62d29163.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8088,15 +6288,6 @@ const books = [
     "year": "2014",
     "format": "epub",
     "path": "4 Uncovered (Dev and Lee).epub",
-    "cover": "covers/generic.webp",
-    "genre": "lee"
-  },
-  {
-    "title": "Uncovered (Dev and Lee Book 4)",
-    "author": "Gold, Kyell",
-    "year": "2014",
-    "format": "epub",
-    "path": "Uncovered (OoP #4) - Kyell Gold.epub",
     "cover": "covers/generic.webp",
     "genre": "lee"
   },
@@ -8119,7 +6310,7 @@ const books = [
     "genre": "loss"
   },
   {
-    "title": "unknowable",
+    "title": "Unknowable",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -8164,7 +6355,16 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "useless",
+    "title": "Used By The Stallion Draft 1",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Used_by_the_Stallion_draft_1.pdf",
+    "cover": "covers/30b8fa3c.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Useless Tears",
     "author": "Unknown Author",
     "year": "2025",
     "format": "txt",
@@ -8179,6 +6379,15 @@ const books = [
     "format": "epub",
     "path": "1 Volle - Gold, Kyell & Sara Palmer.epub",
     "cover": "covers/a5186065.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Vulpine Dominance Draft 2",
+    "author": "Lorna Davies",
+    "year": "2016",
+    "format": "pdf",
+    "path": "Vulpine_Dominance_draft_2.pdf",
+    "cover": "covers/ca34ba3b.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8209,30 +6418,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Walls",
-    "author": "Raedwulf",
-    "year": "2024",
-    "format": "epub",
-    "path": "Raedwulf-Walls1.epub",
-    "cover": "covers/11cb684d.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Walls: Exodus",
     "author": "Raedwulf",
     "year": "Unknown Year",
     "format": "epub",
     "path": "Walls_ Exodus - Raedwulf.epub",
     "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Walls: Exodus",
-    "author": "Raedwulf",
-    "year": "2024",
-    "format": "epub",
-    "path": "Raedwulf-Walls2Exodus.epub",
-    "cover": "covers/0e5936d5.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8272,24 +6463,6 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Waterways",
-    "author": "Kyell Gold",
-    "year": "2014",
-    "format": "epub",
-    "path": "Waterways - Kyell Gold.epub",
-    "cover": "covers/generic.webp",
-    "genre": "Forester Universe"
-  },
-  {
-    "title": "Waterways",
-    "author": "Kyell Gold",
-    "year": "2014",
-    "format": "epub",
-    "path": "Waterways - Kyell Gold (1).epub",
-    "cover": "covers/generic.webp",
-    "genre": "Forester Universe"
-  },
-  {
     "title": "Weasel Presents",
     "author": "Kyell Gold",
     "year": "2011",
@@ -8299,7 +6472,7 @@ const books = [
     "genre": "Argaea Series"
   },
   {
-    "title": "wedefyoldstars",
+    "title": "Wedefyoldstars",
     "author": "Unknown Author",
     "year": "2025",
     "format": "rtf",
@@ -8335,9 +6508,9 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "why-coyotes-howl",
+    "title": "Why Coyotes Howl",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "why-coyotes-howl.mobi",
     "cover": "covers/generic.webp",
@@ -8390,29 +6563,29 @@ const books = [
   },
   {
     "title": "Windfall",
-    "author": "O'Kun, Tempe",
-    "year": "2019",
+    "author": "",
+    "year": "Unknown Year",
     "format": "pdf",
-    "path": "Windfall - O'Kun, Tempe.pdf",
-    "cover": "covers/f5cab463.webp",
+    "path": "Windfall.pdf",
+    "cover": "covers/0dd9ce75.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Windfall - O'Kun, Tempe",
+    "title": "Windfall An Otter Body Experience Tempe O'kun",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Windfall_ An Otter-Body Experience - Tempe O'Kun.mobi",
+    "cover": "covers/8df6455e.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Windfall O'kun, Tempe",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Windfall - O'Kun, Tempe.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Windfall - O'Kun, Tempe",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Windfall - O'Kun, Tempe.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/79e374e9.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8425,57 +6598,12 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Windfall: An Otter-Body Experience",
-    "author": "Tempe O'Kun",
-    "year": "2019",
-    "format": "epub",
-    "path": "Windfall_ An Otter-Body Experience - Tempe O'Kun.epub",
-    "cover": "covers/99c16b51.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Windfall: An Otter-Body Experience",
-    "author": "Tempe O'Kun",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Windfall_ An Otter-Body Experience - Tempe O'Kun.pdf",
-    "cover": "covers/2c0f923b.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Windfall_ An Otter-Body Experience - Tempe O'Kun",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Windfall_ An Otter-Body Experience - Tempe O'Kun.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Windfall_ An Otter-Body Experience - Tempe O'Kun",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Windfall_ An Otter-Body Experience - Tempe O'Kun.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
     "title": "Winter Games",
     "author": "Gold, Kyell",
     "year": "2013",
     "format": "epub",
     "path": "Winter Games - Gold, Kyell.epub",
     "cover": "covers/288d91b3.webp",
-    "genre": "mystery"
-  },
-  {
-    "title": "Winter Games",
-    "author": "Gold, Kyell",
-    "year": "2013",
-    "format": "epub",
-    "path": "Winter Games - Kyell Gold.epub",
-    "cover": "covers/1b3cda37.webp",
     "genre": "mystery"
   },
   {
@@ -8486,24 +6614,6 @@ const books = [
     "path": "Winter Thunder - Scott, Sylvan.epub",
     "cover": "covers/daaa7360.webp",
     "genre": "christmas"
-  },
-  {
-    "title": "Winter Thunder",
-    "author": "Scott, Sylvan",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Winter Thunder - Scott, Sylvan.pdf",
-    "cover": "covers/ddd89322.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Winter Thunder - Scott, Sylvan",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Winter Thunder - Scott, Sylvan.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
   },
   {
     "title": "Witch's Promise",
@@ -8551,30 +6661,21 @@ const books = [
     "genre": "General Fiction"
   },
   {
-    "title": "Woman's Best Friend",
-    "author": "Jarvis, Gideon Kalve",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Woman's Best Friend - Jarvis, Gideon Kalve.pdf",
-    "cover": "covers/7ae702dc.webp",
+    "title": "Woman's Best Friend An Erotic Novel Jarvis, Gideon Kalve",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Woman's Best Friend_ An Erotic Novel - Jarvis, Gideon Kalve.mobi",
+    "cover": "covers/97c3666f.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "Woman's Best Friend - Jarvis, Gideon Kalve",
+    "title": "Woman's Best Friend Jarvis, Gideon Kalve",
     "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "Woman's Best Friend - Jarvis, Gideon Kalve.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Woman's Best Friend - Jarvis, Gideon Kalve",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Woman's Best Friend - Jarvis, Gideon Kalve.opf",
-    "cover": "covers/generic.webp",
+    "cover": "covers/62a28a51.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -8587,119 +6688,29 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
-    "title": "Woman's Best Friend: An Erotic Novel",
-    "author": "Jarvis, Gideon Kalve",
-    "year": "2019",
-    "format": "pdf",
-    "path": "Woman's Best Friend_ An Erotic Novel - Jarvis, Gideon Kalve.pdf",
-    "cover": "covers/873decdd.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Woman's Best Friend_ An Erotic Novel - Jarvis, Gideon Kalve",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "mobi",
-    "path": "Woman's Best Friend_ An Erotic Novel - Jarvis, Gideon Kalve.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Woman's Best Friend_ An Erotic Novel - Jarvis, Gideon Kalve",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "Woman's Best Friend_ An Erotic Novel - Jarvis, Gideon Kalve.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Word Document",
+    "title": "World Of Fur We Live In Bundle 1 (furry Erotica) Books 1 2, The Heidi Fisk",
     "author": "Unknown Author",
     "year": "Unknown Year",
-    "format": "docx",
-    "path": "Lovesong - TJ Klune.docx",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "Word Document",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "docx",
-    "path": "Feralsong - TJ Klune.docx",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "World of Fur We Live In_ Bundle 1 (Furry Erotica)_ Books 1-2, The - Heidi Fisk",
-    "author": "Unknown Author",
-    "year": "2025",
     "format": "mobi",
     "path": "World of Fur We Live In_ Bundle 1 (Furry Erotica)_ Books 1-2, The - Heidi Fisk.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/bbca3b76.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "World of Fur We Live In_ Bundle 1 (Furry Erotica)_ Books 1-2, The - Heidi Fisk",
+    "title": "World We Never Knew, The Blanco, Adrian Jesus",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "World of Fur We Live In_ Bundle 1 (Furry Erotica)_ Books 1-2, The - Heidi Fisk.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "World of Warcraft",
-    "author": "Steve Danuser",
-    "year": "2021",
-    "format": "epub",
-    "path": "[World of Warcraft] Steve Danuser_ Allison Irons (ed) - Folk & Fairy Tales of Azeroth (2021, Blizzard Entertainment, LLC).epub",
-    "cover": "covers/494cbdfa.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "World of Warcraft",
-    "author": "Steve Danuser",
-    "year": "2022",
-    "format": "pdf",
-    "path": "[World of Warcraft] Steve Danuser_ Allison Irons (ed) - Folk & Fairy Tales of Azeroth (2021, Blizzard Entertainment, LLC).pdf",
-    "cover": "covers/c54b4fd0.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "World We Never Knew, The - Blanco, Adrian Jesus",
-    "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "World We Never Knew, The - Blanco, Adrian Jesus.mobi",
-    "cover": "covers/generic.webp",
+    "cover": "covers/128f8ae7.webp",
     "genre": "Unknown Genre"
   },
   {
-    "title": "World We Never Knew, The - Blanco, Adrian Jesus",
+    "title": "World We Never Knew, The Jr Adrianjesus Blanco",
     "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "World We Never Knew, The - Blanco, Adrian Jesus.opf",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "World We Never Knew, The - Jr Adrianjesus Blanco",
-    "author": "Unknown Author",
-    "year": "2025",
+    "year": "Unknown Year",
     "format": "mobi",
     "path": "World We Never Knew, The - Jr Adrianjesus Blanco.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "World We Never Knew, The - Jr Adrianjesus Blanco",
-    "author": "Unknown Author",
-    "year": "2025",
-    "format": "opf",
-    "path": "World We Never Knew, The - Jr Adrianjesus Blanco.opf",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
@@ -8722,30 +6733,21 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Zarosdrahkiin Dragons After Dark",
+    "author": "Lorna Davies",
+    "year": "2015",
+    "format": "pdf",
+    "path": "Zarosdrahkiin_-_Dragons_after_Dark.pdf",
+    "cover": "covers/1538715d.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "\u5bb6\u6709\u5927\u8c93\uff1a\u8c93\u72d7\u5927\u6230",
     "author": "Pache",
     "year": "Unknown Year",
     "format": "epub",
     "path": "Vertical.epub",
     "cover": "covers/8fc8d51f.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "\u5bb6\u6709\u5927\u8c93\uff1a\u8c93\u72d7\u5927\u6230",
-    "author": "Pache",
-    "year": "Unknown Year",
-    "format": "epub",
-    "path": "Horizontal.epub",
-    "cover": "covers/23400eb4.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "\u5bb6\u6709\u5927\u8c93\uff1a\u8c93\u72d7\u5927\u6230",
-    "author": "Pache",
-    "year": "Unknown Year",
-    "format": "pdf",
-    "path": "\u5bb6\u6709\u5927\u8c93\uff1a\u8c93\u72d7\u5927\u6230.pdf",
-    "cover": "covers/3dacbba1.webp",
     "genre": "Unknown Genre"
   }
 ];
