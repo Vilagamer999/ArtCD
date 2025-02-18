@@ -1,104 +1,5 @@
-// Generated on 2025-02-18T16:32:11.591493
+// Generated on 2025-02-18T18:08:24.694634
 const books = [
-  {
-    "title": "[foster Alan Dean] Chorus Skating",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] Chorus Skating.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] Son Of Spellsinger",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] Son of Spellsinger.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] Spellsinger",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] Spellsinger.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] The Day Of The Dissonance",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Day of the Dissonance.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] The Hour Of The Gate",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Hour of the Gate.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] The Moment Of The Magician",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Moment of the Magician.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] The Paths Of The Perambulator",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Paths of the Perambulator.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[foster Alan Dean] The Time Of The Transferance",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Foster Alan Dean] The Time Of The Transferance.mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[gallico Paul] The Abandoned (jennie)(bookzz",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[Gallico_Paul]_The_Abandoned_(Jennie)(BookZZ.org).mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[mccaffrey Anne] Anne Mccaffrey Pegasus 1 Get (b Ok",
-    "author": "",
-    "year": "2007",
-    "format": "pdf",
-    "path": "[McCaffrey_Anne]_Anne_McCaffrey_-_Pegasus_1_-_Get_(b-ok.org).pdf",
-    "cover": "covers/0f536a52.webp",
-    "genre": "Unknown Genre"
-  },
-  {
-    "title": "[mccaffrey Anne] Get Off The Unicorn(b Ok",
-    "author": "Unknown Author",
-    "year": "Unknown Year",
-    "format": "mobi",
-    "path": "[McCaffrey_Anne]_Get_Off_the_Unicorn(b-ok.org).mobi",
-    "cover": "covers/generic.webp",
-    "genre": "Unknown Genre"
-  },
   {
     "title": "A Bloom in the North (Stone Moon Trilogy 3)",
     "author": "M.C.A. Hogarth",
@@ -385,6 +286,15 @@ const books = [
     "format": "txt",
     "path": "anadi-dolls.txt",
     "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Anne Mccaffrey Pegasus 1 Get (b Ok",
+    "author": "",
+    "year": "2007",
+    "format": "pdf",
+    "path": "Anne_McCaffrey_-_Pegasus_1_-_Get_(b-ok.org).pdf",
+    "cover": "covers/a24f35df.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -997,6 +907,15 @@ const books = [
     "format": "mobi",
     "path": "Chimera - T.E.S T.E.S.mobi",
     "cover": "covers/30b0e9c9.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Chorus Skating",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Chorus Skating.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -2267,6 +2186,15 @@ const books = [
     "path": "Genmos_ Emily's Flight - Coghlan, Stephen.epub",
     "cover": "covers/5ee586b5.webp",
     "genre": "genmos"
+  },
+  {
+    "title": "Get Off The Unicorn",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Get_Off_the_Unicorn.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
   },
   {
     "title": "Gladiator And His Mistress, The Matthew Chapel",
@@ -4933,6 +4861,24 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "Son Of Spellsinger",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Son of Spellsinger.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "Spellsinger",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "Spellsinger.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "Squeak Thief",
     "author": "Kyell Gold",
     "year": "Unknown Year",
@@ -5194,6 +5140,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "The Abandoned (jennie)",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "The_Abandoned_(Jennie).mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The Afflicted",
     "author": "Kalante, Kjorteo",
     "year": "2013",
@@ -5299,6 +5254,15 @@ const books = [
     "format": "epub",
     "path": "The D'Karon Apprentice (The Book of Deacon 4) - Joseph Lallo.epub",
     "cover": "covers/b447a8d7.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Day Of The Dissonance",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "The Day of the Dissonance.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5455,6 +5419,15 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "The Hour Of The Gate",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "The Hour of the Gate.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The Hunt",
     "author": "Flint, Stephanie",
     "year": "2012",
@@ -5545,12 +5518,30 @@ const books = [
     "genre": "Unknown Genre"
   },
   {
+    "title": "The Moment Of The Magician",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "The Moment of the Magician.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
     "title": "The Mysterious Affair of Giles",
     "author": "Kyell Gold",
     "year": "2015",
     "format": "epub",
     "path": "The Mysterious Affair of Giles - Kyell Gold.epub",
     "cover": "covers/7c5b05a7.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Paths Of The Perambulator",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "The Paths of the Perambulator.mobi",
+    "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
   {
@@ -5838,6 +5829,15 @@ const books = [
     "year": "Unknown Year",
     "format": "mobi",
     "path": "The-Time-He-Desires-Kindle.mobi",
+    "cover": "covers/generic.webp",
+    "genre": "Unknown Genre"
+  },
+  {
+    "title": "The Time Of The Transferance",
+    "author": "Unknown Author",
+    "year": "Unknown Year",
+    "format": "mobi",
+    "path": "The Time Of The Transferance.mobi",
     "cover": "covers/generic.webp",
     "genre": "Unknown Genre"
   },
