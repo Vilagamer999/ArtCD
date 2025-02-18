@@ -341,7 +341,7 @@
             $('.booklist').innerHTML = books.map(book => `
                 <li class="book">
                     <img class="cover" src="${book.cover}" alt="Cover of ${book.title}" 
-                        onerror="this.src='/api/placeholder/100/150'">
+                        onerror="this.src='covers/generic.webp'">
                     <div class="info">
                         <h2>${book.title}</h2>
                         <p class="meta">
