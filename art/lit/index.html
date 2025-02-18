@@ -12,7 +12,7 @@
             --text-secondary: #444;
             --border: #666;
         }
-        
+
         :root[data-theme="dark"] {
             --bg-primary: #222;
             --bg-secondary: #333;
@@ -37,7 +37,6 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 1.25rem;
             width: 100%;
             box-sizing: border-box;
         }
@@ -66,7 +65,8 @@
         .booklist {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 1rem 0;
+            margin-top: 0;
         }
 
         .book {
@@ -74,6 +74,7 @@
             gap: 1.5rem;
             padding: 1rem;
             border-bottom: 1px solid var(--border);
+            align-items: flex-start;
         }
 
         .book:hover {
@@ -85,6 +86,7 @@
             height: 150px;
             object-fit: cover;
             background: var(--bg-secondary);
+            flex-shrink: 0;
         }
 
         .center {
@@ -96,18 +98,55 @@
 
         .info {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .info h2 {
+            margin: 0;
         }
 
         .meta {
             color: var(--text-secondary);
             font-size: 0.9rem;
-            margin: 0.5rem 0;
+            margin: 0;
         }
 
         .actions {
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
+        }
+
+        .search-controls {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .search-input,
+        .sort-select {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .search-input {
+            flex: 1;
+        }
+
+        .sort-select {
+            width: auto;
+        }
+
+        .search-input:hover,
+        .sort-select:hover {
+            border-color: var(--text-primary);
         }
 
         #reader {
@@ -134,7 +173,6 @@
             background: var(--bg-primary);
             border-bottom: 1px solid var(--border);
             z-index: 10;
-            position: relative;
         }
 
         .left-controls {
@@ -211,6 +249,12 @@
             border: none;
         }
 
+        .page-counter {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
         .loading-overlay {
             position: fixed;
             top: 0;
@@ -263,11 +307,24 @@
     <div id="library-view">
         <header>
             <div class="container">
-	        <img src="cover.webp" alt="cover" class="center">
+                <img src="cover.webp" alt="cover" class="center">
             </div>
         </header>
 
         <main class="container">
+            <div class="search-controls">
+                <input type="search" class="search-input" placeholder="Search books...">
+                <select class="sort-select">
+                    <option value="title-asc">Title A-Z</option>
+                    <option value="title-desc">Title Z-A</option>
+                    <option value="author-asc">Author A-Z</option>
+                    <option value="author-desc">Author Z-A</option>
+                    <option value="year-desc">Newest First</option>
+                    <option value="year-asc">Oldest First</option>
+                    <option value="size-asc">Size: Small to Large</option>
+                    <option value="size-desc">Size: Large to Small</option>
+                </select>
+            </div>
             <ul class="booklist"></ul>
         </main>
     </div>
@@ -290,6 +347,7 @@
         <div class="reader-footer">
             <button id="prev-page">Previous</button>
             <input type="range" id="progress-bar" min="0" max="1" step="0.001">
+            <span class="page-counter">0/0</span>
             <button id="next-page">Next</button>
         </div>
     </div>
@@ -306,13 +364,12 @@
         import books from './books/books.js';
 
         const hints = [
-            "Use arrow keys to navigate pages!",
+            "Use arrow keys to navigate pages",
             "Press A+ A- to adjust text size",
-            "Use progress bar to instantly jump to any page",
-            "Toggle theme for a more comfortable reading experiance (light mode is more comfy tho >:3)",
-            "Made with <3 for furz by furz :3",
-            "Brought to you by Foliate.js, [energy beverage] and lack of sleep",
-            "More books and features will be added soon™",
+            "Use progress bar to jump to any page",
+            "Toggle theme for comfortable reading",
+            "Made with ♥ for readers",
+            "More books coming soon"
         ];
 
         let view = null;
@@ -337,21 +394,51 @@
             }, 300);
         }
 
-        function renderLibrary() {
-            $('.booklist').innerHTML = books.map(book => `
+        function sortBooks(books, method) {
+            const sorters = {
+                'title-asc': (a, b) => a.title.localeCompare(b.title),
+                'title-desc': (a, b) => b.title.localeCompare(a.title),
+                'author-asc': (a, b) => a.author.localeCompare(b.author),
+                'author-desc': (a, b) => b.author.localeCompare(a.author),
+                'year-asc': (a, b) => a.year - b.year,
+                'year-desc': (a, b) => b.year - a.year,
+                'size-asc': (a, b) => a.size - b.size,
+                'size-desc': (a, b) => b.size - a.size
+            };
+            return [...books].sort(sorters[method]);
+        }
+
+        function filterBooks(query) {
+            query = query.toLowerCase();
+            return books.filter(book => 
+                book.title.toLowerCase().includes(query) ||
+                book.author.toLowerCase().includes(query) ||
+                book.genre.toLowerCase().includes(query)
+            );
+        }
+
+        function updateLibrary() {
+            const query = $('.search-input').value.trim();
+            const sortMethod = $('.sort-select').value;
+            const filteredBooks = query ? filterBooks(query) : books;
+            const sortedBooks = sortBooks(filteredBooks, sortMethod);
+            
+            $('.booklist').innerHTML = sortedBooks.map(book => `
                 <li class="book">
-                    <img class="cover" src="${book.cover}" alt="Cover of ${book.title}" 
-                        onerror="this.src='./covers/generic.webp'">
-                    <div class="info">
+                    <img class="cover" 
+                         src="${book.cover}" 
+                         alt="Cover of ${book.title}"
+                         onerror="this.src='./covers/generic.webp'">
+                    <div class="book-info">
                         <h2>${book.title}</h2>
-                        <p class="meta">
+                        <p class="book-meta">
                             ${book.author} (${book.year})<br>
                             ${book.genre} · ${book.format.toUpperCase()}
                         </p>
-                        <div class="actions">
-                            <button data-book-path="./books/${book.path}">Read</button>
+                        <div class="book-actions">
+                            <button type="button" data-book-path="./books/${book.path}">Read</button>
                             <a href="./books/${book.path}" download>
-                                <button>Download</button>
+                                <button type="button">Download</button>
                             </a>
                         </div>
                     </div>
@@ -372,16 +459,8 @@
             }
         }
 
-        function showLoading() {
-            $('.loading-overlay').classList.add('active');
-        }
-
-        function hideLoading() {
-            $('.loading-overlay').classList.remove('active');
-        }
-
         async function openBook(path) {
-            showLoading();
+            $('.loading').classList.add('active');
             try {
                 if (view) {
                     view.close();
@@ -389,10 +468,12 @@
                 }
 
                 view = document.createElement('foliate-view');
-                $('.reader-main').appendChild(view);
+                $('.reader-content').appendChild(view);
 
                 view.addEventListener('relocate', e => {
                     $('#progress-bar').value = e.detail.fraction;
+                    const currentPage = Math.ceil(e.detail.fraction * e.detail.total);
+                    $('.page-counter').textContent = `${currentPage}/${e.detail.total}`;
                 });
 
                 await view.open(path);
@@ -400,36 +481,27 @@
                 
                 $('#reader').classList.add('active');
                 $('#library-view').style.display = 'none';
-                
-                // Set initial styles including current theme
-                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-                view.renderer.setStyles?.(`
-                    :root {
-                        font-size: ${fontSize}rem;
-                        color: ${!isDark ? '#222' : '#e4e4e0'} !important;
-                        background-color: ${!isDark ? '#f4f4f0' : '#222'} !important;
-                    }
-                `);
+                updateFontSize();
             } catch (error) {
                 console.error('Error loading book:', error);
                 alert('Error loading book. Please try again.');
             } finally {
-                hideLoading();
+                $('.loading').classList.remove('active');
             }
         }
 
         // Event Listeners
-        $('.booklist').addEventListener('click', (e) => {
+        $('.booklist').addEventListener('click', e => {
             const button = e.target.closest('[data-book-path]');
             if (button) {
                 openBook(button.dataset.bookPath);
             }
         });
 
-        $('#back-btn').onclick = () => {
+        $('#back-btn').addEventListener('click', () => {
             $('#reader').classList.remove('active');
             $('#library-view').style.display = 'block';
-        };
+        });
 
         $('#decrease-font').addEventListener('click', () => {
             if (fontSize > MIN_FONT_SIZE) {
@@ -450,17 +522,7 @@
             const isDark = root.getAttribute('data-theme') === 'dark';
             root.setAttribute('data-theme', isDark ? 'light' : 'dark');
             $('#theme-toggle').querySelector('.theme-icon').textContent = isDark ? '☀️' : '🌙';
-            
-            // Update Foliate view styles with corrected colors
-            if (view) {
-                view.renderer.setStyles?.(`
-                    :root {
-                        font-size: ${fontSize}rem;
-                        color: ${isDark ? '#222' : '#e4e4e0'} !important;
-                        background-color: ${isDark ? '#f4f4f0' : '#222'} !important;
-                    }
-                `);
-            }
+            updateFontSize();
         });
 
         document.addEventListener('keydown', e => {
@@ -469,14 +531,17 @@
             else if (e.key === 'ArrowRight') view.goRight();
         });
 
-        $('#prev-page').onclick = () => view?.goLeft();
-        $('#next-page').onclick = () => view?.goRight();
-        $('#progress-bar').oninput = e => view?.goToFraction(parseFloat(e.target.value));
+        $('#prev-page').addEventListener('click', () => view?.goLeft());
+        $('#next-page').addEventListener('click', () => view?.goRight());
+        $('#progress-bar').addEventListener('input', e => view?.goToFraction(parseFloat(e.target.value)));
 
-        // Initialize hint system
+        // Search and sort event listeners
+        $('.search-input').addEventListener('input', updateLibrary);
+        $('.sort-select').addEventListener('change', updateLibrary);
         $('.nav-hint').addEventListener('click', showRandomHint);
 
-        renderLibrary();
+        // Initialize
+        updateLibrary();
     </script>
 </body>
 </html>
