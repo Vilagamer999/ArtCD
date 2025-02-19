@@ -200,6 +200,74 @@
             cursor: pointer;
             transition: opacity 0.3s;
             pointer-events: all;
+            white-space: nowrap;
+            z-index: 1;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .nav-hint {
+                display: none;
+            }
+
+            .reader-header {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .left-controls {
+                flex: 1;
+                justify-content: space-between;
+            }
+
+            button {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 0.75rem 1rem;
+            }
+
+            #progress-bar {
+                height: 6px;
+            }
+
+            #progress-bar::-webkit-slider-thumb {
+                width: 18px;
+                height: 18px;
+            }
+
+            #progress-bar::-moz-range-thumb {
+                width: 18px;
+                height: 18px;
+            }
+
+            .reader-footer {
+                padding: 1rem 0.5rem;
+                gap: 0.5rem;
+            }
+
+            .search-controls {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .search-input,
+            .sort-select {
+                min-height: 44px;
+                width: 100%;
+            }
+
+            .book {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .cover {
+                width: 100%;
+                height: auto;
+                max-width: 200px;
+                align-self: center;
+            }
         }
 
         #theme-toggle {
