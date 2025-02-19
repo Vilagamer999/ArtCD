@@ -25,9 +25,8 @@
             font-family: Georgia, serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 1rem;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -37,6 +36,7 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
+            margin-bottom: 1rem;
             width: 100%;
             box-sizing: border-box;
         }
@@ -61,6 +61,11 @@
             border-color: var(--text-primary);
         }
 
+        .book-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
         .booklist {
             list-style: none;
             padding: 0;
@@ -72,7 +77,7 @@
             gap: 1.5rem;
             padding: 1rem;
             border-bottom: 1px solid var(--border);
-            align-items: flex-start;
+            align-items: center;
         }
 
         .book:hover {
@@ -80,8 +85,8 @@
         }
 
         .cover {
-            width: 100px;
-            height: 150px;
+            width: 105px;
+            height: 155px;
             object-fit: cover;
             background: var(--bg-secondary);
             flex-shrink: 0;
@@ -139,7 +144,7 @@
         }
 
         .sort-select {
-            width: auto;
+            width: 8rem;
         }
 
         .search-input:hover,
@@ -319,8 +324,6 @@
                     <option value="author-desc">Author Z-A</option>
                     <option value="year-desc">Newest First</option>
                     <option value="year-asc">Oldest First</option>
-                    <option value="size-asc">Size: Small to Large</option>
-                    <option value="size-desc">Size: Large to Small</option>
                 </select>
             </div>
             <ul class="booklist"></ul>
@@ -400,8 +403,6 @@
                 'author-desc': (a, b) => b.author.localeCompare(a.author),
                 'year-asc': (a, b) => a.year - b.year,
                 'year-desc': (a, b) => b.year - a.year,
-                'size-asc': (a, b) => a.size - b.size,
-                'size-desc': (a, b) => b.size - a.size
             };
             return [...books].sort(sorters[method]);
         }
@@ -469,9 +470,14 @@
                 $('.reader-main').appendChild(view);
 
                 view.addEventListener('relocate', e => {
-                    $('#progress-bar').value = e.detail.fraction;
-                    const currentPage = Math.ceil(e.detail.fraction * e.detail.total);
-                    $('.page-counter').textContent = `${currentPage}/${e.detail.total}`;
+                    const { fraction, total } = e.detail;
+                    $('#progress-bar').value = fraction;
+                    const currentPage = Math.min(Math.ceil(fraction * total), total);
+                    if (total > 0) {
+                        $('.page-counter').textContent = `${currentPage}/${total}`;
+                    } else {
+                        $('.page-counter').textContent = '0/0';
+                    }
                 });
 
                 await view.open(path);
