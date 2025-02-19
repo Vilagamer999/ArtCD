@@ -464,24 +464,39 @@
             }, 300);
         }
 
+        function flattenBooks(books) {
+            return books.flatMap(authorGroup => 
+                authorGroup.series.flatMap(series => 
+                    series.books.map(book => ({
+                        ...book,
+                        author: authorGroup.author,
+                        series: series.name
+                    }))
+                )
+            );
+        }
+
         function sortBooks(books, method) {
+            const flatBooks = flattenBooks(books);
             const sorters = {
                 'title-asc': (a, b) => a.title.localeCompare(b.title),
                 'title-desc': (a, b) => b.title.localeCompare(a.title),
                 'author-asc': (a, b) => a.author.localeCompare(b.author),
                 'author-desc': (a, b) => b.author.localeCompare(a.author),
-                'year-asc': (a, b) => a.year - b.year,
-                'year-desc': (a, b) => b.year - a.year,
+                'year-asc': (a, b) => (a.year || 0) - (b.year || 0),
+                'year-desc': (a, b) => (b.year || 0) - (a.year || 0),
             };
-            return [...books].sort(sorters[method]);
+            return flatBooks.sort(sorters[method]);
         }
 
         function filterBooks(query) {
+            const flatBooks = flattenBooks(books);
             query = query.toLowerCase();
-            return books.filter(book => 
+            return flatBooks.filter(book => 
                 book.title.toLowerCase().includes(query) ||
                 book.author.toLowerCase().includes(query) ||
-                book.genre.toLowerCase().includes(query)
+                (book.genre || '').toLowerCase().includes(query) ||  // Handle potentially undefined genre
+                (book.series || '').toLowerCase().includes(query)    // Add series search
             );
         }
 
@@ -501,7 +516,8 @@
                         <h2>${book.title}</h2>
                         <p class="book-meta">
                             ${book.author} (${book.year})<br>
-                            ${book.genre} · ${book.format.toUpperCase()}
+                            ${book.genre} · ${book.format.toUpperCase()} · ${book.pages || '?'} pages
+                            ${book.series ? `<br>Series: ${book.series}` : ''}
                         </p>
                         <div class="book-actions">
                             <button type="button" data-book-path="./books/${book.path}">Read</button>
