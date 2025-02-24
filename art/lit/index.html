@@ -321,31 +321,29 @@
         }
 
         .page-counter {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            padding: 0.5rem 0.75rem;
             background: var(--bg-secondary);
+            color: var(--text-primary);
             border: 1px solid var(--border);
-            border-radius: 4px;
-            min-width: 80px;
-            text-align: center;
-            font-family: system-ui, -apple-system, sans-serif;
-            white-space: nowrap;
-            transition: border-color 0.2s;
+            padding: 0.5rem 1rem;
+            cursor: default;
+            transition: all 0.2s;
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 90px;
+            font-family: inherit;
         }
 
         .page-counter:hover {
+            background: var(--bg-primary);
             border-color: var(--text-primary);
         }
 
         @media (max-width: 768px) {
             .page-counter {
-                padding: 0.75rem;
-                min-width: 70px;
                 min-height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                padding: 0.75rem 1rem;
             }
         }
 
@@ -575,21 +573,25 @@
                     view.remove();
                 }
 
-                // Find the book data from the flattened books array
                 const flatBooks = flattenBooks(books);
                 const bookData = flatBooks.find(book => `./books/${book.path}` === path);
-                const totalPages = bookData?.pages || 0;
 
                 view = document.createElement('foliate-view');
                 $('.reader-main').appendChild(view);
 
                 view.addEventListener('relocate', e => {
-                    const { fraction } = e.detail;
+                    const { fraction, total } = e.detail;
                     $('#progress-bar').value = fraction;
                     
-                    // Calculate current page based on fraction and total pages
-                    const currentPage = Math.min(Math.ceil(fraction * totalPages), totalPages);
-                    $('.page-counter').textContent = `${currentPage}/${totalPages}`;
+                    // If we have book metadata, use it for total pages
+                    if (bookData?.pages) {
+                        const currentPage = Math.ceil(fraction * bookData.pages);
+                        $('.page-counter').textContent = `${currentPage}/${bookData.pages}`;
+                    } else {
+                        // Fallback to Foliate's internal page count
+                        const currentPage = Math.ceil(fraction * total);
+                        $('.page-counter').textContent = `${currentPage}/${total}`;
+                    }
                 });
 
                 await view.open(path);
