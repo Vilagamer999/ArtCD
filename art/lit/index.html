@@ -127,6 +127,17 @@
             gap: 1rem;
             padding: 1rem 0;
             border-bottom: 1px solid var(--border);
+            background: var(--bg-primary);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .search-controls.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 49;
+            padding: 1rem;
         }
 
         .search-input,
@@ -199,12 +210,150 @@
             font-size: 0.9rem;
             cursor: pointer;
             transition: opacity 0.3s;
-            pointer-events: all;
             white-space: nowrap;
             z-index: 1;
         }
 
-        /* Mobile Optimizations */
+        .reader-main {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reader-footer {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        #progress-bar {
+            flex: 1;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--bg-secondary);
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        #progress-bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            background: var(--text-primary);
+            border: none;
+        }
+
+        #progress-bar::-moz-range-thumb {
+            width: 12px;
+            height: 12px;
+            background: var(--text-primary);
+            border: none;
+        }
+
+        .page-counter {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+            user-select: none;
+            font-family: inherit;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .loading-bar {
+            width: 200px;
+            height: 4px;
+            background: var(--bg-secondary);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 100%;
+            height: 100%;
+            background: var(--text-primary);
+            transform: translateX(-100%);
+            animation: loading 1s infinite;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            z-index: 48;
+            padding: 0.1rem;
+        }
+
+        .scroll-top svg {
+            width: 29px;
+            height: 29px;
+            fill: var(--text-primary);
+            transition: fill 0.2s;
+        }
+
+        .scroll-top:hover {
+            background: var(--bg-primary);
+            border-color: var(--text-primary);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        foliate-view {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
         @media (max-width: 768px) {
             .nav-hint {
                 display: none;
@@ -254,6 +403,10 @@
                 gap: 0.5rem;
             }
 
+            .search-controls.fixed {
+                padding: 1rem 0.5rem;
+            }
+
             .search-input,
             .sort-select {
                 min-height: 44px;
@@ -272,111 +425,11 @@
                 max-width: 200px;
                 align-self: center;
             }
-        }
 
-        #theme-toggle {
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .reader-main {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .reader-footer {
-            background: var(--bg-primary);
-            padding: 1rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            z-index: 10;
-        }
-
-        #progress-bar {
-            flex: 1;
-            height: 4px;
-            -webkit-appearance: none;
-            appearance: none;
-            background: var(--bg-secondary);
-            border-radius: 0;
-            cursor: pointer;
-        }
-
-        #progress-bar::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 12px;
-            height: 12px;
-            background: var(--text-primary);
-            border: none;
-        }
-
-        #progress-bar::-moz-range-thumb {
-            width: 12px;
-            height: 12px;
-            background: var(--text-primary);
-            border: none;
-        }
-
-        .page-counter {
-            color: var(--text-primary);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            line-height: normal;
-            user-select: none;
-        }
-
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
-        }
-
-        .loading-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .loading-bar {
-            width: 200px;
-            height: 4px;
-            background: var(--bg-secondary);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-
-        .loading-progress {
-            width: 100%;
-            height: 100%;
-            background: var(--text-primary);
-            transform: translateX(-100%);
-            animation: loading 1s infinite;
-        }
-
-        foliate-view {
-            width: 100%;
-            height: 100%;
-        }
-
-        @keyframes loading {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            .scroll-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
         }
     </style>
 </head>
@@ -384,7 +437,7 @@
     <div id="library-view">
         <header>
             <div class="container">
-                <img src="cover.webp" alt="cover" class="center">
+                <img src="cover.webp" alt="Library Cover" class="center">
             </div>
         </header>
 
@@ -405,7 +458,7 @@
     </div>
 
     <div id="reader">
-        <div class="reader-header">
+        <header class="reader-header">
             <div class="left-controls">
                 <button id="back-btn">Back to Library</button>
                 <div class="font-controls">
@@ -417,14 +470,16 @@
             <button id="theme-toggle">
                 <span class="theme-icon">☀️</span>
             </button>
-        </div>
-        <div class="reader-main"></div>
-        <div class="reader-footer">
+        </header>
+
+        <main class="reader-main"></main>
+
+        <footer class="reader-footer">
             <button id="prev-page">Previous</button>
             <input type="range" id="progress-bar" min="0" max="1" step="0.001">
             <span class="page-counter">0/0</span>
             <button id="next-page">Next</button>
-        </div>
+        </footer>
     </div>
 
     <div class="loading-overlay">
@@ -433,9 +488,16 @@
         </div>
     </div>
 
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0V0z" fill="none"/>
+            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+        </svg>
+    </button>
+
     <script src="./books/books.js" type="module"></script>
     <script type="module">
-        import './foliate-js/view.js'
+        import './foliate-js/view.js';
         import books from './books/books.js';
 
         const hints = [
@@ -558,6 +620,51 @@
                     view.remove();
                 }
 
+                // Handle text files differently
+                if (path.endsWith('.txt')) {
+                    const fileContent = await window.fs.readFile(path, { encoding: 'utf8' });
+                    view = document.createElement('div');
+                    view.style.cssText = `
+                        padding: 2rem;
+                        line-height: 1.6;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        white-space: pre-wrap;
+                        font-family: inherit;
+                    `;
+                    view.textContent = fileContent;
+                    
+                    $('.reader-main').replaceChildren(view);
+                    $('#reader').classList.add('active');
+                    $('#library-view').style.display = 'none';
+                    
+                    const pageHeight = view.clientHeight - 80;
+                    const contentHeight = view.scrollHeight;
+                    const totalPages = Math.ceil(contentHeight / pageHeight);
+                    $('.page-counter').textContent = `1/${totalPages}`;
+                    
+                    view.addEventListener('scroll', () => {
+                        const currentPage = Math.ceil((view.scrollTop + pageHeight) / pageHeight);
+                        $('.page-counter').textContent = `${currentPage}/${totalPages}`;
+                    });
+                    
+                    $('#next-page').onclick = () => {
+                        view.scrollBy({ top: pageHeight, behavior: 'smooth' });
+                    };
+                    
+                    $('#prev-page').onclick = () => {
+                        view.scrollBy({ top: -pageHeight, behavior: 'smooth' });
+                    };
+                    
+                    $('#progress-bar').oninput = (e) => {
+                        const fraction = parseFloat(e.target.value);
+                        view.scrollTop = fraction * (contentHeight - pageHeight);
+                    };
+                    
+                    return;
+                }
+
+                // Handle other book formats with Foliate
                 const flatBooks = flattenBooks(books);
                 const bookData = flatBooks.find(book => `./books/${book.path}` === path);
 
@@ -568,12 +675,10 @@
                     const { fraction, total } = e.detail;
                     $('#progress-bar').value = fraction;
                     
-                    // If we have book metadata, use it for total pages
                     if (bookData?.pages) {
                         const currentPage = Math.ceil(fraction * bookData.pages);
                         $('.page-counter').textContent = `${currentPage}/${bookData.pages}`;
                     } else {
-                        // Fallback to Foliate's internal page count
                         const currentPage = Math.ceil(fraction * total);
                         $('.page-counter').textContent = `${currentPage}/${total}`;
                     }
@@ -592,6 +697,38 @@
                 $('.loading-overlay').classList.remove('active');
             }
         }
+
+        // Scroll handling
+        const searchControls = $('.search-controls');
+        const scrollTop = $('.scroll-top');
+        const searchControlsTop = searchControls.offsetTop;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedScroll = localStorage.getItem('scrollPosition');
+            if (savedScroll) {
+                window.scrollTo(0, parseInt(savedScroll));
+            }
+        });
+
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('scrollPosition', window.scrollY.toString());
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > searchControlsTop) {
+                searchControls.classList.add('fixed');
+                document.body.style.paddingTop = searchControls.offsetHeight + 'px';
+            } else {
+                searchControls.classList.remove('fixed');
+                document.body.style.paddingTop = '0';
+            }
+            
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
 
         // Event Listeners
         $('.booklist').addEventListener('click', e => {
@@ -637,11 +774,12 @@
         $('#prev-page').addEventListener('click', () => view?.goLeft());
         $('#next-page').addEventListener('click', () => view?.goRight());
         $('#progress-bar').addEventListener('input', e => view?.goToFraction(parseFloat(e.target.value)));
-
-        // Search and sort event listeners
         $('.search-input').addEventListener('input', updateLibrary);
         $('.sort-select').addEventListener('change', updateLibrary);
         $('.nav-hint').addEventListener('click', showRandomHint);
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         // Initialize
         updateLibrary();
