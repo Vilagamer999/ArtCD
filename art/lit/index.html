@@ -558,68 +558,39 @@
 
         async function openBook(path) {
             $('.loading-overlay').classList.add('active');
-            
             try {
-                const fileContent = await window.fs.readFile(path, { encoding: 'utf8' });
-                const filePathParts = path.split('/');
-                const fileName = filePathParts[filePathParts.length - 1];
-                
-                // Check if it's a text file
-                if (fileName.endsWith('.txt')) {
-                    view = document.createElement('div');
-                    view.style.cssText = `
-                        padding: 2rem;
-                        line-height: 1.6;
-                        max-width: 800px;
-                        margin: 0 auto;
-                        white-space: pre-wrap;
-                        font-family: inherit;
-                    `;
-                    view.textContent = fileContent;
-                    
-                    $('.reader-main').replaceChildren(view);
-                    $('#reader').classList.add('active');
-                    $('#library-view').style.display = 'none';
-                    
-                    // Set initial page count based on content height
-                    const pageHeight = view.clientHeight - 80; // Account for margins
-                    const contentHeight = view.scrollHeight;
-                    const totalPages = Math.ceil(contentHeight / pageHeight);
-                    $('.page-counter').textContent = `1/${totalPages}`;
-                    
-                    // Update page counter on scroll
-                    view.addEventListener('scroll', () => {
-                        const currentPage = Math.ceil((view.scrollTop + pageHeight) / pageHeight);
-                        $('.page-counter').textContent = `${currentPage}/${totalPages}`;
-                    });
-                    
-                    // Handle next/previous navigation
-                    $('#next-page').onclick = () => {
-                        view.scrollBy({ top: pageHeight, behavior: 'smooth' });
-                    };
-                    
-                    $('#prev-page').onclick = () => {
-                        view.scrollBy({ top: -pageHeight, behavior: 'smooth' });
-                    };
-                    
-                    // Handle progress bar
-                    $('#progress-bar').oninput = (e) => {
-                        const fraction = parseFloat(e.target.value);
-                        view.scrollTop = fraction * (contentHeight - pageHeight);
-                    };
-                    
-                    return;
-                }
-                
-                // For non-text files, proceed with Foliate
                 if (view) {
                     view.close();
                     view.remove();
                 }
+
+                const flatBooks = flattenBooks(books);
+                const bookData = flatBooks.find(book => `./books/${book.path}` === path);
+
                 view = document.createElement('foliate-view');
                 $('.reader-main').appendChild(view);
+
+                view.addEventListener('relocate', e => {
+                    const { fraction, total } = e.detail;
+                    $('#progress-bar').value = fraction;
+                    
+                    // If we have book metadata, use it for total pages
+                    if (bookData?.pages) {
+                        const currentPage = Math.ceil(fraction * bookData.pages);
+                        $('.page-counter').textContent = `${currentPage}/${bookData.pages}`;
+                    } else {
+                        // Fallback to Foliate's internal page count
+                        const currentPage = Math.ceil(fraction * total);
+                        $('.page-counter').textContent = `${currentPage}/${total}`;
+                    }
+                });
+
                 await view.open(path);
                 await view.init({ showTextStart: true });
+                
+                $('#reader').classList.add('active');
+                $('#library-view').style.display = 'none';
+                updateFontSize();
             } catch (error) {
                 console.error('Error loading book:', error);
                 alert('Error loading book. Please try again.');
