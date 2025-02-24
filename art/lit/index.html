@@ -323,7 +323,30 @@
         .page-counter {
             color: var(--text-secondary);
             font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            min-width: 80px;
+            text-align: center;
+            font-family: system-ui, -apple-system, sans-serif;
             white-space: nowrap;
+            transition: border-color 0.2s;
+        }
+
+        .page-counter:hover {
+            border-color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .page-counter {
+                padding: 0.75rem;
+                min-width: 70px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         .loading-overlay {
@@ -465,26 +488,26 @@
         }
 
         function flattenBooks(books) {
-            return books.flatMap(authorGroup => 
+            return books.map(authorGroup => 
                 authorGroup.series.flatMap(series => 
                     series.books.map(book => ({
                         ...book,
-                        author: authorGroup.author,
+                        author: authorGroup.author || 'Unknown Author',
                         series: series.name
                     }))
                 )
-            );
+            ).flat();
         }
 
         function sortBooks(books, method) {
-            const flatBooks = flattenBooks(books);
+            const flatBooks = Array.isArray(books) ? books : flattenBooks(books);
             const sorters = {
                 'title-asc': (a, b) => a.title.localeCompare(b.title),
                 'title-desc': (a, b) => b.title.localeCompare(a.title),
                 'author-asc': (a, b) => a.author.localeCompare(b.author),
                 'author-desc': (a, b) => b.author.localeCompare(a.author),
                 'year-asc': (a, b) => (a.year || 0) - (b.year || 0),
-                'year-desc': (a, b) => (b.year || 0) - (a.year || 0),
+                'year-desc': (a, b) => (b.year || 0) - (a.year || 0)
             };
             return flatBooks.sort(sorters[method]);
         }
@@ -495,15 +518,15 @@
             return flatBooks.filter(book => 
                 book.title.toLowerCase().includes(query) ||
                 book.author.toLowerCase().includes(query) ||
-                (book.genre || '').toLowerCase().includes(query) ||  // Handle potentially undefined genre
-                (book.series || '').toLowerCase().includes(query)    // Add series search
+                (book.genre || '').toLowerCase().includes(query) ||
+                (book.series || '').toLowerCase().includes(query)
             );
         }
 
         function updateLibrary() {
             const query = $('.search-input').value.trim();
             const sortMethod = $('.sort-select').value;
-            const filteredBooks = query ? filterBooks(query) : books;
+            const filteredBooks = query ? filterBooks(query) : flattenBooks(books);
             const sortedBooks = sortBooks(filteredBooks, sortMethod);
             
             $('.booklist').innerHTML = sortedBooks.map(book => `
@@ -512,12 +535,13 @@
                          src="${book.cover}" 
                          alt="Cover of ${book.title}"
                          onerror="this.src='./covers/generic.webp'">
-                    <div class="book-info">
+                    <div class="info">
                         <h2>${book.title}</h2>
-                        <p class="book-meta">
+                        <p class="meta">
                             ${book.author} (${book.year})<br>
                             ${book.genre} · ${book.format.toUpperCase()} · ${book.pages || '?'} pages
                             ${book.series ? `<br>Series: ${book.series}` : ''}
+                            ${book.series_index ? ` (Book ${book.series_index})` : ''}
                         </p>
                         <div class="book-actions">
                             <button type="button" data-book-path="./books/${book.path}">Read</button>
@@ -551,18 +575,21 @@
                     view.remove();
                 }
 
+                // Find the book data from the flattened books array
+                const flatBooks = flattenBooks(books);
+                const bookData = flatBooks.find(book => `./books/${book.path}` === path);
+                const totalPages = bookData?.pages || 0;
+
                 view = document.createElement('foliate-view');
                 $('.reader-main').appendChild(view);
 
                 view.addEventListener('relocate', e => {
-                    const { fraction, total } = e.detail;
+                    const { fraction } = e.detail;
                     $('#progress-bar').value = fraction;
-                    const currentPage = Math.min(Math.ceil(fraction * total), total);
-                    if (total > 0) {
-                        $('.page-counter').textContent = `${currentPage}/${total}`;
-                    } else {
-                        $('.page-counter').textContent = '0/0';
-                    }
+                    
+                    // Calculate current page based on fraction and total pages
+                    const currentPage = Math.min(Math.ceil(fraction * totalPages), totalPages);
+                    $('.page-counter').textContent = `${currentPage}/${totalPages}`;
                 });
 
                 await view.open(path);
