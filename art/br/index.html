@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinyl Music Player</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f0f0f0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .title-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .album-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+
+        .album-artist {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .player-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .player-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: 655px;
+        }
+
+        .album-section {
+            position: relative;
+        }
+
+        .turntable {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #f5f5f5;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .vinyl {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            background: #222;
+            animation: rotate 20s linear infinite paused;
+        }
+
+        .vinyl.playing {
+            animation-play-state: running;
+        }
+
+        .album-art {
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-image: url('dragontech.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .material-symbols-rounded {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 20;
+            line-height: 1;
+            vertical-align: middle;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .btn {
+            background: #f0f0f0;
+            border: none;
+            color: #333;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background: #e0e0e0;
+            transform: scale(1.1);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .playlist {
+            background: #f8f8f8;
+            border-radius: 10px;
+            padding: 1rem;
+            height: 660px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #ccc #f0f0f0;
+        }
+
+        .track {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            background: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .track:hover {
+            background: #f5f5f5;
+            transform: translateX(5px);
+        }
+
+        .track.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .track.active .track-info {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .track-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: #eee;
+            border-radius: 5px;
+            margin-top: 1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #4CAF50;
+            border-radius: 5px;
+            transition: width 0.1s linear;
+            position: relative;
+            will-change: width;
+            transition-duration: 0.2s;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .progress-container:hover .progress-bar::after {
+            opacity: 1;
+        }
+
+        .album-description {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .album-details {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .detail-item {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .detail-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .playlist::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .playlist::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .playlist::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .playlist::-webkit-scrollbar-thumb:hover {
+            background: #bbb;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="title-container">
+            <h1 class="album-title">Blast Radius</h1>
+            <div class="album-artist">by Pepper Coyote</div>
+        </div>
+
+        <div class="player-container">
+            <div class="player-content">
+                <div class="album-section">
+                    <div class="turntable">
+                        <div class="vinyl">
+                            <div class="album-art"></div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="btn" id="prevBtn">
+                            <span class="material-symbols-rounded">skip_previous</span>
+                        </button>
+                        <button class="btn" id="playBtn">
+                            <span class="material-symbols-rounded">play_arrow</span>
+                        </button>
+                        <button class="btn" id="nextBtn">
+                            <span class="material-symbols-rounded">skip_next</span>
+                        </button>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="playlist">
+                    
+                    <div class="track active" data-file="01 BD Jingle.mp3">
+                        <div>BD Jingle</div>
+                        <div class="track-info">
+                            <span>00:10</span>
+                            <span class="material-symbols-rounded" >volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="02 Duck and Cover.mp3">
+                        <div>Duck and Cover</div>
+                        <div class="track-info">
+                            <span>02:13</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="03 Duka Cola Informative.mp3">
+                        <div>Duka Cola Informative</div>
+                        <div class="track-info">
+                            <span>00:54</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="04 One Thing.mp3">
+                        <div>One Thing</div>
+                        <div class="track-info">
+                            <span>03:02</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="05 You'll Need a Duke.mp3">
+                        <div>You'll Need a Duke</div>
+                        <div class="track-info">
+                            <span>03:22</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="06 Nuclear Love.mp3">
+                        <div>Nuclear Love</div>
+                        <div class="track-info">
+                            <span>02:13</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="07 Ode to a [Redacted].mp3">
+                        <div>Ode to a [Redacted]</div>
+                        <div class="track-info">
+                            <span>02:11</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="08 No [Censored] like [Censored] [Censored].mp3">
+                        <div>No [Censored] like [Censored] [Censored]</div>
+                        <div class="track-info">
+                            <span>02:16</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="09 BD Jingle [Vintage].mp3">
+                        <div>BD Jingle [Vintage]</div>
+                        <div class="track-info">
+                            <span>00:10</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="10 Duck and Cover [Vintage].mp3">
+                        <div>Duck and Cover [Vintage]</div>
+                        <div class="track-info">
+                            <span>02:13</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="11 Duka Cola informative [Vintage].mp3">
+                        <div>Duka Cola informative [Vintage]</div>
+                        <div class="track-info">
+                            <span>00:54</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="12 One Thing [Vintage].mp3">
+                        <div>One Thing [Vintage]</div>
+                        <div class="track-info">
+                            <span>03:02</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="13 You'll Need a Duke [Vintage].mp3">
+                        <div>You'll Need a Duke [Vintage]</div>
+                        <div class="track-info">
+                            <span>03:24</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="14 Nuclear Love [Vintage].mp3">
+                        <div>Nuclear Love [Vintage]</div>
+                        <div class="track-info">
+                            <span>02:13</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="15 Ode to a [Redacted] [Vintage].mp3">
+                        <div>Ode to a [Redacted] [Vintage]</div>
+                        <div class="track-info">
+                            <span>02:11</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                    <div class="track " data-file="16 No [Censored] like [Censored] [Censored] [Vintage].mp3">
+                        <div>No [Censored] like [Censored] [Censored] [Vintage]</div>
+                        <div class="track-info">
+                            <span>02:16</span>
+                            <span class="material-symbols-rounded" style="opacity: 0;">volume_up</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="album-description">
+                <p>To capitalize on the release of Bethesda Game Studios's action role-playing game, Fallout 4, Bad Dragon released a limited-edition run of Deathclaw dildos.<br><br>They also changed the theme of their website to a Fallout-theme, and even commissioned furry musician Pepper Coyote a related accompanying album titled Blast Radius, which played upon arrival to the website's front landing page.</p>
+            </div>
+            <div class="album-details">
+                <div class="detail-item">
+                    <div class="detail-label">Release Date</div>
+                    <div class="detail-value">6th November 2015</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Genre</div>
+                    <div class="detail-value">Furry</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Duration</div>
+                    <div class="detail-value">32:44</div></div></div></div>
+    </div>
+
+    
+
+    <!-- JavaScript -->
+    
+        <audio id="audio-player">
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio><script>
+        // DOM Elements
+        const vinyl = document.querySelector('.vinyl');
+        const playBtn = document.getElementById('playBtn');
+        const playBtnIcon = playBtn.querySelector('.material-symbols-rounded');
+        const tracks = document.querySelectorAll('.track');
+        const progressBar = document.querySelector('.progress-bar');
+        const progressContainer = document.querySelector('.progress-container');
+        const audioPlayer = document.getElementById('audio-player');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // State
+        let isPlaying = false;
+        let progressAnimationFrame;
+
+        // Smooth progress update using requestAnimationFrame
+        function updateProgressSmooth() {
+            if (audioPlayer.duration) {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
+            progressAnimationFrame = requestAnimationFrame(updateProgressSmooth);
+        }
+
+        function startProgressUpdate() {
+            cancelAnimationFrame(progressAnimationFrame);
+            progressAnimationFrame = requestAnimationFrame(updateProgressSmooth);
+        }
+
+        function stopProgressUpdate() {
+            cancelAnimationFrame(progressAnimationFrame);
+        }
+
+        // Track Management Functions
+        function loadAndPlayTrack(track) {
+            const filename = track.dataset.file;
+            audioPlayer.src = filename;
+            audioPlayer.load();
+            
+            tracks.forEach(t => {
+                t.classList.remove('active');
+                t.querySelector('.material-symbols-rounded').style.opacity = '0';
+            });
+            track.classList.add('active');
+            track.querySelector('.material-symbols-rounded').style.opacity = '1';
+            
+            if (isPlaying) {
+                audioPlayer.play().then(startProgressUpdate);
+            }
+        }
+
+        function playNextTrack() {
+            const currentTrack = document.querySelector('.track.active');
+            const nextTrack = currentTrack.nextElementSibling || tracks[0];
+            loadAndPlayTrack(nextTrack);
+        }
+
+        function playPreviousTrack() {
+            const currentTrack = document.querySelector('.track.active');
+            const prevTrack = currentTrack.previousElementSibling || tracks[tracks.length - 1];
+            loadAndPlayTrack(prevTrack);
+        }
+
+        // Playback Control Functions
+        function togglePlay(shouldPlay = true) {
+            isPlaying = shouldPlay;
+            if (isPlaying) {
+                vinyl.classList.add('playing');
+                playBtnIcon.textContent = 'pause';
+                audioPlayer.play().then(startProgressUpdate);
+            } else {
+                vinyl.classList.remove('playing');
+                playBtnIcon.textContent = 'play_arrow';
+                audioPlayer.pause();
+                stopProgressUpdate();
+            }
+        }
+
+        function seekTo(event) {
+            const rect = progressContainer.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const percentage = x / rect.width;
+            if (audioPlayer.duration) {
+                audioPlayer.currentTime = audioPlayer.duration * percentage;
+            }
+        }
+
+        // Event Listeners
+        audioPlayer.addEventListener('play', () => {
+            isPlaying = true;
+            vinyl.classList.add('playing');
+            playBtnIcon.textContent = 'pause';
+            startProgressUpdate();
+        });
+
+        audioPlayer.addEventListener('pause', () => {
+            isPlaying = false;
+            vinyl.classList.remove('playing');
+            playBtnIcon.textContent = 'play_arrow';
+            stopProgressUpdate();
+        });
+
+        audioPlayer.addEventListener('ended', () => {
+            stopProgressUpdate();
+            playNextTrack();
+        });
+
+        playBtn.addEventListener('click', () => {
+            togglePlay(!isPlaying);
+        });
+
+        tracks.forEach(track => {
+            track.addEventListener('click', () => {
+                const isSameTrack = track.classList.contains('active');
+                loadAndPlayTrack(track);
+                if (isSameTrack) {
+                    togglePlay(!isPlaying);
+                } else {
+                    togglePlay(true);
+                }
+            });
+        });
+
+        progressContainer.addEventListener('click', seekTo);
+        prevBtn.addEventListener('click', playPreviousTrack);
+        nextBtn.addEventListener('click', playNextTrack);
+
+        // Keyboard Controls
+        document.addEventListener('keydown', (e) => {
+            switch(e.code) {
+                case 'Space':
+                    e.preventDefault();
+                    togglePlay(!isPlaying);
+                    break;
+                case 'ArrowLeft':
+                    playPreviousTrack();
+                    break;
+                case 'ArrowRight':
+                    playNextTrack();
+                    break;
+            }
+        });
+
+        // Initialize
+        window.addEventListener('load', () => {
+            if (tracks.length > 0) {
+                loadAndPlayTrack(tracks[0]);
+                audioPlayer.volume = 0.7;
+            }
+        });
+
+        // Error handling
+        audioPlayer.addEventListener('error', (e) => {
+            console.error('Audio error:', e);
+            stopProgressUpdate();
+        });
+
+        // Cleanup
+        window.addEventListener('unload', () => {
+            stopProgressUpdate();
+        });
+    </script>
+</body>
+</html>

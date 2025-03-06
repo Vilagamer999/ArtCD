@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrie Smith</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+        .window {
+            background-color: #FAFAFA;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .title-bar {
+            background-color: #f6f6f6;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .title {
+            font-weight: 500;
+            font-size: 14px;
+            color: #333;
+        }
+        .window-controls {
+            display: flex;
+        }
+        .control-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .close { background-color: #ff5f56; }
+        .minimize { background-color: #ffbd2e; }
+        .expand { background-color: #27c93f; }
+        .content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+        .item {
+            background-color: transparent;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 140px;
+        }
+        .item:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .folder {
+            color: #4a86e8;
+        }
+        .folder-icon, .file-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .item-name {
+            font-size: 12px;
+            word-break: break-word;
+            color: #333;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-content {
+            max-width: 100%;
+            max-height: calc(90vh - 40px);
+            object-fit: contain;
+            cursor: pointer;
+        }
+        .modal-info {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .nav-arrow:hover {
+            background-color: rgba(0,0,0,0.7);
+        }
+        .prev-arrow { left: 20px; }
+        .next-arrow { right: 20px; }
+        .nav-arrow::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid white;
+            border-right: 3px solid white;
+            display: inline-block;
+        }
+        .prev-arrow::before {
+            transform: rotate(-135deg);
+        }
+        .next-arrow::before {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="window-controls">
+                <div class="control-button close"></div>
+                <div class="control-button minimize"></div>
+                <div class="control-button expand"></div>
+            </div>
+            <div class="title">Terrie Smith</div>
+        </div>
+        <div class="content">
+            <div id="file-viewer" class="grid"></div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="nav-arrow prev-arrow"></div>
+        <div class="nav-arrow next-arrow"></div>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modal-img">
+            <div class="modal-info" id="modal-info"></div>
+        </div>
+    </div>
+    <script>
+    const fileStructure = {
+    "A Taste of Blood": {
+        "A_Taste_of_Blood_01.webp": "A Taste of Blood/A_Taste_of_Blood_01.webp",
+        "A_Taste_of_Blood_02.webp": "A Taste of Blood/A_Taste_of_Blood_02.webp",
+        "A_Taste_of_Blood_03.webp": "A Taste of Blood/A_Taste_of_Blood_03.webp",
+        "A_Taste_of_Blood_04.webp": "A Taste of Blood/A_Taste_of_Blood_04.webp",
+        "A_Taste_of_Blood_05.webp": "A Taste of Blood/A_Taste_of_Blood_05.webp",
+        "A_Taste_of_Blood_06.webp": "A Taste of Blood/A_Taste_of_Blood_06.webp",
+        "A_Taste_of_Blood_07.webp": "A Taste of Blood/A_Taste_of_Blood_07.webp",
+        "A_Taste_of_Blood_08.webp": "A Taste of Blood/A_Taste_of_Blood_08.webp",
+        "A_Taste_of_Blood_09.webp": "A Taste of Blood/A_Taste_of_Blood_09.webp",
+        "A_Taste_of_Blood_10.webp": "A Taste of Blood/A_Taste_of_Blood_10.webp",
+        "A_Taste_of_Blood_11.webp": "A Taste of Blood/A_Taste_of_Blood_11.webp",
+        "A_Taste_of_Blood_12.webp": "A Taste of Blood/A_Taste_of_Blood_12.webp"
+    },
+    "African Safari": {
+        "african safari 00.webp": "African Safari/african safari 00.webp",
+        "african safari 01.webp": "African Safari/african safari 01.webp",
+        "african safari 02.webp": "African Safari/african safari 02.webp",
+        "african safari 03.webp": "African Safari/african safari 03.webp",
+        "african safari 04.webp": "African Safari/african safari 04.webp",
+        "african safari 05.webp": "African Safari/african safari 05.webp",
+        "african safari 06.webp": "African Safari/african safari 06.webp",
+        "african safari 07.webp": "African Safari/african safari 07.webp",
+        "african safari 08.webp": "African Safari/african safari 08.webp",
+        "african safari 09.webp": "African Safari/african safari 09.webp",
+        "african safari 10.webp": "African Safari/african safari 10.webp",
+        "african safari 11.webp": "African Safari/african safari 11.webp",
+        "african safari 12.webp": "African Safari/african safari 12.webp"
+    },
+    "Cats and Dogs": {
+        "cats and dogs 00.webp": "Cats and Dogs/cats and dogs 00.webp",
+        "cats and dogs 01.webp": "Cats and Dogs/cats and dogs 01.webp",
+        "cats and dogs 02.webp": "Cats and Dogs/cats and dogs 02.webp",
+        "cats and dogs 03.webp": "Cats and Dogs/cats and dogs 03.webp",
+        "cats and dogs 04.webp": "Cats and Dogs/cats and dogs 04.webp",
+        "cats and dogs 05.webp": "Cats and Dogs/cats and dogs 05.webp",
+        "cats and dogs 06.webp": "Cats and Dogs/cats and dogs 06.webp",
+        "cats and dogs 07.webp": "Cats and Dogs/cats and dogs 07.webp",
+        "cats and dogs 08.webp": "Cats and Dogs/cats and dogs 08.webp",
+        "cats and dogs 09.webp": "Cats and Dogs/cats and dogs 09.webp",
+        "cats and dogs 10.webp": "Cats and Dogs/cats and dogs 10.webp",
+        "cats and dogs 11.webp": "Cats and Dogs/cats and dogs 11.webp",
+        "cats and dogs 12.webp": "Cats and Dogs/cats and dogs 12.webp",
+        "cats and dogs 13.webp": "Cats and Dogs/cats and dogs 13.webp"
+    },
+    "Chester": {
+        "Chester10yrs - #01.webp": "Chester/Chester10yrs - #01.webp",
+        "Chester10yrs - #02.webp": "Chester/Chester10yrs - #02.webp",
+        "Chester10yrs - #03.webp": "Chester/Chester10yrs - #03.webp",
+        "Chester10yrs - #04.webp": "Chester/Chester10yrs - #04.webp",
+        "Chester10yrs - #05.webp": "Chester/Chester10yrs - #05.webp",
+        "Chester10yrs - #06.webp": "Chester/Chester10yrs - #06.webp",
+        "Chester10yrs - #07.webp": "Chester/Chester10yrs - #07.webp",
+        "Chester10yrs - #08.webp": "Chester/Chester10yrs - #08.webp",
+        "Chester10yrs - #09.webp": "Chester/Chester10yrs - #09.webp",
+        "Chester10yrs - #10.webp": "Chester/Chester10yrs - #10.webp",
+        "Chester10yrs - #11.webp": "Chester/Chester10yrs - #11.webp",
+        "Chester10yrs - #12.webp": "Chester/Chester10yrs - #12.webp",
+        "Chester10yrs - #13.webp": "Chester/Chester10yrs - #13.webp",
+        "Chester10yrs - #14.webp": "Chester/Chester10yrs - #14.webp",
+        "Chester10yrs - #15.webp": "Chester/Chester10yrs - #15.webp",
+        "Chester10yrs - #16.webp": "Chester/Chester10yrs - #16.webp",
+        "Chester10yrs - #17.webp": "Chester/Chester10yrs - #17.webp",
+        "Chester10yrs - #18.webp": "Chester/Chester10yrs - #18.webp",
+        "Chester10yrs - #19.webp": "Chester/Chester10yrs - #19.webp",
+        "Chester10yrs - Cover.webp": "Chester/Chester10yrs - Cover.webp",
+        "Chester10yrs - Credits Back.webp": "Chester/Chester10yrs - Credits Back.webp"
+    },
+    "Chester 20th Anniversary Calendar": {
+        "2009_Chester_20th_Anniversary_Calendar_00_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_00_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_01_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_01_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_02_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_02_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_03_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_03_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_04_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_04_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_05_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_05_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_06_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_06_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_07_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_07_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_08_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_08_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_09_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_09_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_10_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_10_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_11_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_11_ScanAvikWolf.webp",
+        "2009_Chester_20th_Anniversary_Calendar_12_ScanAvikWolf.webp": "Chester 20th Anniversary Calendar/2009_Chester_20th_Anniversary_Calendar_12_ScanAvikWolf.webp"
+    },
+    "Fur Fems 2007": {
+        "2007FurFemCal-00.webp": "Fur Fems 2007/2007FurFemCal-00.webp",
+        "2007FurFemCal-01.webp": "Fur Fems 2007/2007FurFemCal-01.webp",
+        "2007FurFemCal-02.webp": "Fur Fems 2007/2007FurFemCal-02.webp",
+        "2007FurFemCal-03.webp": "Fur Fems 2007/2007FurFemCal-03.webp",
+        "2007FurFemCal-04.webp": "Fur Fems 2007/2007FurFemCal-04.webp",
+        "2007FurFemCal-05.webp": "Fur Fems 2007/2007FurFemCal-05.webp",
+        "2007FurFemCal-06.webp": "Fur Fems 2007/2007FurFemCal-06.webp",
+        "2007FurFemCal-07.webp": "Fur Fems 2007/2007FurFemCal-07.webp",
+        "2007FurFemCal-08.webp": "Fur Fems 2007/2007FurFemCal-08.webp",
+        "2007FurFemCal-09.webp": "Fur Fems 2007/2007FurFemCal-09.webp",
+        "2007FurFemCal-10.webp": "Fur Fems 2007/2007FurFemCal-10.webp",
+        "2007FurFemCal-11.webp": "Fur Fems 2007/2007FurFemCal-11.webp",
+        "2007FurFemCal-12.webp": "Fur Fems 2007/2007FurFemCal-12.webp",
+        "2007FurFemCal-13.webp": "Fur Fems 2007/2007FurFemCal-13.webp",
+        "2007FurFemCal-14.webp": "Fur Fems 2007/2007FurFemCal-14.webp",
+        "2007FurFemCal-15.webp": "Fur Fems 2007/2007FurFemCal-15.webp",
+        "2007FurFemCal-16.webp": "Fur Fems 2007/2007FurFemCal-16.webp",
+        "2007FurFemCal-17.webp": "Fur Fems 2007/2007FurFemCal-17.webp",
+        "2007FurFemCal-18.webp": "Fur Fems 2007/2007FurFemCal-18.webp",
+        "2007FurFemCal-19.webp": "Fur Fems 2007/2007FurFemCal-19.webp",
+        "2007FurFemCal-20.webp": "Fur Fems 2007/2007FurFemCal-20.webp",
+        "2007FurFemCal-21.webp": "Fur Fems 2007/2007FurFemCal-21.webp",
+        "2007FurFemCal-22.webp": "Fur Fems 2007/2007FurFemCal-22.webp",
+        "2007FurFemCal-23.webp": "Fur Fems 2007/2007FurFemCal-23.webp",
+        "2007FurFemCal-24.webp": "Fur Fems 2007/2007FurFemCal-24.webp",
+        "2007FurFemCal-25.webp": "Fur Fems 2007/2007FurFemCal-25.webp"
+    },
+    "Little Paw": {
+        "000 FRONT.webp": "Little Paw/000 FRONT.webp",
+        "001.webp": "Little Paw/001.webp",
+        "002.webp": "Little Paw/002.webp",
+        "003.webp": "Little Paw/003.webp",
+        "004.webp": "Little Paw/004.webp",
+        "005.webp": "Little Paw/005.webp",
+        "006.webp": "Little Paw/006.webp",
+        "007.webp": "Little Paw/007.webp",
+        "008.webp": "Little Paw/008.webp",
+        "009'.webp": "Little Paw/009'.webp",
+        "010.webp": "Little Paw/010.webp",
+        "011.webp": "Little Paw/011.webp",
+        "012.webp": "Little Paw/012.webp",
+        "013.webp": "Little Paw/013.webp",
+        "014.webp": "Little Paw/014.webp",
+        "015.webp": "Little Paw/015.webp",
+        "016.webp": "Little Paw/016.webp",
+        "017.webp": "Little Paw/017.webp",
+        "018'.webp": "Little Paw/018'.webp",
+        "019.webp": "Little Paw/019.webp",
+        "020.webp": "Little Paw/020.webp",
+        "021.webp": "Little Paw/021.webp",
+        "022.webp": "Little Paw/022.webp",
+        "023.webp": "Little Paw/023.webp",
+        "024.webp": "Little Paw/024.webp",
+        "025.webp": "Little Paw/025.webp",
+        "026'.webp": "Little Paw/026'.webp",
+        "027.webp": "Little Paw/027.webp",
+        "028.webp": "Little Paw/028.webp",
+        "029.webp": "Little Paw/029.webp",
+        "030.webp": "Little Paw/030.webp",
+        "031.webp": "Little Paw/031.webp",
+        "032.webp": "Little Paw/032.webp",
+        "034'.webp": "Little Paw/034'.webp",
+        "035.webp": "Little Paw/035.webp",
+        "036.webp": "Little Paw/036.webp",
+        "037'.webp": "Little Paw/037'.webp",
+        "038.webp": "Little Paw/038.webp",
+        "039.webp": "Little Paw/039.webp",
+        "040.webp": "Little Paw/040.webp",
+        "041.webp": "Little Paw/041.webp",
+        "042.webp": "Little Paw/042.webp",
+        "043.webp": "Little Paw/043.webp",
+        "044.webp": "Little Paw/044.webp",
+        "045.webp": "Little Paw/045.webp",
+        "046.webp": "Little Paw/046.webp",
+        "047.webp": "Little Paw/047.webp",
+        "048.webp": "Little Paw/048.webp",
+        "049.webp": "Little Paw/049.webp",
+        "050.webp": "Little Paw/050.webp",
+        "051.webp": "Little Paw/051.webp",
+        "052'.webp": "Little Paw/052'.webp",
+        "053'.webp": "Little Paw/053'.webp",
+        "054.webp": "Little Paw/054.webp",
+        "055.webp": "Little Paw/055.webp",
+        "056.webp": "Little Paw/056.webp",
+        "057.webp": "Little Paw/057.webp",
+        "058.webp": "Little Paw/058.webp",
+        "059.webp": "Little Paw/059.webp",
+        "060.webp": "Little Paw/060.webp",
+        "061.webp": "Little Paw/061.webp",
+        "062.webp": "Little Paw/062.webp",
+        "063.webp": "Little Paw/063.webp",
+        "064'.webp": "Little Paw/064'.webp",
+        "065'.webp": "Little Paw/065'.webp",
+        "066'.webp": "Little Paw/066'.webp",
+        "067.webp": "Little Paw/067.webp",
+        "068.webp": "Little Paw/068.webp",
+        "069.webp": "Little Paw/069.webp",
+        "070.webp": "Little Paw/070.webp",
+        "071'.webp": "Little Paw/071'.webp",
+        "072.webp": "Little Paw/072.webp",
+        "073.webp": "Little Paw/073.webp",
+        "074.webp": "Little Paw/074.webp",
+        "075.webp": "Little Paw/075.webp",
+        "076.webp": "Little Paw/076.webp",
+        "077.webp": "Little Paw/077.webp",
+        "078.webp": "Little Paw/078.webp",
+        "079.webp": "Little Paw/079.webp",
+        "080.webp": "Little Paw/080.webp",
+        "081.webp": "Little Paw/081.webp",
+        "082'.webp": "Little Paw/082'.webp",
+        "083'.webp": "Little Paw/083'.webp",
+        "084'.webp": "Little Paw/084'.webp",
+        "085.webp": "Little Paw/085.webp",
+        "086.webp": "Little Paw/086.webp",
+        "087.webp": "Little Paw/087.webp",
+        "088.webp": "Little Paw/088.webp",
+        "089.webp": "Little Paw/089.webp",
+        "090.webp": "Little Paw/090.webp",
+        "091'.webp": "Little Paw/091'.webp",
+        "092.webp": "Little Paw/092.webp",
+        "093'.webp": "Little Paw/093'.webp",
+        "094.webp": "Little Paw/094.webp",
+        "095.webp": "Little Paw/095.webp",
+        "096.webp": "Little Paw/096.webp",
+        "097.webp": "Little Paw/097.webp",
+        "098'.webp": "Little Paw/098'.webp",
+        "099.webp": "Little Paw/099.webp",
+        "100.webp": "Little Paw/100.webp",
+        "101.webp": "Little Paw/101.webp",
+        "102.webp": "Little Paw/102.webp",
+        "103.webp": "Little Paw/103.webp",
+        "104.webp": "Little Paw/104.webp",
+        "105'.webp": "Little Paw/105'.webp",
+        "106.webp": "Little Paw/106.webp",
+        "999 BACK.webp": "Little Paw/999 BACK.webp"
+    },
+    "Prints": {
+        "Abela.webp": "Prints/Abela.webp",
+        "Devra.webp": "Prints/Devra.webp",
+        "Ginnie.webp": "Prints/Ginnie.webp",
+        "Golden Tigress.webp": "Prints/Golden Tigress.webp",
+        "Joelynn.webp": "Prints/Joelynn.webp",
+        "Kismet.webp": "Prints/Kismet.webp",
+        "Mousey Love XV.webp": "Prints/Mousey Love XV.webp",
+        "Radella.webp": "Prints/Radella.webp",
+        "Sohalia.webp": "Prints/Sohalia.webp",
+        "Time Pirate.webp": "Prints/Time Pirate.webp",
+        "Valeria.webp": "Prints/Valeria.webp",
+        "Vana.webp": "Prints/Vana.webp",
+        "Yo-Yo.webp": "Prints/Yo-Yo.webp"
+    },
+    "Ringtail Review": {
+        "RtR001.webp": "Ringtail Review/RtR001.webp",
+        "RtR002.webp": "Ringtail Review/RtR002.webp",
+        "RtR003.webp": "Ringtail Review/RtR003.webp",
+        "RtR004.webp": "Ringtail Review/RtR004.webp",
+        "RtR005.webp": "Ringtail Review/RtR005.webp",
+        "RtR006.webp": "Ringtail Review/RtR006.webp",
+        "RtR007.webp": "Ringtail Review/RtR007.webp",
+        "RtR008.webp": "Ringtail Review/RtR008.webp",
+        "RtR009.webp": "Ringtail Review/RtR009.webp",
+        "RtR010.webp": "Ringtail Review/RtR010.webp",
+        "RtR011.webp": "Ringtail Review/RtR011.webp",
+        "RtR012.webp": "Ringtail Review/RtR012.webp",
+        "RtR013.webp": "Ringtail Review/RtR013.webp",
+        "RtR014.webp": "Ringtail Review/RtR014.webp",
+        "RtR015.webp": "Ringtail Review/RtR015.webp",
+        "RtR016.webp": "Ringtail Review/RtR016.webp"
+    },
+    "Terrie": {
+        "All.webp": "Terrie/All.webp",
+        "Alleycat.webp": "Terrie/Alleycat.webp",
+        "Amenouzume.webp": "Terrie/Amenouzume.webp",
+        "Ameretat.webp": "Terrie/Ameretat.webp",
+        "Ananke.webp": "Terrie/Ananke.webp",
+        "Angitia.webp": "Terrie/Angitia.webp",
+        "Anna.webp": "Terrie/Anna.webp",
+        "Annis.webp": "Terrie/Annis.webp",
+        "Antiope.webp": "Terrie/Antiope.webp",
+        "Aphrodite.webp": "Terrie/Aphrodite.webp",
+        "Ariadne.webp": "Terrie/Ariadne.webp",
+        "Arinnitti.webp": "Terrie/Arinnitti.webp",
+        "Artemis.webp": "Terrie/Artemis.webp",
+        "Aruru.webp": "Terrie/Aruru.webp",
+        "Asherah.webp": "Terrie/Asherah.webp",
+        "Astarte.webp": "Terrie/Astarte.webp",
+        "Atargatis.webp": "Terrie/Atargatis.webp",
+        "Ate.webp": "Terrie/Ate.webp",
+        "Athena.webp": "Terrie/Athena.webp",
+        "Aurora.webp": "Terrie/Aurora.webp",
+        "Auseklis.webp": "Terrie/Auseklis.webp",
+        "Baalat.webp": "Terrie/Baalat.webp",
+        "Bast.webp": "Terrie/Bast.webp",
+        "Bau.webp": "Terrie/Bau.webp",
+        "Belit.webp": "Terrie/Belit.webp",
+        "Bellona.webp": "Terrie/Bellona.webp",
+        "Bendis.webp": "Terrie/Bendis.webp",
+        "Blaze.webp": "Terrie/Blaze.webp",
+        "Blythe.webp": "Terrie/Blythe.webp",
+        "Border.webp": "Terrie/Border.webp",
+        "Brenda.webp": "Terrie/Brenda.webp",
+        "Brenna.webp": "Terrie/Brenna.webp",
+        "Brewster.webp": "Terrie/Brewster.webp",
+        "Breyette.webp": "Terrie/Breyette.webp",
+        "Brynie.webp": "Terrie/Brynie.webp",
+        "Brynja.webp": "Terrie/Brynja.webp",
+        "Butris.webp": "Terrie/Butris.webp",
+        "California.webp": "Terrie/California.webp",
+        "Calliope.webp": "Terrie/Calliope.webp",
+        "Casey.webp": "Terrie/Casey.webp",
+        "Cashew.webp": "Terrie/Cashew.webp",
+        "Chestertoo.webp": "Terrie/Chestertoo.webp",
+        "Chickadee.webp": "Terrie/Chickadee.webp",
+        "Chiquita.webp": "Terrie/Chiquita.webp",
+        "Cholena.webp": "Terrie/Cholena.webp",
+        "Chriselda.webp": "Terrie/Chriselda.webp",
+        "Coffee.webp": "Terrie/Coffee.webp",
+        "Colena.webp": "Terrie/Colena.webp",
+        "Colette.webp": "Terrie/Colette.webp",
+        "Curse.webp": "Terrie/Curse.webp",
+        "Danny.webp": "Terrie/Danny.webp",
+        "Definitely.webp": "Terrie/Definitely.webp",
+        "Demi.webp": "Terrie/Demi.webp",
+        "digits.webp": "Terrie/digits.webp",
+        "Dorothy.webp": "Terrie/Dorothy.webp",
+        "Ellin.webp": "Terrie/Ellin.webp",
+        "Elsa.webp": "Terrie/Elsa.webp",
+        "ffcover04.webp": "Terrie/ffcover04.webp",
+        "Fidella.webp": "Terrie/Fidella.webp",
+        "Fuji.webp": "Terrie/Fuji.webp",
+        "Furry.webp": "Terrie/Furry.webp",
+        "Garth.webp": "Terrie/Garth.webp",
+        "goddess04.webp": "Terrie/goddess04.webp",
+        "Golden.webp": "Terrie/Golden.webp",
+        "Heidi.webp": "Terrie/Heidi.webp",
+        "Hortense.webp": "Terrie/Hortense.webp",
+        "Hot.webp": "Terrie/Hot.webp",
+        "Hulda.webp": "Terrie/Hulda.webp",
+        "images.htm": "Terrie/images.htm",
+        "Inky.webp": "Terrie/Inky.webp",
+        "Ironstar.webp": "Terrie/Ironstar.webp",
+        "Jalene.webp": "Terrie/Jalene.webp",
+        "Jasmine.webp": "Terrie/Jasmine.webp",
+        "Jayne.webp": "Terrie/Jayne.webp",
+        "Jblayne.webp": "Terrie/Jblayne.webp",
+        "Jerrilyn.webp": "Terrie/Jerrilyn.webp",
+        "Jiff.webp": "Terrie/Jiff.webp",
+        "Joslyn.webp": "Terrie/Joslyn.webp",
+        "Kami.webp": "Terrie/Kami.webp",
+        "Kelley.webp": "Terrie/Kelley.webp",
+        "Lachlan.webp": "Terrie/Lachlan.webp",
+        "Leala.webp": "Terrie/Leala.webp",
+        "Leanna.webp": "Terrie/Leanna.webp",
+        "Lila.webp": "Terrie/Lila.webp",
+        "Liron.webp": "Terrie/Liron.webp",
+        "Lovers.webp": "Terrie/Lovers.webp",
+        "Lula.webp": "Terrie/Lula.webp",
+        "Magic.webp": "Terrie/Magic.webp",
+        "Martina.webp": "Terrie/Martina.webp",
+        "Maxa.webp": "Terrie/Maxa.webp",
+        "Melynda.webp": "Terrie/Melynda.webp",
+        "Merry.webp": "Terrie/Merry.webp",
+        "Minnie.webp": "Terrie/Minnie.webp",
+        "Mira.webp": "Terrie/Mira.webp",
+        "Mitzi.webp": "Terrie/Mitzi.webp",
+        "Moonstone.webp": "Terrie/Moonstone.webp",
+        "Mouseyxv.webp": "Terrie/Mouseyxv.webp",
+        "Murle.webp": "Terrie/Murle.webp",
+        "mystic.webp": "Terrie/mystic.webp",
+        "Ninon.webp": "Terrie/Ninon.webp",
+        "Palma.webp": "Terrie/Palma.webp",
+        "Panther.webp": "Terrie/Panther.webp",
+        "Peaches.webp": "Terrie/Peaches.webp",
+        "Pepe.webp": "Terrie/Pepe.webp",
+        "Peppermint.webp": "Terrie/Peppermint.webp",
+        "Polecat.webp": "Terrie/Polecat.webp",
+        "prints.webp": "Terrie/prints.webp",
+        "Punky.webp": "Terrie/Punky.webp",
+        "Radella.webp": "Terrie/Radella.webp",
+        "Raisin.webp": "Terrie/Raisin.webp",
+        "Rama.webp": "Terrie/Rama.webp",
+        "Rohn.webp": "Terrie/Rohn.webp",
+        "Samantha.webp": "Terrie/Samantha.webp",
+        "Secret.webp": "Terrie/Secret.webp",
+        "Shuly.webp": "Terrie/Shuly.webp",
+        "smudge.webp": "Terrie/smudge.webp",
+        "Snickers.webp": "Terrie/Snickers.webp",
+        "Snow.webp": "Terrie/Snow.webp",
+        "Sohalia.webp": "Terrie/Sohalia.webp",
+        "Solace.webp": "Terrie/Solace.webp",
+        "Sprite.webp": "Terrie/Sprite.webp",
+        "Stockard.webp": "Terrie/Stockard.webp",
+        "Sunshine.webp": "Terrie/Sunshine.webp",
+        "Tegan.webp": "Terrie/Tegan.webp",
+        "Tiger.webp": "Terrie/Tiger.webp",
+        "Tilla.webp": "Terrie/Tilla.webp",
+        "Time.webp": "Terrie/Time.webp",
+        "Valora.webp": "Terrie/Valora.webp",
+        "Vana.webp": "Terrie/Vana.webp",
+        "Veil.webp": "Terrie/Veil.webp",
+        "Wet.webp": "Terrie/Wet.webp",
+        "Young.webp": "Terrie/Young.webp",
+        "Yoyo.webp": "Terrie/Yoyo.webp"
+    },
+    "Timeless temptations": {
+        "timeless_temptations_00.webp": "Timeless temptations/timeless_temptations_00.webp",
+        "timeless_temptations_01.webp": "Timeless temptations/timeless_temptations_01.webp",
+        "timeless_temptations_02.webp": "Timeless temptations/timeless_temptations_02.webp",
+        "timeless_temptations_03.webp": "Timeless temptations/timeless_temptations_03.webp",
+        "timeless_temptations_04.webp": "Timeless temptations/timeless_temptations_04.webp",
+        "timeless_temptations_05.webp": "Timeless temptations/timeless_temptations_05.webp",
+        "timeless_temptations_06.webp": "Timeless temptations/timeless_temptations_06.webp",
+        "timeless_temptations_07.webp": "Timeless temptations/timeless_temptations_07.webp",
+        "timeless_temptations_08.webp": "Timeless temptations/timeless_temptations_08.webp",
+        "timeless_temptations_09.webp": "Timeless temptations/timeless_temptations_09.webp",
+        "timeless_temptations_10.webp": "Timeless temptations/timeless_temptations_10.webp",
+        "timeless_temptations_11.webp": "Timeless temptations/timeless_temptations_11.webp",
+        "timeless_temptations_12.webp": "Timeless temptations/timeless_temptations_12.webp"
+    },
+    "0Big.webp": "0Big.webp",
+    "1.webp": "1.webp",
+    "1006492648.webp": "1006492648.webp",
+    "1007256436.webp": "1007256436.webp",
+    "1007256567.webp": "1007256567.webp",
+    "1007256934.webp": "1007256934.webp",
+    "1008453074.webp": "1008453074.webp",
+    "1008453564.webp": "1008453564.webp",
+    "1008453984.webp": "1008453984.webp",
+    "1008454440.webp": "1008454440.webp",
+    "1008455290.webp": "1008455290.webp",
+    "1008484271.webp": "1008484271.webp",
+    "1009678667.webp": "1009678667.webp",
+    "1009678976.webp": "1009678976.webp",
+    "1009679196.webp": "1009679196.webp",
+    "1009679456.webp": "1009679456.webp",
+    "1010717216.webp": "1010717216.webp",
+    "1010717404.webp": "1010717404.webp",
+    "1010717518.webp": "1010717518.webp",
+    "1011510373.webp": "1011510373.webp",
+    "1011597791.webp": "1011597791.webp",
+    "1014342688.webp": "1014342688.webp",
+    "1014342833.webp": "1014342833.webp",
+    "1015168185.webp": "1015168185.webp",
+    "1015816529.webp": "1015816529.webp",
+    "1015817102.webp": "1015817102.webp",
+    "1015817442.webp": "1015817442.webp",
+    "1015821783.webp": "1015821783.webp",
+    "1015824644.webp": "1015824644.webp",
+    "1015831208.webp": "1015831208.webp",
+    "1015832517.webp": "1015832517.webp",
+    "1015833088.webp": "1015833088.webp",
+    "1015947404.webp": "1015947404.webp",
+    "1015947808.webp": "1015947808.webp",
+    "1015948379.webp": "1015948379.webp",
+    "1015948680.webp": "1015948680.webp",
+    "1015949296.webp": "1015949296.webp",
+    "1015949969.webp": "1015949969.webp",
+    "1015950582.webp": "1015950582.webp",
+    "1015950870.webp": "1015950870.webp",
+    "1015951984.webp": "1015951984.webp",
+    "1015952302.webp": "1015952302.webp",
+    "1015952879.webp": "1015952879.webp",
+    "1015953192.webp": "1015953192.webp",
+    "1015953491.webp": "1015953491.webp",
+    "1015954043.webp": "1015954043.webp",
+    "1015954303.webp": "1015954303.webp",
+    "1017895738.webp": "1017895738.webp",
+    "1018828508.webp": "1018828508.webp",
+    "1019661310.webp": "1019661310.webp",
+    "1019661446.webp": "1019661446.webp",
+    "1019661870.webp": "1019661870.webp",
+    "1019661870_modified_1.webp": "1019661870_modified_1.webp",
+    "1019662593.webp": "1019662593.webp",
+    "1019698967.webp": "1019698967.webp",
+    "1019699223.webp": "1019699223.webp",
+    "1019699607.webp": "1019699607.webp",
+    "1019700074.webp": "1019700074.webp",
+    "1019700342.webp": "1019700342.webp",
+    "1019700582.webp": "1019700582.webp",
+    "1019700996.webp": "1019700996.webp",
+    "1019701517.webp": "1019701517.webp",
+    "1019702639.webp": "1019702639.webp",
+    "1020186762.webp": "1020186762.webp",
+    "1021096821.webp": "1021096821.webp",
+    "1021420915.webp": "1021420915.webp",
+    "1021421116.webp": "1021421116.webp",
+    "1021421223.webp": "1021421223.webp",
+    "1022204884.webp": "1022204884.webp",
+    "1022205683.webp": "1022205683.webp",
+    "1022207291.webp": "1022207291.webp",
+    "1022207912.webp": "1022207912.webp",
+    "1022208889.webp": "1022208889.webp",
+    "1022469671.webp": "1022469671.webp",
+    "1022984278.webp": "1022984278.webp",
+    "1023847430.webp": "1023847430.webp",
+    "1024457929.webp": "1024457929.webp",
+    "1025138444.webp": "1025138444.webp",
+    "1031279374.webp": "1031279374.webp",
+    "1032876122.webp": "1032876122.webp",
+    "1032876329.webp": "1032876329.webp",
+    "1032876719.webp": "1032876719.webp",
+    "1032876892.webp": "1032876892.webp",
+    "1032877022.webp": "1032877022.webp",
+    "1032877141.webp": "1032877141.webp",
+    "1032879415.webp": "1032879415.webp",
+    "1032879624.webp": "1032879624.webp",
+    "1032879856.webp": "1032879856.webp",
+    "1032879967.webp": "1032879967.webp",
+    "1033407942.webp": "1033407942.webp",
+    "1033408146.webp": "1033408146.webp",
+    "1033408269.webp": "1033408269.webp",
+    "1033409448.webp": "1033409448.webp",
+    "1035793345.webp": "1035793345.webp",
+    "1035793550.webp": "1035793550.webp",
+    "1038264444.webp": "1038264444.webp",
+    "1039438466.webp": "1039438466.webp",
+    "1041133831.webp": "1041133831.webp",
+    "1048034764.webp": "1048034764.webp",
+    "1048035007.webp": "1048035007.webp",
+    "1048035554.webp": "1048035554.webp",
+    "1048037660.webp": "1048037660.webp",
+    "1048041358.webp": "1048041358.webp",
+    "1048391208.webp": "1048391208.webp",
+    "1048634367.webp": "1048634367.webp",
+    "1048634731.webp": "1048634731.webp",
+    "1048634932.webp": "1048634932.webp",
+    "1048635102.webp": "1048635102.webp",
+    "1048635614.webp": "1048635614.webp",
+    "1048635754.webp": "1048635754.webp",
+    "1048635917.webp": "1048635917.webp",
+    "1048636061.webp": "1048636061.webp",
+    "1048636173.webp": "1048636173.webp",
+    "1048636330.webp": "1048636330.webp",
+    "1048636541.webp": "1048636541.webp",
+    "1050346407.webp": "1050346407.webp",
+    "1050346793.webp": "1050346793.webp",
+    "1050347474.webp": "1050347474.webp",
+    "1050863939.webp": "1050863939.webp",
+    "1050867256.webp": "1050867256.webp",
+    "1050975722.webp": "1050975722.webp",
+    "1050975878.webp": "1050975878.webp",
+    "1050976130.webp": "1050976130.webp",
+    "1050976442.webp": "1050976442.webp",
+    "1050976555.webp": "1050976555.webp",
+    "1063147807.webp": "1063147807.webp",
+    "1887038043_back.webp": "1887038043_back.webp",
+    "1887038043_interior01.webp": "1887038043_interior01.webp",
+    "1887038043_interior02.webp": "1887038043_interior02.webp",
+    "1887038043_interior03.webp": "1887038043_interior03.webp",
+    "1887038043_interior04.webp": "1887038043_interior04.webp",
+    "1887038043_interior05.webp": "1887038043_interior05.webp",
+    "2.webp": "2.webp",
+    "2001FurFemsCal - April.webp": "2001FurFemsCal - April.webp",
+    "2sisters.webp": "2sisters.webp",
+    "3.webp": "3.webp",
+    "4.webp": "4.webp",
+    "4A4C.webp": "4A4C.webp",
+    "4Draghn.webp": "4Draghn.webp",
+    "991331723.webp": "991331723.webp",
+    "992995229.webp": "992995229.webp",
+    "992996301.webp": "992996301.webp",
+    "992996962.webp": "992996962.webp",
+    "Abbey-FB.webp": "Abbey-FB.webp",
+    "AD.webp": "AD.webp",
+    "ADMONST2.webp": "ADMONST2.webp",
+    "ADRAGON.webp": "ADRAGON.webp",
+    "AJA.webp": "AJA.webp",
+    "AkkaPulco-FB.webp": "AkkaPulco-FB.webp",
+    "Alfreda-FB.webp": "Alfreda-FB.webp",
+    "AmandaFlag-FB.webp": "AmandaFlag-FB.webp",
+    "ambush.webp": "ambush.webp",
+    "Anubis.webp": "Anubis.webp",
+    "AVATAR.webp": "AVATAR.webp",
+    "AVATARC.webp": "AVATARC.webp",
+    "BadgerMedicineShield-FB.webp": "BadgerMedicineShield-FB.webp",
+    "bain+.webp": "bain+.webp",
+    "bain.webp": "bain.webp",
+    "Bedroom_Eyes2.webp": "Bedroom_Eyes2.webp",
+    "Bedroom_Eyes3.webp": "Bedroom_Eyes3.webp",
+    "BIGBULL2.webp": "BIGBULL2.webp",
+    "BigTopo-FB.webp": "BigTopo-FB.webp",
+    "BirBir-FB.webp": "BirBir-FB.webp",
+    "birdie.webp": "birdie.webp",
+    "BlondeBunnyBabe-FB.webp": "BlondeBunnyBabe-FB.webp",
+    "bracha.webp": "bracha.webp",
+    "BuckTease-FB.webp": "BuckTease-FB.webp",
+    "BUFFSILV.webp": "BUFFSILV.webp",
+    "BUFFSILV_.webp": "BUFFSILV_.webp",
+    "Bumps-FB.webp": "Bumps-FB.webp",
+    "Buni-FB.webp": "Buni-FB.webp",
+    "Caerdwyn-FB.webp": "Caerdwyn-FB.webp",
+    "Calico.webp": "Calico.webp",
+    "Cat'sPajamas-FB.webp": "Cat'sPajamas-FB.webp",
+    "Cats-sm.webp": "Cats-sm.webp",
+    "Cats.webp": "Cats.webp",
+    "CatsNDogs.webp": "CatsNDogs.webp",
+    "CBG1379C.webp": "CBG1379C.webp",
+    "CFE1.webp": "CFE1.webp",
+    "CHASE3.webp": "CHASE3.webp",
+    "Chesblwn.webp": "Chesblwn.webp",
+    "CHESTE_1.webp": "CHESTE_1.webp",
+    "Chester-c.webp": "Chester-c.webp",
+    "Chester.webp": "Chester.webp",
+    "Chester01.webp": "Chester01.webp",
+    "Chester02.webp": "Chester02.webp",
+    "Chester04.webp": "Chester04.webp",
+    "Chester05.webp": "Chester05.webp",
+    "Chester06.webp": "Chester06.webp",
+    "Chester07.webp": "Chester07.webp",
+    "Chester08.webp": "Chester08.webp",
+    "Chester10yrs.webp": "Chester10yrs.webp",
+    "ChesterBeach2.webp": "ChesterBeach2.webp",
+    "ChesterBust.webp": "ChesterBust.webp",
+    "Chesterhead.webp": "Chesterhead.webp",
+    "Chesterrings.webp": "Chesterrings.webp",
+    "Chesterrock.webp": "Chesterrock.webp",
+    "ChestersGift-FB.webp": "ChestersGift-FB.webp",
+    "Chirp_II-FB.webp": "Chirp_II-FB.webp",
+    "Chocolate.webp": "Chocolate.webp",
+    "CLAN.webp": "CLAN.webp",
+    "coco.webp": "coco.webp",
+    "Cosby-FB.webp": "Cosby-FB.webp",
+    "COVER-B.webp": "COVER-B.webp",
+    "COVER2SM.webp": "COVER2SM.webp",
+    "Cover3sm.webp": "Cover3sm.webp",
+    "COVER4SM.webp": "COVER4SM.webp",
+    "Cover5sm.webp": "Cover5sm.webp",
+    "COVER6SM.webp": "COVER6SM.webp",
+    "COVER8SM.webp": "COVER8SM.webp",
+    "cuba.webp": "cuba.webp",
+    "Cyrano-FB.webp": "Cyrano-FB.webp",
+    "DANDCGIF.webp": "DANDCGIF.webp",
+    "daria.webp": "daria.webp",
+    "Davina-FB.webp": "Davina-FB.webp",
+    "DECKHEAD.webp": "DECKHEAD.webp",
+    "DoggieStyle.webp": "DoggieStyle.webp",
+    "DoggieStyle2.webp": "DoggieStyle2.webp",
+    "Duo.webp": "Duo.webp",
+    "DUO2.webp": "DUO2.webp",
+    "DUOPIC.webp": "DUOPIC.webp",
+    "Etta-FB.webp": "Etta-FB.webp",
+    "Fb-otter-perfection-terrie-smith-2.webp": "Fb-otter-perfection-terrie-smith-2.webp",
+    "FBChester1.webp": "FBChester1.webp",
+    "FBChester2.webp": "FBChester2.webp",
+    "FBChester3.webp": "FBChester3.webp",
+    "FBChester4.webp": "FBChester4.webp",
+    "FBChester5.webp": "FBChester5.webp",
+    "FBChester6.webp": "FBChester6.webp",
+    "FBChester7.webp": "FBChester7.webp",
+    "FBChester7_modified_1.webp": "FBChester7_modified_1.webp",
+    "FBChesterDeck.webp": "FBChesterDeck.webp",
+    "Femsnolep.webp": "Femsnolep.webp",
+    "FlowersForChester-FB.webp": "FlowersForChester-FB.webp",
+    "FO-COVER.webp": "FO-COVER.webp",
+    "FORWARD.webp": "FORWARD.webp",
+    "FPAGE.webp": "FPAGE.webp",
+    "frankie2.webp": "frankie2.webp",
+    "FREYDA.webp": "FREYDA.webp",
+    "Furbid-cover.webp": "Furbid-cover.webp",
+    "Furbid-coyote1.webp": "Furbid-coyote1.webp",
+    "Furbid-thief.webp": "Furbid-thief.webp",
+    "Furbid-weaselshield.webp": "Furbid-weaselshield.webp",
+    "furfemsB.webp": "furfemsB.webp",
+    "FURLICK1.webp": "FURLICK1.webp",
+    "FURLICK2.webp": "FURLICK2.webp",
+    "FURLICK3.webp": "FURLICK3.webp",
+    "GEMIRA.webp": "GEMIRA.webp",
+    "ggen2517.webp": "ggen2517.webp",
+    "Glance-FB.webp": "Glance-FB.webp",
+    "GP_A.webp": "GP_A.webp",
+    "Groupshot.webp": "Groupshot.webp",
+    "gudrid.webp": "gudrid.webp",
+    "HAVENTER.webp": "HAVENTER.webp",
+    "Havocblock3.webp": "Havocblock3.webp",
+    "Havocinc.webp": "Havocinc.webp",
+    "HAVTRIO.webp": "HAVTRIO.webp",
+    "help.webp": "help.webp",
+    "HorseMedicineWoman-FB.webp": "HorseMedicineWoman-FB.webp",
+    "howling.webp": "howling.webp",
+    "HTOON1.webp": "HTOON1.webp",
+    "hulah.webp": "hulah.webp",
+    "HYRAX.webp": "HYRAX.webp",
+    "IPAGE.webp": "IPAGE.webp",
+    "ITTA.webp": "ITTA.webp",
+    "Jamisina-FB.webp": "Jamisina-FB.webp",
+    "JEFFERY.webp": "JEFFERY.webp",
+    "Jimmy-FB.webp": "Jimmy-FB.webp",
+    "JOH1C.webp": "JOH1C.webp",
+    "JOH2C.webp": "JOH2C.webp",
+    "JOH3C.webp": "JOH3C.webp",
+    "JUNGLE.webp": "JUNGLE.webp",
+    "Kamandi-FB.webp": "Kamandi-FB.webp",
+    "KingOfTheBeasts-FB.webp": "KingOfTheBeasts-FB.webp",
+    "Kline-FB.webp": "Kline-FB.webp",
+    "lameassie1.webp": "lameassie1.webp",
+    "lameassie2.webp": "lameassie2.webp",
+    "lameassie3.webp": "lameassie3.webp",
+    "lameassie4.webp": "lameassie4.webp",
+    "lameassie5.webp": "lameassie5.webp",
+    "lameassie6.webp": "lameassie6.webp",
+    "lameassie8.webp": "lameassie8.webp",
+    "LAMHEAD.webp": "LAMHEAD.webp",
+    "LARKKEY.webp": "LARKKEY.webp",
+    "Leopck.webp": "Leopck.webp",
+    "LionByTheStream-FB.webp": "LionByTheStream-FB.webp",
+    "LIONTI_1.webp": "LIONTI_1.webp",
+    "lipservice.webp": "lipservice.webp",
+    "LittlePaws_CoverArt.webp": "LittlePaws_CoverArt.webp",
+    "LKcover.webp": "LKcover.webp",
+    "LKINSERT.webp": "LKINSERT.webp",
+    "Lollipop.webp": "Lollipop.webp",
+    "LongOverdue-FB.webp": "LongOverdue-FB.webp",
+    "Lothar-FB.webp": "Lothar-FB.webp",
+    "LoveBandit-FB.webp": "LoveBandit-FB.webp",
+    "LPII-MU.webp": "LPII-MU.webp",
+    "LSGL-MU.webp": "LSGL-MU.webp",
+    "Maris-FB.webp": "Maris-FB.webp",
+    "MartyLu-FB.webp": "MartyLu-FB.webp",
+    "MLskunkvix.webp": "MLskunkvix.webp",
+    "MomentAlone-FB.webp": "MomentAlone-FB.webp",
+    "moria.webp": "moria.webp",
+    "MORWENA.webp": "MORWENA.webp",
+    "MouseyLove-FB.webp": "MouseyLove-FB.webp",
+    "mouseyxiii.webp": "mouseyxiii.webp",
+    "mousie_2.webp": "mousie_2.webp",
+    "Mouslve3.webp": "Mouslve3.webp",
+    "MrMarvel-FB.webp": "MrMarvel-FB.webp",
+    "MyTwoDads-FB.webp": "MyTwoDads-FB.webp",
+    "naamloos2.webp": "naamloos2.webp",
+    "naamloos3.webp": "naamloos3.webp",
+    "NAS-KAN.webp": "NAS-KAN.webp",
+    "Neutroncat.webp": "Neutroncat.webp",
+    "NH1.webp": "NH1.webp",
+    "NH3.webp": "NH3.webp",
+    "Noelle'sKitten-FB.webp": "Noelle'sKitten-FB.webp",
+    "Notchester.webp": "Notchester.webp",
+    "nudebunn.webp": "nudebunn.webp",
+    "offering.webp": "offering.webp",
+    "Olga-FB.webp": "Olga-FB.webp",
+    "Original-KittyKitty.webp": "Original-KittyKitty.webp",
+    "PAIRBLU4.webp": "PAIRBLU4.webp",
+    "Pepper%20%24950.webp": "Pepper%20%24950.webp",
+    "peppyfurbid.webp": "peppyfurbid.webp",
+    "PinkTaffi-FB.webp": "PinkTaffi-FB.webp",
+    "PIRATES.webp": "PIRATES.webp",
+    "pistachio.webp": "pistachio.webp",
+    "polkadot.webp": "polkadot.webp",
+    "PPAGE1.webp": "PPAGE1.webp",
+    "Predprey.webp": "Predprey.webp",
+    "Predprey2.webp": "Predprey2.webp",
+    "Predprey3.webp": "Predprey3.webp",
+    "PRESS3.webp": "PRESS3.webp",
+    "prey.webp": "prey.webp",
+    "Promo.webp": "Promo.webp",
+    "quilla.webp": "quilla.webp",
+    "Rachel-ML-FB.webp": "Rachel-ML-FB.webp",
+    "Rawhide-FB.webp": "Rawhide-FB.webp",
+    "Reatha-FB.webp": "Reatha-FB.webp",
+    "Redshirtwolf.webp": "Redshirtwolf.webp",
+    "RedVest-FB.webp": "RedVest-FB.webp",
+    "REGPIC.webp": "REGPIC.webp",
+    "Rilla-FB.webp": "Rilla-FB.webp",
+    "Ringtail_review.webp": "Ringtail_review.webp",
+    "Ringtailbow.webp": "Ringtailbow.webp",
+    "Robin-FB.webp": "Robin-FB.webp",
+    "RoyalWaits-FB.webp": "RoyalWaits-FB.webp",
+    "SALOME.webp": "SALOME.webp",
+    "SALOME_.webp": "SALOME_.webp",
+    "Sample-01.webp": "Sample-01.webp",
+    "Shay-FB.webp": "Shay-FB.webp",
+    "sidi.webp": "sidi.webp",
+    "Skit-n-Scoot-FB.webp": "Skit-n-Scoot-FB.webp",
+    "Sleepinggods.webp": "Sleepinggods.webp",
+    "Smith-2BadMice.webp": "Smith-2BadMice.webp",
+    "Smith-Bobkitty.webp": "Smith-Bobkitty.webp",
+    "Smith-HightailKitty.webp": "Smith-HightailKitty.webp",
+    "Smith-PensivePuma.webp": "Smith-PensivePuma.webp",
+    "Smith-Silver-Vixen.webp": "Smith-Silver-Vixen.webp",
+    "Smith-Topless-Babe.webp": "Smith-Topless-Babe.webp",
+    "Smith-vixen.webp": "Smith-vixen.webp",
+    "Smith-WeaselBabe.webp": "Smith-WeaselBabe.webp",
+    "smith001.webp": "smith001.webp",
+    "smith002.webp": "smith002.webp",
+    "smith004.webp": "smith004.webp",
+    "smith005.webp": "smith005.webp",
+    "smith006.webp": "smith006.webp",
+    "smith011.webp": "smith011.webp",
+    "snowstorm.webp": "snowstorm.webp",
+    "SoftTouch-FB.webp": "SoftTouch-FB.webp",
+    "SOLANGE.webp": "SOLANGE.webp",
+    "SOLANGE_.webp": "SOLANGE_.webp",
+    "START1.webp": "START1.webp",
+    "Sugarfoot-FB.webp": "Sugarfoot-FB.webp",
+    "Sundance-FB.webp": "Sundance-FB.webp",
+    "sunny.webp": "sunny.webp",
+    "Tai-pan.webp": "Tai-pan.webp",
+    "Tease.webp": "Tease.webp",
+    "Templa-FB.webp": "Templa-FB.webp",
+    "TenderMercy-FB.webp": "TenderMercy-FB.webp",
+    "threesome.webp": "threesome.webp",
+    "Thumbs.db": "Thumbs.db",
+    "Timeless-01-thumb.webp": "Timeless-01-thumb.webp",
+    "Timeless-02-thumb.webp": "Timeless-02-thumb.webp",
+    "Timeless-03-thumb.webp": "Timeless-03-thumb.webp",
+    "Timeless-04-thumb.webp": "Timeless-04-thumb.webp",
+    "Timeless-05-thumb.webp": "Timeless-05-thumb.webp",
+    "Timeless-06-thumb.webp": "Timeless-06-thumb.webp",
+    "Timeless-07-thumb.webp": "Timeless-07-thumb.webp",
+    "Timeless-08-thumb.webp": "Timeless-08-thumb.webp",
+    "Timeless-09-thumb.webp": "Timeless-09-thumb.webp",
+    "Timeless-10-thumb.webp": "Timeless-10-thumb.webp",
+    "Timeless-11-thumb.webp": "Timeless-11-thumb.webp",
+    "Timeless-12-thumb.webp": "Timeless-12-thumb.webp",
+    "Timeless-colour-thumb.webp": "Timeless-colour-thumb.webp",
+    "Timeless-sm.webp": "Timeless-sm.webp",
+    "timeless.webp": "timeless.webp",
+    "Tomasa-FB.webp": "Tomasa-FB.webp",
+    "tootsie.webp": "tootsie.webp",
+    "Travis.webp": "Travis.webp",
+    "TRIO.webp": "TRIO.webp",
+    "trio1.webp": "trio1.webp",
+    "Ts-1.webp": "Ts-1.webp",
+    "TS-Batterup.webp": "TS-Batterup.webp",
+    "TS-ChestPeek.webp": "TS-ChestPeek.webp",
+    "TS-Glimpse-FB.webp": "TS-Glimpse-FB.webp",
+    "TS-Icecream.webp": "TS-Icecream.webp",
+    "TS-Skunk.webp": "TS-Skunk.webp",
+    "Tsches2_30.webp": "Tsches2_30.webp",
+    "Tsches4_30.webp": "Tsches4_30.webp",
+    "Tsches5_30.webp": "Tsches5_30.webp",
+    "Tscy1_30.webp": "Tscy1_30.webp",
+    "Tscy2_30.webp": "Tscy2_30.webp",
+    "Tsfox2_30.webp": "Tsfox2_30.webp",
+    "Tsfurrypirate_30.webp": "Tsfurrypirate_30.webp",
+    "Tshcsnow30.webp": "Tshcsnow30.webp",
+    "Tshcvixen30.webp": "Tshcvixen30.webp",
+    "Tsjackal30.webp": "Tsjackal30.webp",
+    "TSLay.webp": "TSLay.webp",
+    "TSMITH.webp": "TSMITH.webp",
+    "TSMITH01.webp": "TSMITH01.webp",
+    "TSMITH02.webp": "TSMITH02.webp",
+    "TSMITH03.webp": "TSMITH03.webp",
+    "TSMITH04.webp": "TSMITH04.webp",
+    "TSMITH05.webp": "TSMITH05.webp",
+    "TSMITH06.webp": "TSMITH06.webp",
+    "TSMITH07.webp": "TSMITH07.webp",
+    "Tsmith_lydia_thumb.webp": "Tsmith_lydia_thumb.webp",
+    "Tsmith_smitty_thumb.webp": "Tsmith_smitty_thumb.webp",
+    "Tsmith_ultima_thumb.webp": "Tsmith_ultima_thumb.webp",
+    "Tsmith_unity_thumb.webp": "Tsmith_unity_thumb.webp",
+    "Tsringtail30.webp": "Tsringtail30.webp",
+    "Tsskunk30.webp": "Tsskunk30.webp",
+    "Tsvixen30.webp": "Tsvixen30.webp",
+    "tusslei.webp": "tusslei.webp",
+    "unicorn.webp": "unicorn.webp",
+    "Water.webp": "Water.webp",
+    "Watermelon.webp": "Watermelon.webp",
+    "Weapons.webp": "Weapons.webp",
+    "wearing1.webp": "wearing1.webp",
+    "wearingii.webp": "wearingii.webp",
+    "Werner-FB.webp": "Werner-FB.webp",
+    "Werner.webp": "Werner.webp",
+    "WetPussy-FB.webp": "WetPussy-FB.webp",
+    "WhiteRabbitsLodge-FB.webp": "WhiteRabbitsLodge-FB.webp",
+    "WhiteWeaselMS-FB.webp": "WhiteWeaselMS-FB.webp",
+    "WILHEAD.webp": "WILHEAD.webp",
+    "Wilmette-FB.webp": "Wilmette-FB.webp",
+    "WILSON1.webp": "WILSON1.webp",
+    "Wolf.webp": "Wolf.webp",
+    "WOW16.webp": "WOW16.webp",
+    "Yoo-Hoo-FB.webp": "Yoo-Hoo-FB.webp",
+    "ZipMe-FB.webp": "ZipMe-FB.webp"
+};
+
+    const folderIconUrl = "folder.webp";
+    const fileIconUrl = "file.webp";
+
+    let currentPath = [];
+    let isFullscreen = false;
+    let currentImageIndex = 0;
+    let imageList = [];
+    let rootScrollPosition = 0;
+
+    // Lazy loading
+    const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
+        });
+    }, { rootMargin: "200px" });
+
+    // Preload images
+    function preloadImages(urls) {
+        urls.forEach(url => {
+            const img = new Image();
+            img.src = url;
+        });
+    }
+
+    // Throttle function
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    }
+
+    function renderFileViewer() {
+        const fileViewer = document.getElementById('file-viewer');
+        fileViewer.innerHTML = '';
+
+        if (currentPath.length > 0) {
+            const backItem = document.createElement('div');
+            backItem.className = 'item folder';
+            backItem.innerHTML = `
+                <img src="${folderIconUrl}" alt="Back" class="folder-icon">
+                <span class="item-name">..</span>
+            `;
+            backItem.onclick = () => {
+                currentPath.pop();
+                renderFileViewer();
+                if (currentPath.length === 0) {
+                    setTimeout(() => {
+                        document.querySelector('.content').scrollTop = rootScrollPosition;
+                    }, 0);
+                }
+            };
+            fileViewer.appendChild(backItem);
+        }
+
+        let currentFolder = fileStructure;
+        for (const folder of currentPath) {
+            currentFolder = currentFolder[folder];
+        }
+
+        imageList = [];
+        const imagesToPreload = [];
+
+        for (const [name, content] of Object.entries(currentFolder)) {
+            const item = document.createElement('div');
+            item.className = 'item';
+
+            if (typeof content === 'object') {
+                item.className += ' folder';
+                item.innerHTML = `
+                    <img src="${folderIconUrl}" alt="Folder" class="folder-icon">
+                    <span class="item-name">${name}</span>
+                `;
+                item.onclick = () => {
+                    if (currentPath.length === 0) {
+                        rootScrollPosition = document.querySelector('.content').scrollTop;
+                    }
+                    currentPath.push(name);
+                    renderFileViewer();
+                };
+            } else {
+                const isImage = content.toLowerCase().match(/\.(jpeg|jpg|gif|png|webp)$/);
+                const imgSrc = isImage ? content : fileIconUrl;
+                item.innerHTML = `
+                    <img data-src="${imgSrc}" alt="${name}" class="${isImage ? 'folder-icon' : 'file-icon'}" loading="lazy">
+                    <span class="item-name">${name}</span>
+                `;
+                if (isImage) {
+                    imageList.push(content);
+                    imagesToPreload.push(content);
+                    item.onclick = () => openModal(content, name);
+                } else {
+                    item.onclick = () => window.open(content, '_blank');
+                }
+                lazyLoadObserver.observe(item.querySelector('img'));
+            }
+
+            fileViewer.appendChild(item);
+        }
+
+        updateTitle();
+        preloadImages(imagesToPreload.slice(0, 5)); // Preload first 5 images
+    }
+
+    const updateTitle = throttle(() => {
+        const title = document.querySelector('.title');
+        title.textContent = 'Terrie Smith - ' + (currentPath.length > 0 ? currentPath.join(' - ') : 'Home');
+    }, 100);
+
+    function openModal(src, name) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalInfo = document.getElementById('modal-info');
+        
+        modal.style.display = "flex";
+        modalImg.src = src;
+        modalImg.alt = name;
+        
+        currentImageIndex = imageList.indexOf(src);
+        
+        modalImg.onload = function() {
+            const width = this.naturalWidth;
+            const height = this.naturalHeight;
+            modalInfo.innerHTML = `Resolution: ${width} x ${height}<br>Click image to open in new tab`;
+            updateArrows();
+        };
+
+        modalImg.onerror = function() {
+            this.onerror = null;
+            this.src = fileIconUrl;
+            modalInfo.innerHTML = `Unable to load image: ${name}<br>Click to open in new tab`;
+            updateArrows();
+        };
+
+        modalImg.onclick = function() {
+            window.open(src, '_blank');
+        };
+
+        // Preload next and previous images
+        if (currentImageIndex > 0) preloadImages([imageList[currentImageIndex - 1]]);
+        if (currentImageIndex < imageList.length - 1) preloadImages([imageList[currentImageIndex + 1]]);
+    }
+
+    const updateArrows = throttle(() => {
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+        
+        prevArrow.style.display = currentImageIndex > 0 ? 'flex' : 'none';
+        nextArrow.style.display = currentImageIndex < imageList.length - 1 ? 'flex' : 'none';
+    }, 100);
+
+    function navigateImage(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex >= 0 && currentImageIndex < imageList.length) {
+            const newSrc = imageList[currentImageIndex];
+            openModal(newSrc, newSrc.split('/').pop());
+        }
+    }
+
+    const modal = document.getElementById('modal');
+    const span = document.getElementsByClassName("close-modal")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.querySelector('.prev-arrow').addEventListener('click', () => navigateImage(-1));
+    document.querySelector('.next-arrow').addEventListener('click', () => navigateImage(1));
+
+    // Window control buttons functionality
+    document.querySelector('.close').addEventListener('click', () => {
+        window.close();
+    });
+
+    document.querySelector('.minimize').addEventListener('click', () => {
+        if (isFullscreen) {
+            document.exitFullscreen().catch(err => {
+                console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+            });
+        }
+    });
+
+    document.querySelector('.expand').addEventListener('click', () => {
+        if (!isFullscreen) {
+            document.querySelector('.window').requestFullscreen().then(() => {
+                isFullscreen = true;
+            }).catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            document.exitFullscreen().then(() => {
+                isFullscreen = false;
+            }).catch(err => {
+                console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+            });
+        }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+        isFullscreen = !!document.fullscreenElement;
+    });
+
+    renderFileViewer();
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREAK FILES</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f5f5;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+            --sidebar-width: 325px;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: var(--sidebar-width);
+            min-width: var(--sidebar-width);
+            max-width: var(--sidebar-width);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .sidebar-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .sidebar-footer {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: calc(100% - var(--sidebar-width));
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: -10px;
+            margin-bottom: 0px;
+        }
+        h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: -9px;
+            margin-bottom: 0px;
+        }
+        h5 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        h6 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        .file-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .file-card {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .file-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .file-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3a7bc8;
+        }
+        .viewer {
+            display: flex;
+            flex-grow: 1;
+            gap: 20px;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .text-container {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+        .text-container h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h1>FREAK FILES</h1>
+            <h3>Doc Viewer</h3>
+            <h6>(Translations are sometimes wrong, added just for fun)</h6>
+            <hr>
+            <div id="file-list" class="file-list"></div>
+            <h5>By Vila ;3</h5>
+        </div>
+        <div class="sidebar-footer">
+            <a href="./pmyth.zip" download class="btn">Download All Files</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="viewer">
+            <div class="text-container" id="original-container">
+                <h2>Original Text</h2>
+                <pre id="original-text"></pre>
+            </div>
+            <div class="text-container" id="translated-container">
+                <h2>Translated Text (DeepL & TCRF)</h2>
+                <pre id="translated-text"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="document_data.js"></script>
+    <script>
+        function displayFiles() {
+            const fileList = document.getElementById('file-list');
+            files.forEach(file => {
+                const fileCard = document.createElement('div');
+                fileCard.className = 'file-card';
+                fileCard.innerHTML = `
+                    <div class="file-name">${file.name}</div>
+                    <a href="#" class="btn view-btn" data-file="${file.name}">View</a>
+                    ${file.docFile ? `<a href="#" class="btn download-btn" data-file="${file.docFile}">Download Original</a>` : ''}
+                `;
+                fileList.appendChild(fileCard);
+            });
+        }
+
+        function viewFile(fileName) {
+            const file = files.find(f => f.name === fileName);
+            if (file) {
+                document.getElementById('original-text').textContent = file.originalText;
+                document.getElementById('translated-text').textContent = file.translatedText;
+            }
+        }
+
+        function downloadFile(fileName) {
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function syncScroll(e) {
+            const other = e.target.id === 'original-container' ? document.getElementById('translated-container') : document.getElementById('original-container');
+            other.scrollTop = e.target.scrollTop;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            displayFiles();
+            document.getElementById('file-list').addEventListener('click', (e) => {
+                if (e.target.classList.contains('view-btn')) {
+                    e.preventDefault();
+                    viewFile(e.target.dataset.file);
+                } else if (e.target.classList.contains('download-btn')) {
+                    e.preventDefault();
+                    downloadFile(e.target.dataset.file);
+                }
+            });
+
+            document.getElementById('original-container').addEventListener('scroll', syncScroll);
+            document.getElementById('translated-container').addEventListener('scroll', syncScroll);
+        });
+    </script>
+</body>
+</html>

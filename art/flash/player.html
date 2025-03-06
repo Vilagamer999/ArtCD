@@ -40,7 +40,6 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const file = urlParams.get('file');
-        const baseUrl = "https://raw.githubusercontent.com/Vilagamer999/ArtCD/main/art/flash/";
         
         if (file) {
             const container = document.getElementById('ruffle-player');
@@ -49,7 +48,7 @@
             player.id = 'ruffle-player';
             container.appendChild(player);
 
-            player.load(baseUrl + file);
+            player.load('https://files.catbox.moe/' + file);
 
             // Set the page title to the file name
             document.title = "Playing: " + file;
