@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">75</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">974f0038-27b9-4d4a-a5f2-003cf62fd6bc</dc:identifier>
+        <dc:title>The Grey Elk</dc:title>
+        <dc:creator opf:file-as="Hendrickson, Kevis" opf:role="aut">Hendrickson, Kevis</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2011-12-12T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;A man of nature searching for wonders. A land of magic and splendour. A tale of love and hope and sorrow. The Grey Elk recounts the wondrous tale of the magical guardian of the woods.&lt;/p&gt;
+
+&lt;p class="description"&gt;Naran Jasar travels to a distant land where he encounters an enchanted land with wondrous people. Untold adventures and hardships await him that will test his courage, resolve, and kindness. Prepare for a tale of love and hope and sorrow. The Grey Elk recounts the wondrous tale of the magical guardian of the woods.The Grey Elk is a 3,000 word fantasy short story that honors the time old tradition of bardic tales and fables.KEYWORDS: world of arva, short stories, epic fantasy, adventure, quest, parable, fairy tale, anthromorph, animal magic, wanderer, forbidden love, tolerance&lt;/p&gt;</dc:description>
+        <dc:publisher>Pronoun</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">the-grey-elk</dc:identifier>
+        <dc:identifier opf:scheme="GOOGLE">fbKXBQAAQBAJ</dc:identifier>
+        <dc:identifier opf:scheme="FICTIONDB">kevis-hendrickson~the-grey-elk~592866~b</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">33957450</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>fable</dc:subject>
+        <dc:subject>hendrickson</dc:subject>
+        <dc:subject>arva</dc:subject>
+        <meta content="{&quot;Hendrickson, Kevis&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="Arva Universe" name="calibre:series"/>
+        <meta content="1" name="calibre:series_index"/>
+        <meta content="8" name="calibre:rating"/>
+        <meta content="2019-05-16T19:31:11.548997+00:00" name="calibre:timestamp"/>
+        <meta content="Grey Elk, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Grey Elk, The - Hendrickson, Kevis.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">34</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">526b85ba-2f7f-48ed-a7f1-03ff9569aa12</dc:identifier>
+        <dc:title>Murder at the Gala</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-04-01T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;Sometimes, just when you think your life can't get any better, reality throws you a bit of a curve ball. As the guest of honor at this year's Brookfield Gala, you feel like you're on top of the world, but the annual event at the Hotel Chalet is off to a rocky start, to say the least, when one of the dinner guests is found dead in the banquet hall. As a distinguished guest, you're one of the prime suspects in their murder, and only your wit and the choices you make can keep you from jail, the hospital, or even an early grave... Will you survive your stay at the Hotel Chalet?&lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B01DR9CXK0</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">29812380</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:57.423903+00:00" name="calibre:timestamp"/>
+        <meta content="Murder at the Gala" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Murder at the Gala - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">7</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">7a79e014-a7de-411e-a18a-8cd2cf916064</dc:identifier>
+        <dc:title>Windfall</dc:title>
+        <dc:creator opf:file-as="O'Kun, Tempe" opf:role="aut">O'Kun, Tempe</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2015-06-22T21:31:35.410752+00:00</dc:date>
+        <dc:description>What do you do when the world gets bigger?Minor celebrities Max and Kylie have always fit together perfectly, both on the screen and behind the cameras. But it's not until their show is cancelled and they go their separate ways that they begin to wonder if they might have been more than just friends.  Now, Kylie struggles to adjust to life in Windfall, the little New England town whose weird local legends inspired the show. When Max comes to visit for the summer, she strives to let him know how she feels about him--without exposing him to the chilling secrets she's begun to uncover in her new home.Written by Tempe O'Kun, Illustrated by Slate</dc:description>
+        <dc:publisher>Argyll Productions</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9781614502531</dc:identifier>
+        <dc:identifier opf:scheme="GOOGLE">rJXYsgEACAAJ</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">B01DKRP67Q</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">25777193</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;O'Kun, Tempe&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="Sixes Wild" name="calibre:series"/>
+        <meta content="1.50" name="calibre:series_index"/>
+        <meta content="10" name="calibre:rating"/>
+        <meta content="2019-05-16T19:30:48.789785+00:00" name="calibre:timestamp"/>
+        <meta content="Windfall" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Windfall - O'Kun, Tempe.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

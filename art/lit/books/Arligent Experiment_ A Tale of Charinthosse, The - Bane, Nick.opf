@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">2</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">3d4db783-8ecd-4540-8a2c-7ea40cbb507a</dc:identifier>
+        <dc:title>The Arligent Experiment: A Tale of Charinthosse</dc:title>
+        <dc:creator opf:file-as="Bane, Nick" opf:role="aut">Bane, Nick</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-10-02T21:30:24.266846+00:00</dc:date>
+        <dc:description>To Theodore Locke, the churns of the industrial revolution were lackluster at best. Content to live and work in the Silver Ladle, a world-renowned bordello, the Wolf enjoyed a mild-mannered existence that allowed him to keep his expectations of his life low, despite the upper ends of exclusivity the Madame insisted upon for her workers. "A whore matron, a professor, and a civil-war revolutionary met in a bordello..." If someone had started a joke with those words, Theodore would have been eager to hear the end, but after the happenstance meeting with the soldier-scholar Kendall Whitaker and the acclaimed Marie Ackerman of Fielora, Theodore's life was abruptly thrown into disarray. Now, this joke had become the beginning of a begrudged Fate that nudged Theodore (with a little help from the Madame) toward a ring of espionage, civil war and occult science. The night worker finds himself a pawn in a game that has dug graves for beasts, innocent and guilty alike, for two decades. Unbeknownst to Theodore, many eyes have begun to look in his direction in this game of powerful beasts trying to twist Science to seek God.</dc:description>
+        <dc:publisher>Amazon Digital Services LLC - Kdp Print Us</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9780692185940</dc:identifier>
+        <dc:identifier opf:scheme="GOOGLE">nrNUvQEACAAJ</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">B07HY595LW</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Bane, Nick&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:47.575275+00:00" name="calibre:timestamp"/>
+        <meta content="Arligent Experiment: A Tale of Charinthosse, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Arligent Experiment_ A Tale of Charinthosse, The - Bane, Nick.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

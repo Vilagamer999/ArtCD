@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">112</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">d6dd94fd-11c7-4439-8c74-1f1b2dc3b643</dc:identifier>
+        <dc:title>Woman's Best Friend</dc:title>
+        <dc:creator opf:file-as="Jarvis, Gideon Kalve" opf:role="aut">Jarvis, Gideon Kalve</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-12-01T00:00:00+00:00</dc:date>
+        <dc:description>Ambrose has always considered himself a good dog. In the near future, a new species, the morphs, were created to serve humankind, and Ambrose is one of them. Specifically, Ambrose is a canomorph, an anthropomorphic Doberman Pinscher in the service of the fabulously wealthy Diane Lords and her daughter, Mercy. All the time he's served his two mistresses, Ambrose has been loyal, faithful, and, above all else, strong in the face of temptation. After all, it is both illegal and immoral for a morph to have sexual relations with a human. Now, however, Diane Lords is going away for the week of Spring Break, and Mercy is having her three best friends over. Nothing too difficult, not for Ambrose. except now Mercy and her friends have started awakening to their own sexuality, and they all have a serious "thing" for Ambrose. This week of Spring Break may prove more temptation than even Ambrose is able to resist. In Ambrose's story are found scenes of heterosexual sex, dominance and submission, impregnation, mild lesbian content, and the occasional orgy.</dc:description>
+        <dc:publisher>Gideon Kalve Jarvis</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B01MSZNOJP</dc:identifier>
+        <dc:identifier opf:scheme="FICTIONDB">gideon-kalve-jarvis~womans-best-friend~2036246~b</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>General Fiction</dc:subject>
+        <meta content="{&quot;Jarvis, Gideon Kalve&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:48.756538+00:00" name="calibre:timestamp"/>
+        <meta content="Woman's Best Friend" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Woman's Best Friend - Jarvis, Gideon Kalve.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

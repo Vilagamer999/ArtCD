@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">3</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">21447356-df49-4f64-83ab-8123804dd4de</dc:identifier>
+        <dc:title>Burning Passions: For the Love of Fire Types (For Pokemon Fans Book 2)</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-10-09T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;We're continuing with our second in the series of "For Pokemon Fans" e-books, and this time, things are really heating up!   &lt;/p&gt;
+&lt;p&gt;Fans of fire type Pokemon won't want to miss this entry, with Flareon, Arcanine and Ninetails making their way onto the scene for some lustful adventures. For some, the heat will be a little too much to handle...are you ready to dance in the flames of passion with these needy creatures?&lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B076C1DHFM</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">40044789</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:47.694434+00:00" name="calibre:timestamp"/>
+        <meta content="Burning Passions: For the Love of Fire Types (For Pokemon Fans Book 2)" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Burning Passions_ For the Love of Fire Types (For Pokemon Fans Book 2) - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

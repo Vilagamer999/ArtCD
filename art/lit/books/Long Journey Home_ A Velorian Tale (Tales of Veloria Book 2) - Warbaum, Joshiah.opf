@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">16</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">b258ca32-e4eb-433b-84fb-cf5b2823f6e8</dc:identifier>
+        <dc:title>Long Journey Home: A Velorian Tale (Tales of Veloria Book 2)</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-03-04T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;Sometimes, adventure comes seeking you, even if you aren't looking for it.   &lt;/p&gt;
+&lt;p&gt;Escaping the clutches of his brutal village, Jon the otter sets out to find a new place to call home, but before he can reach the fabled territory of the white wolves, he is nearly slain by a deadly creature.   &lt;/p&gt;
+&lt;p&gt;He awakes in the capable paws of the wolfess, Likita. She takes it upon herself to nurse Jon back to health, but his presence is an unwelcome change in an ageless land, and soon, fate drives the pair apart.   &lt;/p&gt;
+&lt;p&gt;At the end of their journey to reunite, will they still be able to find a home in one another?&lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B07B7WRDTD</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">39775003</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:51.212393+00:00" name="calibre:timestamp"/>
+        <meta content="Long Journey Home: A Velorian Tale (Tales of Veloria Book 2)" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Long Journey Home_ A Velorian Tale (Tales of Veloria Book 2) - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

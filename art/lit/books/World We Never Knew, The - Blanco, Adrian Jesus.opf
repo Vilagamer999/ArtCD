@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">251</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">98a135cc-6a56-42fd-b7bb-c68ae2d3ff17</dc:identifier>
+        <dc:title>The World We Never Knew</dc:title>
+        <dc:creator opf:file-as="Blanco, Adrian Jesus" opf:role="aut">Blanco, Adrian Jesus</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2014-01-20T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;The World We Never knew is an anthropomorphic story set in modern day which takes the reader to a different world.  It is a love story, and adventure with a wolf named Dotson and his love Crista.&lt;/p&gt;
+
+&lt;p&gt;The World We Never knew is an anthropomorphic story set in modern day which takes the reader to a different world. It is a love story, and adventure with a wolf named Dotson and his love Crista. It is a story about a family, and friends, and the battles they face with each other and against each other.
+**&lt;/p&gt;</dc:description>
+        <dc:publisher>CreateSpace Independent Publishing Platform</dc:publisher>
+        <dc:identifier opf:scheme="AMAZON">1495306739</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781495306730</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>comedy</dc:subject>
+        <dc:subject>anthropomorphic</dc:subject>
+        <dc:subject>love</dc:subject>
+        <meta content="{&quot;Blanco, Adrian Jesus&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-17T23:34:15.070688+00:00" name="calibre:timestamp"/>
+        <meta content="World We Never Knew, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="World We Never Knew, The - Blanco, Adrian Jesus.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

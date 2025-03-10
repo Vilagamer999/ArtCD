@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">54</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">70acf84e-057b-4f64-9302-2f50fef2541d</dc:identifier>
+        <dc:title>Skylands: Large Living</dc:title>
+        <dc:creator opf:file-as="Scott, Sylvan" opf:role="aut">Scott, Sylvan</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-02-25T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;Macaferty Jahn, one of the proud ferret-like tahvic, is a warrior on a mission. Fiercely proud despite his diminutive size, he nonetheless has to face incredible odds owing to far more than just a disparity in height. But as he fights against a band of brigands, a change arises:  a change that impacts his life in a truly gigantic way.&lt;/p&gt;
+
+&lt;p&gt;The Skylands are floating continents, islands in the sky, of a fantasy realm known as Talvali. It is a patchwork world into which pieces of other lands are taken. In this world, the proud ferret-like warrior, Macaferty Jahn, must deal with magic, battle, his allies, his enemies, and the frustrating nature of those not native to his beloved world.  &lt;/p&gt;
+&lt;p&gt;Jahn is a warrior on a mission. Fiercely proud despite his diminutive size, he nonetheless has to face incredible odds owing to far more than just a disparity in height. But as he fights against a band of brigands, a change arises: a change that impacts his life in a truly gigantic way.&lt;/p&gt;</dc:description>
+        <dc:publisher>Sylvan Scott</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">skylands-large-living</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781466036963</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">21619009</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Kurzgeschichten</dc:subject>
+        <dc:subject>anthrofiction</dc:subject>
+        <dc:subject>giants</dc:subject>
+        <dc:subject>adventure</dc:subject>
+        <dc:subject>Belletristik &amp; Literatur</dc:subject>
+        <dc:subject>skylands</dc:subject>
+        <dc:subject>tahvic</dc:subject>
+        <dc:subject>furry</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>terrmorah</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>Actionthriller</dc:subject>
+        <meta content="{&quot;Scott, Sylvan&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="6" name="calibre:rating"/>
+        <meta content="2019-05-16T19:31:05.295636+00:00" name="calibre:timestamp"/>
+        <meta content="Skylands: Large Living" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Skylands_ Large Living - Scott, Sylvan.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

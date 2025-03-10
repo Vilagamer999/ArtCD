@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">40</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">7d6d326a-2633-4e7f-84b0-5ae6d26852b8</dc:identifier>
+        <dc:title>Boys Only</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-07-05T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;When the girls are away, the boys will play!   &lt;/p&gt;
+&lt;p&gt;Chocked full of enough fun for even the biggest of boys, this anthology contains seven sexy stories for you to enjoy. With a variety of different themes and characters to choose from, there's something for everybody, and plenty of steamy action to go around!   &lt;/p&gt;
+&lt;p&gt;Enjoy the stories, and remember: it's boys only in here.&lt;/p&gt;</dc:description>
+        <dc:identifier opf:scheme="MOBI-ASIN">B01I2C82IY</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">31123421</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="10" name="calibre:rating"/>
+        <meta content="2019-05-16T19:30:59.459217+00:00" name="calibre:timestamp"/>
+        <meta content="Boys Only" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Boys Only - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

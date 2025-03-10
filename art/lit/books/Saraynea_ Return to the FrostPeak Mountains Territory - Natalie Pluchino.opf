@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">9</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">cc433d4b-e005-4dfb-ad98-b93392155f4b</dc:identifier>
+        <dc:title>Saraynea: Return to the FrostPeak Mountains Territory</dc:title>
+        <dc:creator opf:file-as="Pluchino, Natalie" opf:role="aut">Natalie Pluchino</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2017-05-26T22:00:00+00:00</dc:date>
+        <dc:identifier opf:scheme="MOBI-ASIN">B0719VJ2D1</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Natalie Pluchino&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:49.251950+00:00" name="calibre:timestamp"/>
+        <meta content="Saraynea: Return to the FrostPeak Mountains Territory" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Saraynea_ Return to the FrostPeak Mountains Territory - Natalie Pluchino.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

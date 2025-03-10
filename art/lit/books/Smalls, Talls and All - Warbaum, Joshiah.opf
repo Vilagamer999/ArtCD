@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">39</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">6abcb23c-955a-405e-90fe-f3661f805a53</dc:identifier>
+        <dc:title>Smalls, Talls and All</dc:title>
+        <dc:creator opf:file-as="Warbaum, Joshiah" opf:role="aut">Warbaum, Joshiah</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-07-10T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;Our first foray into something a little different, "Smalls, Talls and All" begs the question: "Does size matter?"   &lt;/p&gt;
+&lt;p&gt;To some, size is no barrier to having a good time with someone else. This anthology features a whopping sixteen stories to browse, with something for fans of macro and micro content, realistic size difference, and everything between.   &lt;/p&gt;
+&lt;p&gt;Some like it tall, some like it small, others like it all...no matter your preference, we've got you covered!&lt;/p&gt;</dc:description>
+        <dc:publisher>Joshiah's Written Works</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B07FF4WFL2</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">40798558</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Warbaum, Joshiah&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:30:59.306560+00:00" name="calibre:timestamp"/>
+        <meta content="Smalls, Talls and All" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Smalls, Talls and All - Warbaum, Joshiah.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">51</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">387f6475-8fa7-4225-aefb-d65b10fb5af8</dc:identifier>
+        <dc:title>Hunted</dc:title>
+        <dc:creator opf:file-as="FoxesAreLife" opf:role="aut">FoxesAreLife</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+        <dc:description>A Man in Australia receives a message online from a mysterious person. The government has placed a bounty worth millions on him, his only means of escape? A Fursuiter Named Nick. Prepare for all hell to break loose.</dc:description>
+        <dc:identifier opf:scheme="MOBI-ASIN">90fbd46d-21fd-479b-b248-1deca0851334</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>antarctica</dc:subject>
+        <dc:subject>fandom</dc:subject>
+        <dc:subject>fursuit</dc:subject>
+        <dc:subject>hunted</dc:subject>
+        <dc:subject>anthromorphism</dc:subject>
+        <dc:subject>novel</dc:subject>
+        <dc:subject>furry</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <meta content="{&quot;FoxesAreLife&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-16T19:31:04.449533+00:00" name="calibre:timestamp"/>
+        <meta content="Hunted" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Hunted - FoxesAreLife.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

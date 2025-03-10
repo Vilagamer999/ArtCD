@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Reader</title>
+    <style>
+        :root[data-theme="light"] {
+            --bg-primary: #f4f4f0;
+            --bg-secondary: #e4e4e0;
+            --text-primary: #222;
+            --text-secondary: #444;
+            --border: #666;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-primary: #222;
+            --bg-secondary: #333;
+            --text-primary: #e4e4e0;
+            --text-secondary: #c4c4c0;
+            --border: #888;
+        }
+
+        [data-theme="light"] .dark-icon { display: none; }
+        [data-theme="dark"] .light-icon { display: none; }
+
+        body {
+            font-family: Georgia, serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-primary);
+            z-index: 50;
+        }
+
+        button {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: var(--bg-primary);
+            border-color: var(--text-primary);
+        }
+
+        .book-actions { display: flex; gap: 0.5rem; }
+
+        .booklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .book {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+        }
+
+        .book:hover { background: var(--bg-secondary); }
+
+        .cover {
+            width: 105px;
+            height: 155px;
+            object-fit: cover;
+            background: var(--bg-secondary);
+            flex-shrink: 0;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .info h2 { margin: 0; }
+
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .actions { display: flex; gap: 1rem; margin-top: 1rem; }
+
+        .search-controls {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-primary);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .search-controls.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 49;
+            padding: 1rem;
+        }
+
+        .search-input,
+        .sort-select {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .search-input { flex: 1; }
+        .sort-select { width: 8rem; }
+
+        .search-input:hover,
+        .sort-select:hover {
+            border-color: var(--text-primary);
+        }
+
+        #reader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-primary);
+            z-index: 100;
+            display: none;
+            flex-direction: column;
+        }
+
+        #reader.active { display: flex; }
+
+        .reader-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            z-index: 10;
+        }
+
+        .left-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .font-controls {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .nav-hint {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            z-index: 1;
+        }
+
+        .reader-main {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reader-footer {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        #progress-bar {
+            flex: 1;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--bg-secondary);
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        #progress-bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            background: var(--text-primary);
+            border: none;
+        }
+
+        #progress-bar::-moz-range-thumb {
+            width: 12px;
+            height: 12px;
+            background: var(--text-primary);
+            border: none;
+        }
+
+        .page-counter {
+            color: var(--text-primary);
+            padding: 0.5rem 0.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+            user-select: none;
+            font-family: inherit;
+            min-width: 66px;
+            text-align: center;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .loading-bar {
+            width: 200px;
+            height: 4px;
+            background: var(--bg-secondary);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 100%;
+            height: 100%;
+            background: var(--text-primary);
+            transform: translateX(-100%);
+            animation: loading 1s infinite;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            z-index: 48;
+            padding: 0.1rem;
+        }
+
+        .scroll-top svg {
+            width: 29px;
+            height: 29px;
+            fill: var(--text-primary);
+            transition: fill 0.2s;
+        }
+
+        .scroll-top:hover {
+            background: var(--bg-primary);
+            border-color: var(--text-primary);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        foliate-view {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        #theme-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            width: 40px;
+            height: 35px;
+        }
+
+        #theme-toggle svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-hint { display: none; }
+            
+            .reader-header {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .page-counter { min-height: 44px; }
+            
+            .left-controls {
+                flex: 1;
+                justify-content: space-between;
+            }
+            
+            button {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 0.75rem 1rem;
+            }
+            
+            #progress-bar {
+                height: 6px;
+            }
+            
+            #progress-bar::-webkit-slider-thumb {
+                width: 18px;
+                height: 18px;
+            }
+            
+            #progress-bar::-moz-range-thumb {
+                width: 18px;
+                height: 18px;
+            }
+            
+            .reader-footer {
+                padding: 1rem 0.5rem;
+                gap: 0.5rem;
+            }
+            
+            .search-controls {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .search-controls.fixed { padding: 1rem 0.5rem; }
+            
+            .search-input,
+            .sort-select {
+                min-height: 44px;
+                width: 100%;
+            }
+            
+            .book {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .cover {
+                width: 100%;
+                height: auto;
+                max-width: 200px;
+                align-self: center;
+            }
+            
+            .scroll-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="library-view">
+        <header>
+            <div class="container">
+                <img src="cover.webp" alt="Library Cover" class="center">
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="search-controls">
+                <input type="search" class="search-input" placeholder="Search books..." aria-label="Search books">
+                <select class="sort-select" aria-label="Sort books">
+                    <option value="title-asc">Title A-Z</option>
+                    <option value="title-desc">Title Z-A</option>
+                    <option value="author-asc">Author A-Z</option>
+                    <option value="author-desc">Author Z-A</option>
+                    <option value="year-desc">Newest First</option>
+                    <option value="year-asc">Oldest First</option>
+                </select>
+            </div>
+            <ul class="booklist" aria-label="Book list"></ul>
+        </main>
+    </div>
+
+    <div id="reader" aria-hidden="true">
+        <header class="reader-header">
+            <div class="left-controls">
+                <button id="back-btn">Back to Library</button>
+                <div class="font-controls">
+                    <button id="decrease-font" aria-label="Decrease font size">A-</button>
+                    <button id="increase-font" aria-label="Increase font size">A+</button>
+                </div>
+            </div>
+            <span class="nav-hint" tabindex="0">CLICK ME!</span>
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path class="light-icon" d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M11,1v4h2V1L11,1z M11,19v4h2v-4L11,19z M23,11l-4,0v2l4,0V11z M5,11l-4,0l0,2l4,0L5,11z M16.24,17.66l2.47,2.47l1.41-1.41l-2.47-2.47L16.24,17.66z M3.87,5.28l2.47,2.47l1.41-1.41L5.28,3.87L3.87,5.28z M6.34,16.24l-2.47,2.47l1.41,1.41l2.47-2.47L6.34,16.24z M18.72,3.87l-2.47,2.47l1.41,1.41l2.47-2.47L18.72,3.87z"/>
+                    <path class="dark-icon" d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/>
+                </svg>
+            </button>
+        </header>
+
+        <main class="reader-main"></main>
+
+        <footer class="reader-footer">
+            <button id="prev-page" aria-label="Previous page">Previous</button>
+            <input type="range" id="progress-bar" min="0" max="1" step="0.001" aria-label="Reading progress">
+            <span class="page-counter" aria-live="polite">0/0</span>
+            <button id="next-page" aria-label="Next page">Next</button>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" aria-hidden="true">
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+        </svg>
+    </button>
+
+    <script src="./books/books.js" type="module"></script>
+    <script type="module">
+        import './foliate-js/view.js';
+        import books from './books/books.js';
+
+        const hints = [
+            "Use arrow keys to navigate pages!",
+            "Press A+ A- to adjust text size",
+            "Use progress bar to instantly jump to any page",
+            "Toggle theme for a more comfortable reading experiance (light mode is more comfy tho >:3)",
+            "Made with <3 for furz by furz :3",
+            "Brought to you by Foliate.js, [energy beverage] and a lack of sleep",
+            "More books and features will be added soon™",
+        ];
+
+        let view = null;
+        let fontSize = 1.2;
+        const MIN_FONT_SIZE = 0.8;
+        const MAX_FONT_SIZE = 2;
+        const FONT_STEP = 0.1;
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        // Cache frequently accessed DOM elements
+        const elements = {
+            reader: $('#reader'),
+            libraryView: $('#library-view'),
+            readerMain: $('.reader-main'),
+            pageCounter: $('.page-counter'),
+            progressBar: $('#progress-bar'),
+            searchInput: $('.search-input'),
+            sortSelect: $('.sort-select'),
+            bookList: $('.booklist'),
+            searchControls: $('.search-controls'),
+            scrollTop: $('.scroll-top'),
+            loadingOverlay: $('.loading-overlay'),
+            navHint: $('.nav-hint')
+        };
+
+        function showRandomHint() {
+            const hintElement = elements.navHint;
+            const currentHint = hintElement.textContent;
+            let newHint;
+            do {
+                newHint = hints[Math.floor(Math.random() * hints.length)];
+            } while (newHint === currentHint);
+            
+            hintElement.style.opacity = '0';
+            setTimeout(() => {
+                hintElement.textContent = newHint;
+                hintElement.style.opacity = '1';
+            }, 300);
+        }
+
+        function flattenBooks(books) {
+            return books.map(authorGroup => 
+                authorGroup.series.flatMap(series => 
+                    series.books.map(book => ({
+                        ...book,
+                        author: authorGroup.author || 'Unknown Author',
+                        series: series.name
+                    }))
+                )
+            ).flat();
+        }
+
+        function sortBooks(books, method) {
+            const flatBooks = Array.isArray(books) ? books : flattenBooks(books);
+            const sorters = {
+                'title-asc': (a, b) => a.title.localeCompare(b.title),
+                'title-desc': (a, b) => b.title.localeCompare(a.title),
+                'author-asc': (a, b) => a.author.localeCompare(b.author),
+                'author-desc': (a, b) => b.author.localeCompare(a.author),
+                'year-asc': (a, b) => (a.year || 0) - (b.year || 0),
+                'year-desc': (a, b) => (b.year || 0) - (a.year || 0)
+            };
+            return flatBooks.sort(sorters[method]);
+        }
+
+        function filterBooks(query) {
+            const flatBooks = flattenBooks(books);
+            query = query.toLowerCase();
+            return flatBooks.filter(book => 
+                book.title.toLowerCase().includes(query) ||
+                book.author.toLowerCase().includes(query) ||
+                (book.genre || '').toLowerCase().includes(query) ||
+                (book.series || '').toLowerCase().includes(query)
+            );
+        }
+
+        function updateLibrary() {
+            const query = elements.searchInput.value.trim();
+            const sortMethod = elements.sortSelect.value;
+            const filteredBooks = query ? filterBooks(query) : flattenBooks(books);
+            const sortedBooks = sortBooks(filteredBooks, sortMethod);
+            
+            elements.bookList.innerHTML = sortedBooks.map(book => `
+                <li class="book">
+                    <img class="cover" 
+                         src="${book.cover}" 
+                         alt="Cover of ${book.title}"
+                         onerror="this.src='./covers/generic.webp'">
+                    <div class="info">
+                        <h2>${book.title}</h2>
+                        <p class="meta">
+                            ${book.author} (${book.year})<br>
+                            ${book.genre} · ${book.format.toUpperCase()} · ${book.pages || '?'} pages
+                            ${book.series ? `<br>Series: ${book.series}` : ''}
+                            ${book.series_index ? ` (Book ${book.series_index})` : ''}
+                        </p>
+                        <div class="book-actions">
+                            <button type="button" data-book-path="./books/${book.path}">Read</button>
+                            <a href="./books/${book.path}" download>
+                                <button type="button">Download</button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            `).join('');
+        }
+
+        function updateFontSize() {
+            if (view) {
+                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                view.renderer.setStyles?.(`
+                    :root {
+                        font-size: ${fontSize}rem;
+                        color: ${!isDark ? '#222' : '#e4e4e0'} !important;
+                        background-color: ${!isDark ? '#f4f4f0' : '#222'} !important;
+                    }
+                `);
+            }
+        }
+
+        async function openBook(path) {
+            elements.loadingOverlay.classList.add('active');
+            try {
+                if (view) {
+                    view.close();
+                    view.remove();
+                }
+
+                // Handle text files differently
+                if (path.endsWith('.txt')) {
+                    const fileContent = await window.fs.readFile(path, { encoding: 'utf8' });
+                    view = document.createElement('div');
+                    view.style.cssText = `
+                        padding: 2rem;
+                        line-height: 1.6;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        white-space: pre-wrap;
+                        font-family: inherit;
+                    `;
+                    view.textContent = fileContent;
+                    
+                    elements.readerMain.replaceChildren(view);
+                    elements.reader.classList.add('active');
+                    elements.reader.setAttribute('aria-hidden', 'false');
+                    elements.libraryView.style.display = 'none';
+                    
+                    const pageHeight = view.clientHeight - 80;
+                    const contentHeight = view.scrollHeight;
+                    const totalPages = Math.ceil(contentHeight / pageHeight);
+                    elements.pageCounter.textContent = `1/${totalPages}`;
+                    
+                    view.addEventListener('scroll', () => {
+                        const currentPage = Math.ceil((view.scrollTop + pageHeight) / pageHeight);
+                        elements.pageCounter.textContent = `${currentPage}/${totalPages}`;
+                    });
+                    
+                    $('#next-page').onclick = () => {
+                        view.scrollBy({ top: pageHeight, behavior: 'smooth' });
+                    };
+                    
+                    $('#prev-page').onclick = () => {
+                        view.scrollBy({ top: -pageHeight, behavior: 'smooth' });
+                    };
+                    
+                    elements.progressBar.oninput = (e) => {
+                        const fraction = parseFloat(e.target.value);
+                        view.scrollTop = fraction * (contentHeight - pageHeight);
+                    };
+                    
+                    return;
+                }
+
+                // Handle other book formats with Foliate
+                const flatBooks = flattenBooks(books);
+                const bookData = flatBooks.find(book => `./books/${book.path}` === path);
+
+                view = document.createElement('foliate-view');
+                elements.readerMain.appendChild(view);
+
+                view.addEventListener('relocate', e => {
+                    const { fraction, total } = e.detail;
+                    elements.progressBar.value = fraction;
+                    
+                    if (bookData?.pages) {
+                        const currentPage = Math.ceil(fraction * bookData.pages);
+                        elements.pageCounter.textContent = `${currentPage}/${bookData.pages}`;
+                    } else {
+                        const currentPage = Math.ceil(fraction * total);
+                        elements.pageCounter.textContent = `${currentPage}/${total}`;
+                    }
+                });
+
+                await view.open(path);
+                await view.init({ showTextStart: true });
+                
+                elements.reader.classList.add('active');
+                elements.reader.setAttribute('aria-hidden', 'false');
+                elements.libraryView.style.display = 'none';
+                updateFontSize();
+            } catch (error) {
+                console.error('Error loading book:', error);
+                alert('Error loading book. Please try again.');
+            } finally {
+                elements.loadingOverlay.classList.remove('active');
+            }
+        }
+
+        // Scroll handling
+        const searchControlsTop = elements.searchControls.offsetTop;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedScroll = localStorage.getItem('scrollPosition');
+            if (savedScroll) {
+                window.scrollTo(0, parseInt(savedScroll));
+            }
+        });
+
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('scrollPosition', window.scrollY.toString());
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > searchControlsTop) {
+                elements.searchControls.classList.add('fixed');
+                document.body.style.paddingTop = elements.searchControls.offsetHeight + 'px';
+            } else {
+                elements.searchControls.classList.remove('fixed');
+                document.body.style.paddingTop = '0';
+            }
+            
+            if (window.scrollY > 500) {
+                elements.scrollTop.classList.add('visible');
+            } else {
+                elements.scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Event delegation for book list clicks
+        elements.bookList.addEventListener('click', e => {
+            const button = e.target.closest('[data-book-path]');
+            if (button) {
+                openBook(button.dataset.bookPath);
+            }
+        });
+
+        $('#back-btn').addEventListener('click', () => {
+            elements.reader.classList.remove('active');
+            elements.reader.setAttribute('aria-hidden', 'true');
+            elements.libraryView.style.display = 'block';
+        });
+
+        $('#decrease-font').addEventListener('click', () => {
+            if (fontSize > MIN_FONT_SIZE) {
+                fontSize -= FONT_STEP;
+                updateFontSize();
+            }
+        });
+
+        $('#increase-font').addEventListener('click', () => {
+            if (fontSize < MAX_FONT_SIZE) {
+                fontSize += FONT_STEP;
+                updateFontSize();
+            }
+        });
+
+        $('#theme-toggle').addEventListener('click', () => {
+            const root = document.documentElement;
+            const isDark = root.getAttribute('data-theme') === 'dark';
+            root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            updateFontSize();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (!view) return;
+            if (e.key === 'ArrowLeft') view.goLeft();
+            else if (e.key === 'ArrowRight') view.goRight();
+        });
+
+        $('#prev-page').addEventListener('click', () => view?.goLeft());
+        $('#next-page').addEventListener('click', () => view?.goRight());
+        elements.progressBar.addEventListener('input', e => view?.goToFraction(parseFloat(e.target.value)));
+        elements.searchInput.addEventListener('input', updateLibrary);
+        elements.sortSelect.addEventListener('change', updateLibrary);
+        elements.navHint.addEventListener('click', showRandomHint);
+        elements.scrollTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize
+        updateLibrary();
+    </script>
+</body>
+</html>

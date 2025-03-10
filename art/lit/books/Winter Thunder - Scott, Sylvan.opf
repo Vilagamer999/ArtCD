@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">84</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">69c94b79-01fe-49f4-af45-0591e37d5ab8</dc:identifier>
+        <dc:title>Winter Thunder</dc:title>
+        <dc:creator opf:file-as="Scott, Sylvan" opf:role="aut">Scott, Sylvan</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2011-09-24T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;A holiday short story with an anthropomorphic twist. Nikos, a young, gay artist living in his New York brownstone, is greeting Christmas as he often does:  drunk. But when someone knocks on his door it's more than three ghosts.&lt;/p&gt;
+
+&lt;p&gt;A holiday short story with an anthropomorphic twist. Nikos, a young, gay artist living in his New York brownstone, is greeting Christmas as he often does: drunk. But when someone knocks on his door it's more than "three ghosts".   &lt;/p&gt;
+&lt;p&gt;A cold winter in a big city for a gay artist living alone can be the epitome of seasonal depression. As the holidays approach, Nikos has been trying to face the coming days first with an abundance of ouzo and then with the help of a stranger come knocking at his apartment door. But the stranger isn't human.  &lt;/p&gt;
+&lt;p&gt;Nikos' drawings, anthropomorphized animals, color his life but, in a strange way, his visitor's life as well.  &lt;/p&gt;
+&lt;p&gt;Follow Nikos' one night, without "three ghosts" but something ... else, as he tries to discover his place in the world.&lt;/p&gt;</dc:description>
+        <dc:publisher>SmashWords</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">winter-thunder</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781465870681</dc:identifier>
+        <dc:identifier opf:scheme="MOBI-ASIN">7d16ae15-9177-4dfd-9130-c0536a708eda</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">16098519</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>christmas</dc:subject>
+        <dc:subject>furry</dc:subject>
+        <dc:subject>Unterhaltung</dc:subject>
+        <dc:subject>Belletristik &amp; Literatur</dc:subject>
+        <dc:subject>glbt</dc:subject>
+        <dc:subject>holiday season</dc:subject>
+        <dc:subject>Schwul Und Lesbisch</dc:subject>
+        <dc:subject>anthrofiction</dc:subject>
+        <dc:subject>urban fantasy</dc:subject>
+        <dc:subject>Drama Und Poesie</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>Theater</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <dc:subject>reindeer</dc:subject>
+        <dc:subject>seasonal depression</dc:subject>
+        <dc:subject>Schwul</dc:subject>
+        <dc:subject>Amerikanisch</dc:subject>
+        <dc:subject>lgbt</dc:subject>
+        <dc:subject>Sachbücher &amp; Ratgeber</dc:subject>
+        <meta content="{&quot;Scott, Sylvan&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="8" name="calibre:rating"/>
+        <meta content="2019-05-16T19:31:14.193235+00:00" name="calibre:timestamp"/>
+        <meta content="Winter Thunder" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Winter Thunder - Scott, Sylvan.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">66</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">82be8c9c-a782-47c0-90f8-da6beb90c8c3</dc:identifier>
+        <dc:title>Magus Vol.1</dc:title>
+        <dc:creator opf:file-as="Freeman, Jesse" opf:role="aut">Freeman, Jesse</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2014-04-03T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;Follow the amateurishly written tale chronicling the misadventures of a teenager. Read about Ronan as he's thrown into increasingly unlikely and improbable situations. Spend minutes wondering why no adults are watching these kids and keeping them safe. Contemplate whether you're really ready to invest yourself into a series written by a wannabe writer.&lt;/p&gt;
+
+&lt;p&gt;Follow the amateurishly written tale chronicling the misadventures of a teenager. Read about Ronan as he's thrown into increasingly unlikely and improbable situations. Spend minutes wondering why no adults are watching these kids and keeping them safe. Contemplate whether you're really ready to invest yourself into a series written by a wannabe writer.&lt;/p&gt;</dc:description>
+        <dc:publisher>SmashWords</dc:publisher>
+        <dc:identifier opf:scheme="KOBO">magus-vol-1</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9781311448743</dc:identifier>
+        <dc:identifier opf:scheme="GOODREADS">21857581</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>adventure</dc:subject>
+        <dc:subject>rh</dc:subject>
+        <dc:subject>magic</dc:subject>
+        <dc:subject>urban</dc:subject>
+        <dc:subject>Fantasy &amp; Sci-Fi</dc:subject>
+        <dc:subject>anthro</dc:subject>
+        <dc:subject>fantasy</dc:subject>
+        <meta content="{&quot;Freeman, Jesse&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="4" name="calibre:rating"/>
+        <meta content="2019-05-16T19:31:08.816910+00:00" name="calibre:timestamp"/>
+        <meta content="Magus Vol.1" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Magus Vol.1 - Freeman, Jesse.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

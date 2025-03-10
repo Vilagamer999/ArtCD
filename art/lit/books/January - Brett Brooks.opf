@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">254</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">c90c0890-5c71-4c13-ab50-0e2e09afe1dc</dc:identifier>
+        <dc:title>January</dc:title>
+        <dc:creator opf:file-as="Brooks, Brett" opf:role="aut">Brett Brooks</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.42.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2019-05-16T19:16:16.015027+00:00</dc:date>
+        <dc:identifier opf:scheme="MOBI-ASIN">e8f11df9-e55b-4c57-99e0-12bf1c1154e3</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Brett Brooks&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2019-05-17T23:34:15.486807+00:00" name="calibre:timestamp"/>
+        <meta content="January" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="January - Brett Brooks.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>
