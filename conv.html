@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to CBZ Converter - Background Processing</title>
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUERGIHRvIENCWiBDb252ZXJ0ZXIiLCJzaG9ydF9uYW1lIjoiUERGMkNCWiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMxZTNjNzIiLCJ0aGVtZV9jb2xvciI6IiMxZTNjNzIifQ==">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .status-bar {
+            background: #e8f0fe;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .worker-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4CAF50;
+            animation: pulse 2s infinite;
+        }
+
+        .status-indicator.offline {
+            background: #f44336;
+            animation: none;
+        }
+
+        .performance-info {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .upload-area {
+            border: 3px dashed #2a5298;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #1e3c72;
+            background: #e8f0fe;
+        }
+
+        .upload-area.dragover {
+            border-color: #4CAF50;
+            background: #e8f5e9;
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #2a5298;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .queue-container {
+            margin-bottom: 30px;
+        }
+
+        .queue-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .queue-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .clear-completed {
+            background: #ff5252;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .clear-completed:hover {
+            background: #f44336;
+        }
+
+        .file-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .file-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .file-item:hover {
+            background: #e8f0fe;
+        }
+
+        .file-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .file-name {
+            flex: 1;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .file-status {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .status-queued {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .status-processing {
+            background: #6bcf7f;
+            color: white;
+            animation: pulse 1.5s infinite;
+        }
+
+        .status-complete {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .status-error {
+            background: #f44336;
+            color: white;
+        }
+
+        .file-progress {
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .file-progress-fill {
+            height: 100%;
+            background: #2196F3;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .control-panel {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .control-btn {
+            flex: 1;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(42, 82, 152, 0.3);
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(42, 82, 152, 0.4);
+        }
+
+        .control-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .control-btn.pause {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+        }
+
+        .control-btn.stop {
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+        }
+
+        .settings-panel {
+            background: #f0f4f8;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .settings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .settings-header h3 {
+            color: #1e3c72;
+        }
+
+        .toggle-settings {
+            background: none;
+            border: none;
+            color: #2a5298;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .settings-content {
+            display: grid;
+            gap: 15px;
+        }
+
+        .setting-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .setting-label {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .setting-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .setting-input {
+            width: 80px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .notification-banner {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #323232;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .info-box p {
+            color: #1565C0;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF to CBZ Converter</h1>
+        <p class="subtitle">Background processing with maximum performance</p>
+        
+        <div class="status-bar">
+            <div class="worker-status">
+                <div class="status-indicator" id="workerStatus"></div>
+                <span id="workerText">Background Worker Active</span>
+            </div>
+            <div class="performance-info">
+                <span id="threadCount">Threads: 4</span> | 
+                <span id="queueCount">Queue: 0</span>
+            </div>
+        </div>
+        
+        <div class="settings-panel">
+            <div class="settings-header">
+                <h3>Processing Settings</h3>
+                <button class="toggle-settings" id="toggleSettings">⚙️</button>
+            </div>
+            <div class="settings-content" id="settingsContent">
+                <div class="setting-group">
+                    <span class="setting-label">Output Format</span>
+                    <div class="setting-control">
+                        <select id="outputFormat" class="setting-input">
+                            <option value="png">PNG (Lossless)</option>
+                            <option value="jpeg">JPEG (95%)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <span class="setting-label">Scale Factor</span>
+                    <div class="setting-control">
+                        <input type="number" id="scaleFactor" class="setting-input" value="2" min="1" max="4" step="0.5">
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <span class="setting-label">Worker Threads</span>
+                    <div class="setting-control">
+                        <input type="number" id="workerThreads" class="setting-input" value="4" min="1" max="16">
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <span class="setting-label">Background Processing</span>
+                    <div class="setting-control">
+                        <label class="switch">
+                            <input type="checkbox" id="backgroundProcessing" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <span class="setting-label">Notifications</span>
+                    <div class="setting-control">
+                        <label class="switch">
+                            <input type="checkbox" id="enableNotifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📚</div>
+            <p style="font-size: 1.2em; font-weight: 600; color: #333; margin-bottom: 10px;">
+                Drop PDF files here or click to browse
+            </p>
+            <p style="color: #666;">Files will be processed in the background</p>
+            <input type="file" id="fileInput" class="file-input" accept=".pdf" multiple>
+        </div>
+        
+        <div class="control-panel">
+            <button class="control-btn" id="startBtn">Start Processing</button>
+            <button class="control-btn pause" id="pauseBtn" disabled>Pause</button>
+            <button class="control-btn stop" id="clearBtn">Clear Queue</button>
+        </div>
+        
+        <div class="queue-container">
+            <div class="queue-header">
+                <h3 class="queue-title">Processing Queue</h3>
+                <button class="clear-completed" id="clearCompleted">Clear Completed</button>
+            </div>
+            <div class="file-list" id="fileList"></div>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Background Processing:</strong> Files continue converting even if you close this tab. The service worker uses all available CPU cores for maximum speed. You'll receive notifications when conversions complete.</p>
+        </div>
+    </div>
+
+    <div class="notification-banner" id="notificationBanner"></div>
+
+    <script>
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('data:text/javascript;base64,' + btoa(`
+                self.importScripts('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
+                self.importScripts('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
+                
+                pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+                
+                let processingQueue = [];
+                let isProcessing = false;
+                let settings = {
+                    format: 'png',
+                    scaleFactor: 2,
+                    workerThreads: 4
+                };
+                
+                self.addEventListener('install', event => {
+                    self.skipWaiting();
+                });
+                
+                self.addEventListener('activate', event => {
+                    event.waitUntil(clients.claim());
+                });
+                
+                self.addEventListener('message', event => {
+                    const { type, data } = event.data;
+                    
+                    switch(type) {
+                        case 'ADD_TO_QUEUE':
+                            processingQueue.push(...data.files);
+                            if (!isProcessing) {
+                                processQueue();
+                            }
+                            break;
+                        case 'UPDATE_SETTINGS':
+                            settings = { ...settings, ...data };
+                            break;
+                        case 'PAUSE':
+                            isProcessing = false;
+                            break;
+                        case 'RESUME':
+                            if (!isProcessing && processingQueue.length > 0) {
+                                processQueue();
+                            }
+                            break;
+                        case 'CLEAR_QUEUE':
+                            processingQueue = [];
+                            isProcessing = false;
+                            break;
+                    }
+                });
+                
+                async function processQueue() {
+                    isProcessing = true;
+                    
+                    while (processingQueue.length > 0 && isProcessing) {
+                        const file = processingQueue.shift();
+                        await processFile(file);
+                    }
+                    
+                    isProcessing = false;
+                }
+                
+                async function processFile(fileData) {
+                    try {
+                        postMessage({ type: 'STATUS_UPDATE', fileId: fileData.id, status: 'processing' });
+                        
+                        const pdf = await pdfjsLib.getDocument(fileData.data).promise;
+                        const zip = new JSZip();
+                        const totalPages = pdf.numPages;
+                        
+                        // Process pages in parallel chunks
+                        const chunkSize = Math.ceil(totalPages / settings.workerThreads);
+                        const promises = [];
+                        
+                        for (let i = 0; i < settings.workerThreads; i++) {
+                            const start = i * chunkSize + 1;
+                            const end = Math.min((i + 1) * chunkSize, totalPages);
+                            
+                            if (start <= totalPages) {
+                                promises.push(processPageRange(pdf, zip, start, end, fileData.id, totalPages));
+                            }
+                        }
+                        
+                        await Promise.all(promises);
+                        
+                        const content = await zip.generateAsync({ type: 'blob' });
+                        
+                        postMessage({
+                            type: 'FILE_COMPLETE',
+                            fileId: fileData.id,
+                            fileName: fileData.name.replace('.pdf', '.cbz'),
+                            blob: content
+                        });
+                        
+                    } catch (error) {
+                        postMessage({
+                            type: 'FILE_ERROR',
+                            fileId: fileData.id,
+                            error: error.message
+                        });
+                    }
+                }
+                
+                async function processPageRange(pdf, zip, startPage, endPage, fileId, totalPages) {
+                    for (let pageNum = startPage; pageNum <= endPage; pageNum++) {
+                        const page = await pdf.getPage(pageNum);
+                        const viewport = page.getViewport({ scale: settings.scaleFactor });
+                        
+                        const canvas = new OffscreenCanvas(viewport.width, viewport.height);
+                        const context = canvas.getContext('2d');
+                        
+                        await page.render({
+                            canvasContext: context,
+                            viewport: viewport
+                        }).promise;
+                        
+                        const blob = await canvas.convertToBlob({
+                            type: settings.format === 'png' ? 'image/png' : 'image/jpeg',
+                            quality: settings.format === 'jpeg' ? 0.95 : undefined
+                        });
+                        
+                        const extension = settings.format === 'png' ? 'png' : 'jpg';
+                        const paddedNum = String(pageNum).padStart(4, '0');
+                        zip.file(\`\${paddedNum}.\${extension}\`, blob);
+                        
+                        postMessage({
+                            type: 'PROGRESS_UPDATE',
+                            fileId: fileId,
+                            progress: (pageNum / totalPages) * 100
+                        });
+                    }
+                }
+                
+                function postMessage(data) {
+                    self.clients.matchAll().then(clients => {
+                        clients.forEach(client => client.postMessage(data));
+                    });
+                }
+            `))
+            .then(registration => {
+                console.log('Service Worker registered');
+                updateWorkerStatus(true);
+            })
+            .catch(error => {
+                console.error('Service Worker registration failed:', error);
+                updateWorkerStatus(false);
+            });
+        }
+        
+        // Initialize IndexedDB
+        let db;
+        const request = indexedDB.open('PDFtoCBZ', 1);
+        
+        request.onerror = () => console.error('IndexedDB error');
+        request.onsuccess = event => {
+            db = event.target.result;
+            loadQueueFromDB();
+        };
+        
+        request.onupgradeneeded = event => {
+            db = event.target.result;
+            if (!db.objectStoreNames.contains('queue')) {
+                db.createObjectStore('queue', { keyPath: 'id' });
+            }
+            if (!db.objectStoreNames.contains('completed')) {
+                db.createObjectStore('completed', { keyPath: 'id' });
+            }
+        };
+        
+        // DOM elements
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const startBtn = document.getElementById('startBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const clearCompleted = document.getElementById('clearCompleted');
+        const workerThreads = document.getElementById('workerThreads');
+        const threadCount = document.getElementById('threadCount');
+        const queueCount = document.getElementById('queueCount');
+        const toggleSettings = document.getElementById('toggleSettings');
+        const settingsContent = document.getElementById('settingsContent');
+        
+        let fileQueue = new Map();
+        let isPaused = false;
+        
+        // Event listeners
+        uploadArea.addEventListener('click', () => fileInput.click());
+        
+        fileInput.addEventListener('change', e => {
+            handleFiles(e.target.files);
+        });
+        
+        uploadArea.addEventListener('dragover', e => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', e => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+        
+        toggleSettings.addEventListener('click', () => {
+            settingsContent.style.display = settingsContent.style.display === 'none' ? 'grid' : 'none';
+        });
+        
+        workerThreads.addEventListener('change', e => {
+            const threads = parseInt(e.target.value);
+            threadCount.textContent = `Threads: ${threads}`;
+            updateSettings();
+        });
+        
+        startBtn.addEventListener('click', () => {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ type: 'RESUME' });
+                isPaused = false;
+                updateButtons();
+            }
+        });
+        
+        pauseBtn.addEventListener('click', () => {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ type: 'PAUSE' });
+                isPaused = true;
+                updateButtons();
+            }
+        });
+        
+        clearBtn.addEventListener('click', () => {
+            if (confirm('Clear all queued files?')) {
+                if (navigator.serviceWorker.controller) {
+                    navigator.serviceWorker.controller.postMessage({ type: 'CLEAR_QUEUE' });
+                }
+                fileQueue.clear();
+                updateFileList();
+                clearQueueFromDB();
+            }
+        });
+        
+        clearCompleted.addEventListener('click', () => {
+            const completed = Array.from(fileQueue.entries())
+                .filter(([id, file]) => file.status === 'complete' || file.status === 'error');
+            
+            completed.forEach(([id]) => {
+                fileQueue.delete(id);
+                removeFromDB(id);
+            });
+            
+            updateFileList();
+        });
+        
+        // Service Worker message handler
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.addEventListener('message', event => {
+                const { type, fileId, status, progress, fileName, blob, error } = event.data;
+                
+                switch(type) {
+                    case 'STATUS_UPDATE':
+                        updateFileStatus(fileId, status);
+                        break;
+                    case 'PROGRESS_UPDATE':
+                        updateFileProgress(fileId, progress);
+                        break;
+                    case 'FILE_COMPLETE':
+                        handleFileComplete(fileId, fileName, blob);
+                        break;
+                    case 'FILE_ERROR':
+                        updateFileStatus(fileId, 'error', error);
+                        break;
+                }
+            });
+        }
+        
+        // File handling functions
+        async function handleFiles(files) {
+            const pdfFiles = Array.from(files).filter(file => file.type === 'application/pdf');
+            
+            for (const file of pdfFiles) {
+                const id = generateId();
+                const fileData = {
+                    id,
+                    name: file.name,
+                    size: file.size,
+                    status: 'queued',
+                    progress: 0,
+                    data: await file.arrayBuffer()
+                };
+                
+                fileQueue.set(id, fileData);
+                saveToQueueDB(fileData);
+            }
+            
+            updateFileList();
+            updateQueueCount();
+            
+            if (navigator.serviceWorker.controller) {
+                const filesToProcess = Array.from(fileQueue.values())
+                    .filter(f => f.status === 'queued')
+                    .map(f => ({ id: f.id, name: f.name, data: f.data }));
+                
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'ADD_TO_QUEUE',
+                    data: { files: filesToProcess }
+                });
+            }
+        }
+        
+        function updateFileList() {
+            const files = Array.from(fileQueue.values());
+            
+            fileList.innerHTML = files.map(file => `
+                <div class="file-item" data-id="${file.id}">
+                    <div class="file-header">
+                        <span class="file-name">${file.name}</span>
+                        <span class="file-status status-${file.status}" id="status-${file.id}">
+                            ${file.status.charAt(0).toUpperCase() + file.status.slice(1)}
+                        </span>
+                    </div>
+                    <div class="file-progress">
+                        <div class="file-progress-fill" id="progress-${file.id}" style="width: ${file.progress}%"></div>
+                    </div>
+                </div>
+            `).join('');
+            
+            updateQueueCount();
+        }
+        
+        function updateFileStatus(fileId, status, error) {
+            const file = fileQueue.get(fileId);
+            if (file) {
+                file.status = status;
+                const statusEl = document.getElementById(`status-${fileId}`);
+                if (statusEl) {
+                    statusEl.className = `file-status status-${status}`;
+                    statusEl.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+                    if (error) {
+                        statusEl.textContent += `: ${error}`;
+                    }
+                }
+                saveToQueueDB(file);
+            }
+        }
+        
+        function updateFileProgress(fileId, progress) {
+            const file = fileQueue.get(fileId);
+            if (file) {
+                file.progress = progress;
+                const progressEl = document.getElementById(`progress-${fileId}`);
+                if (progressEl) {
+                    progressEl.style.width = `${progress}%`;
+                }
+            }
+        }
+        
+        async function handleFileComplete(fileId, fileName, blob) {
+            updateFileStatus(fileId, 'complete');
+            
+            // Download file
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = fileName;
+            a.click();
+            URL.revokeObjectURL(a.href);
+            
+            // Show notification
+            if (document.getElementById('enableNotifications').checked) {
+                showNotification(`Conversion complete: ${fileName}`);
+                
+                if (Notification.permission === 'granted') {
+                    new Notification('PDF to CBZ Converter', {
+                        body: `Conversion complete: ${fileName}`,
+                        icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">📚</text></svg>'
+                    });
+                }
+            }
+        }
+        
+        // Utility functions
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+        
+        function updateWorkerStatus(active) {
+            const indicator = document.getElementById('workerStatus');
+            const text = document.getElementById('workerText');
+            
+            if (active) {
+                indicator.classList.remove('offline');
+                text.textContent = 'Background Worker Active';
+            } else {
+                indicator.classList.add('offline');
+                text.textContent = 'Background Worker Offline';
+            }
+        }
+        
+        function updateButtons() {
+            startBtn.disabled = !isPaused;
+            pauseBtn.disabled = isPaused;
+        }
+        
+        function updateQueueCount() {
+            const queued = Array.from(fileQueue.values()).filter(f => f.status === 'queued' || f.status === 'processing').length;
+            queueCount.textContent = `Queue: ${queued}`;
+        }
+        
+        function updateSettings() {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'UPDATE_SETTINGS',
+                    data: {
+                        format: document.getElementById('outputFormat').value,
+                        scaleFactor: parseFloat(document.getElementById('scaleFactor').value),
+                        workerThreads: parseInt(document.getElementById('workerThreads').value)
+                    }
+                });
+            }
+        }
+        
+        function showNotification(message) {
+            const banner = document.getElementById('notificationBanner');
+            banner.textContent = message;
+            banner.style.display = 'block';
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 3000);
+        }
+        
+        // IndexedDB functions
+        async function saveToQueueDB(file) {
+            if (!db) return;
+            const transaction = db.transaction(['queue'], 'readwrite');
+            const store = transaction.objectStore('queue');
+            store.put(file);
+        }
+        
+        async function removeFromDB(fileId) {
+            if (!db) return;
+            const transaction = db.transaction(['queue'], 'readwrite');
+            const store = transaction.objectStore('queue');
+            store.delete(fileId);
+        }
+        
+        async function clearQueueFromDB() {
+            if (!db) return;
+            const transaction = db.transaction(['queue'], 'readwrite');
+            const store = transaction.objectStore('queue');
+            store.clear();
+        }
+        
+        async function loadQueueFromDB() {
+            if (!db) return;
+            const transaction = db.transaction(['queue'], 'readonly');
+            const store = transaction.objectStore('queue');
+            const request = store.getAll();
+            
+            request.onsuccess = () => {
+                const files = request.result;
+                files.forEach(file => {
+                    fileQueue.set(file.id, file);
+                });
+                updateFileList();
+            };
+        }
+        
+        // Request notification permission
+        if ('Notification' in window && Notification.permission === 'default') {
+            Notification.requestPermission();
+        }
+        
+        // Set initial thread count
+        threadCount.textContent = `Threads: ${workerThreads.value}`;
+        
+        // Apply settings on load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSettings();
+        });
+    </script>
+</body>
+</html>
